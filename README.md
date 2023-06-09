@@ -9,12 +9,12 @@ Unity-15
 
 -Yusuf Arslan: Developer
 
--Tuğba Acar: Aktif Olmayan Üye 
+-Tuğba Acar: Developer
 
 # *Ürün İle İlgili Bilgiler*
 
 ## Ürün İsmi
-
+The Secret of the Future
 ## Product Backlog URL
 -trello linki eklenecek-
 ## Ürün Açıklaması
