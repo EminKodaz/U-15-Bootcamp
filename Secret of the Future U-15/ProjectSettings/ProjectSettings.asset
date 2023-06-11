@@ -717,7 +717,11 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
+<<<<<<< Updated upstream
   activeInputHandler: 0
+=======
+  activeInputHandler: 2
+>>>>>>> Stashed changes
   windowsGamepadBackendHint: 0
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
