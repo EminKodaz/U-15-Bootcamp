@@ -24,8 +24,8 @@ public class ShootManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1)) // Sað týk kontrolü
         {
-            ToggleAimObjects();
 
+            ToggleAimObjects();
             Debug.Log("Saðtýk");
         }
     }
@@ -67,5 +67,6 @@ public class ShootManager : MonoBehaviour
 
         isAiming = !isAiming;
     }
+
 
 }

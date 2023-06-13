@@ -59,11 +59,11 @@
     <Compile Include="Assets\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\CharachterController\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
     <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
-    <Compile Include="Assets\Deneme\asdasd.cs" />
     <Compile Include="Assets\Scripts\ShootManager.cs" />
-    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
+    <Compile Include="Assets\Deneme\asdasd.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
