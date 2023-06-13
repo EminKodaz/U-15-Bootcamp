@@ -6,7 +6,7 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     float nextTime = 0;
-    int bulletlength = 5;
+    bool isReloading = false;
 
     AudioSource pistolShootSound;
 
@@ -20,9 +20,9 @@ public class WeaponManager : MonoBehaviour
     private void Update()
     {
         nextTime += Time.time;
-        if (nextTime >= 2f)
+        if (nextTime >= 2f && !isReloading)
         {
-            if (Input.GetMouseButtonDown(0) && bulletlength>0)
+            if (Input.GetMouseButtonDown(0))
             {
                 pistolShootSound.Play();
                 _animator.SetTrigger("Fire");
@@ -37,10 +37,11 @@ public class WeaponManager : MonoBehaviour
             StartCoroutine(ShootDelay(0.1f));       
         }*/
 
-        if (Input.GetKeyDown(KeyCode.R)) 
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading) 
         {
-            _animator.SetBool("reload", true);
-            StartCoroutine(ReloadDone(0.5f));
+            isReloading = true;
+            StartCoroutine(ReloadDone(2));
+            _animator.SetBool("reload", isReloading);
         }
 
         bool isWPressed = Input.GetKey(KeyCode.W);
@@ -70,7 +71,8 @@ public class WeaponManager : MonoBehaviour
     IEnumerator ReloadDone(float delay)
     {
         yield return new WaitForSeconds(delay);
-        _animator.SetBool("reload", false);
+        isReloading = false;
+        _animator.SetBool("reload", isReloading);
     }
 
     IEnumerator RunChecker(float delay)
