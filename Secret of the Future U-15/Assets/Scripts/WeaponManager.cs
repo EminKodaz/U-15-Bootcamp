@@ -5,6 +5,8 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
+    float nextTime = 0;
+    int bulletlength = 5;
 
     AudioSource pistolShootSound;
 
@@ -17,12 +19,23 @@ public class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        nextTime += Time.time;
+        if (nextTime >= 2f)
+        {
+            if (Input.GetMouseButtonDown(0) && bulletlength>0)
+            {
+                pistolShootSound.Play();
+                _animator.SetTrigger("Fire");
+                nextTime = 0;
+            }
+        }
+
+        /*if (Input.GetMouseButtonDown(0)) 
         {
             pistolShootSound.Play();
             _animator.SetBool("isShooting", true);
             StartCoroutine(ShootDelay(0.1f));       
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.R)) 
         {
