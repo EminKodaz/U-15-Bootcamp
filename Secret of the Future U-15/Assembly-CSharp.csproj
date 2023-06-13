@@ -62,6 +62,8 @@
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
     <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Deneme\asdasd.cs" />
+    <Compile Include="Assets\Scripts\ShootManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
