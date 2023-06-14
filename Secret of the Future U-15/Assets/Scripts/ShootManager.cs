@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,20 +14,31 @@ public class ShootManager : MonoBehaviour
     public GameObject pistolAimLook;
     public GameObject pistolNormalLook;
     private bool isAiming = false;
+    public Animator camAnim;
+    bool focus = false;
 
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
 
         if (Input.GetMouseButtonDown(1)) // Sað týk kontrolü
         {
-
-            ToggleAimObjects();
+            focus = !focus;
+            //ToggleAimObjects();
             Debug.Log("Saðtýk");
+            camAnim.SetBool("focus", focus);
+            if (focus)
+            {
+                GetComponentInParent<FirstPersonController>().MoveSpeed = 2;
+            }
+            else
+            {
+                GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
+            }
         }
     }
 

@@ -47,8 +47,8 @@ public class WeaponManager : MonoBehaviour
 
         if (pistol != null && pistol.activeSelf)
         {
-            nextTime += Time.time;
-            if (nextTime >= 2f && !isReloading)
+            nextTime += Time.deltaTime;
+            if (nextTime >= .5f && !isReloading)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -61,7 +61,7 @@ public class WeaponManager : MonoBehaviour
 
         if (pistol != null && rifle.activeSelf)
         {
-            nextTime += Time.time;
+            nextTime += Time.deltaTime;
             if (nextTime >= 2f && !isReloading)
             {
                 if (Input.GetMouseButtonDown(0))
