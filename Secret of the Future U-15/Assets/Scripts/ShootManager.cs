@@ -24,6 +24,7 @@ public class ShootManager : MonoBehaviour
         {
             Shoot();
         }
+        
 
         if (Input.GetMouseButtonDown(1)) // Sað týk kontrolü
         {
