@@ -7,6 +7,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private Animator _animator;
     public GameObject pistol;
     public GameObject rifle;
+    public GameObject ak47;
 
     public ParticleSystem shootVfx;
     float nextTime = 0;
@@ -32,19 +33,43 @@ public class WeaponManager : MonoBehaviour
         }
 
         bool isWPressed = Input.GetKey(KeyCode.W);
-        bool isAPressed = Input.GetKey(KeyCode.A);
-        bool isSPressed = Input.GetKey(KeyCode.S);
-        bool isDPressed = Input.GetKey(KeyCode.D);
+        bool isLeftShiftPressed = Input.GetKey(KeyCode.LeftShift);
 
-        if (isWPressed || isAPressed || isSPressed || isDPressed)
+        if (isWPressed)
         {
-            _animator.SetBool("isMove", true);
-           
+            if (isLeftShiftPressed)
+            {
+                _animator.SetBool("isMove", false);
+                _animator.SetBool("isRun", true);
+            }
+            else
+            {
+                _animator.SetBool("isMove", true);
+                _animator.SetBool("isRun", false);
+            }
         }
         else
         {
             _animator.SetBool("isMove", false);
+            _animator.SetBool("isRun", false);
         }
+
+
+        //if (isWPressed || isAPressed || isSPressed || isDPressed)
+        //{
+        //    _animator.SetBool("isMove", true);
+
+        //}
+        //if (isWPressed && isLeftShiftPressed)
+        //{
+        //    _animator.SetBool("isMove", false);
+        //    _animator.SetBool("isRun", true);
+        //}
+        //else
+        //{
+        //    _animator.SetBool("isMove", false);
+        //    _animator.SetBool("isRun", false);
+        //}
 
         if (pistol != null && pistol.activeSelf)
         {
