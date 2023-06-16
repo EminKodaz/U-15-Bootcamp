@@ -9,28 +9,19 @@ public class ShootManager : MonoBehaviour
     public float range = 100f;
 
     public Camera fpsCam;
-
-
-    public GameObject pistolAimLook;
-    public GameObject pistolNormalLook;
-    private bool isAiming = false;
     public Animator camAnim;
     bool focus = false;
+
+    public bool rifle;
+    public bool gun;
+    public GameObject scopeOverlay;
 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-        
-
-        if (Input.GetMouseButtonDown(1)) // Sað týk kontrolü
+        if (Input.GetMouseButtonDown(1) && gun==true) // Sað týk kontrolü
         {
             focus = !focus;
-            //ToggleAimObjects();
-            Debug.Log("Saðtýk");
             camAnim.SetBool("focus", focus);
             if (focus)
             {
@@ -41,9 +32,16 @@ public class ShootManager : MonoBehaviour
                 GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
             }
         }
+
+        if (Input.GetMouseButtonDown(1) && rifle==true) // Sað týk kontrolü
+        {
+            focus = !focus;
+            camAnim.SetBool("focus", focus);
+            StartCoroutine(ScopeOverlayZoomDelay(focus));
+        }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         RaycastHit hit;
 
@@ -59,26 +57,25 @@ public class ShootManager : MonoBehaviour
             }
         }
     }
-
-    //private void OnMouseDown()
-    //{
-
-    //}
-
-    private void ToggleAimObjects()
+    IEnumerator ScopeOverlayZoomDelay(bool _focus)
     {
-        if (isAiming)
+        yield return new WaitForSeconds(0.3f);
+
+        if (_focus)
         {
-            pistolAimLook.SetActive(true);
-            pistolNormalLook.SetActive(false);
+            GetComponentInParent<FirstPersonController>().MoveSpeed = 2;
+
+            fpsCam.cullingMask = fpsCam.cullingMask & ~(1 << 11);
+            fpsCam.fieldOfView = 20;
         }
         else
         {
-            pistolAimLook.SetActive(false);
-            pistolNormalLook.SetActive(true);
-        }
+            GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
 
-        isAiming = !isAiming;
+            fpsCam.cullingMask = fpsCam.cullingMask | (1 << 11);
+            fpsCam.fieldOfView = 75;
+        }
+        scopeOverlay.SetActive(_focus);
     }
 
 

@@ -8,16 +8,17 @@ public class WeaponManager : MonoBehaviour
     public GameObject pistol;
     public GameObject rifle;
 
-
+    public ParticleSystem shootVfx;
     float nextTime = 0;
     bool isReloading = false;
 
     AudioSource pistolShootSound;
-
+    ShootManager shootManager;
 
     private void Start()
     {
         pistolShootSound = GetComponent<AudioSource>();
+        shootManager = GetComponent<ShootManager>();
     }
 
 
@@ -52,7 +53,9 @@ public class WeaponManager : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    shootVfx.Play();
                     pistolShootSound.Play();
+                    shootManager.Shoot();
                     _animator.SetTrigger("Fire");
                     nextTime = 0;
                 }
@@ -66,7 +69,9 @@ public class WeaponManager : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    shootVfx.Play();
                     _animator.SetTrigger("Fire");
+                    shootManager.Shoot();
                     nextTime = 0;
                 }
             }
