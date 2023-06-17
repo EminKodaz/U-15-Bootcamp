@@ -32,10 +32,10 @@ Secrets of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan ge
 
 ------------
 # *Sprint1* 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in 100 ile başlaması gerektiğine karar verildi.
+- **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 110 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verdik. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
-- **Sprint board update**: Sprint board screenshotları: ----
+- **Sprint board update**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
 - **Ürün Durumu**: ----
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
   Assetlerin ve ses efektlerinin büyük bir kısmı bulundu.
