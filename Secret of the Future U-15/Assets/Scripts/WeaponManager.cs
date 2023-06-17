@@ -37,8 +37,10 @@ public class WeaponManager : MonoBehaviour
 
         if (isWPressed)
         {
+            _animator.SetBool("isMove", true);
             if (isLeftShiftPressed)
             {
+                Debug.Log("içerdeyim");
                 _animator.SetBool("isMove", false);
                 _animator.SetBool("isRun", true);
             }
@@ -102,6 +104,21 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
+        if (ak47 != null && ak47.activeSelf)
+        {
+            nextTime += Time.deltaTime;
+            if (nextTime >= 2f && !isReloading)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    shootVfx.Play();
+                    _animator.SetTrigger("Fire");
+                    shootManager.Shoot();
+                    nextTime = 0;
+                }
+            }
+        }
+
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -110,6 +127,7 @@ public class WeaponManager : MonoBehaviour
             {
                 pistol.SetActive(true);
                 rifle.SetActive(false);
+                ak47.SetActive(false);
 
             }
         }
@@ -118,6 +136,7 @@ public class WeaponManager : MonoBehaviour
             if (rifle != null)
             {
                 pistol.SetActive(false);
+                ak47.SetActive(false);
                 rifle.SetActive(true);
 
 
@@ -125,7 +144,13 @@ public class WeaponManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            
+            if (ak47 != null)
+            {
+                ak47.SetActive(true);
+                rifle.SetActive(false);
+                pistol.SetActive(false);
+
+            }
         }
 
 
