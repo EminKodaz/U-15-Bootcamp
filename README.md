@@ -25,6 +25,7 @@ Secrets of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan ge
 - Gerçekçilik ve ayrıntılar
 - Dinamik Loot Spawn
 - Özgün hikaye anlatımı
+
 Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta kalma FPS oyunu yapar. Oyunda taktik becerilerinizi kullanırken heyecan verici bir deneyim yaşayabilir ve zorlu koşullarda hayatta kalmak için mücadele edebilirsiniz.
   
 
@@ -39,12 +40,13 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 
 ------------
 # *Sprint1* 
--**Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
-https://trello.com/b/ube9LM4u/u-15-bootcamp
+- **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
+
+   https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verdik. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
-- **Sprint board update**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
+- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
 - **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
   Assetlerin ve ses efektlerinin büyük bir kısmı bulundu.
