@@ -49,22 +49,28 @@
      <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\Scripts\ShootManager.cs" />
      <Compile Include="Assets\Deneme\asdasd.cs" />
+     <Compile Include="Assets\Mountain Terrain\Misc\CameraOrbit.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Models\Enviroment\road_props" />
      <Folder Include="Assets\Anims" />
      <Folder Include="Assets\MuzzleFlash\URP\Materials" />
+     <Folder Include="Assets\Mountain Terrain\Trees\materials" />
      <Folder Include="Assets\MuzzleFlash" />
      <Folder Include="Assets\Textures\bilboard" />
      <Folder Include="Assets\Materials\road_props" />
+     <Folder Include="Assets\Mountain Terrain\Prefab" />
      <Folder Include="Assets\Models\Guns\Pistol" />
      <Folder Include="Assets\CharachterController\FirstPersonController" />
+     <Folder Include="Assets\Mountain Terrain\Misc\Materials" />
      <Folder Include="Assets\Textures\Path" />
      <Folder Include="Assets\Models" />
+     <Folder Include="Assets\Mountain Terrain" />
      <Folder Include="Assets\Materials\table" />
      <Folder Include="Assets\Textures\tower" />
      <Folder Include="Assets\PreFabs" />
      <Folder Include="Assets\Models\Enviroment" />
      <Folder Include="Assets\Anims\Camera" />
+     <Folder Include="Assets\Mountain Terrain\Texture\Materials" />
      <Folder Include="Assets\Textures\road_props\psd" />
      <Folder Include="Assets\CharachterController\InputSystem" />
      <Folder Include="Assets\Sounds" />
@@ -77,14 +83,18 @@
      <Folder Include="Assets\CharachterController" />
      <Folder Include="Assets\Models\Guns" />
      <Folder Include="Assets\Textures\busstop" />
+     <Folder Include="Assets\Mountain Terrain\Trees" />
      <Folder Include="Assets\Textures\road_props" />
+     <Folder Include="Assets\Mountain Terrain\Texture" />
      <Folder Include="Assets\Models\Enviroment\Path" />
+     <Folder Include="Assets\Mountain Terrain\stone_03" />
      <Folder Include="Assets\Textures\RifleTex" />
      <Folder Include="Assets\Models\Guns\Rifle" />
      <Folder Include="Assets\Models\Guns\AK-47\textures" />
      <Folder Include="Assets\Models\Guns\AK-47" />
      <Folder Include="Assets\Deneme" />
      <Folder Include="Assets\MuzzleFlash\BuiltIn" />
+     <Folder Include="Assets\Mountain Terrain\Misc" />
      <Folder Include="Assets\Materials\bilboard" />
      <Folder Include="Assets\Textures" />
      <Folder Include="Assets\Textures\build2" />
@@ -782,6 +792,12 @@
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>E:\Unity\U-15-Bootcamp\Secret of the Future U-15\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TerrainTools">
+     <HintPath>E:\Unity\U-15-Bootcamp\Secret of the Future U-15\Library\ScriptAssemblies\Unity.TerrainTools.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TerrainTools.Editor">
+     <HintPath>E:\Unity\U-15-Bootcamp\Secret of the Future U-15\Library\ScriptAssemblies\Unity.TerrainTools.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
