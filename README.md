@@ -1,5 +1,5 @@
 # *Takım İsmi*
-Unity-15
+Bulletproof Bananas
 ## Takım Elemanları
 -Almina İnce: Scrum Master
 
@@ -9,7 +9,7 @@ Unity-15
 
 -Yusuf Arslan: Developer
 
--Tuğba Acar: Developer
+-Tuğba Acar: Aktif Olmayan Üye
 
 # *Ürün İle İlgili Bilgiler*
 
@@ -21,8 +21,12 @@ https://trello.com/b/ube9LM4u/u-15-bootcamp
 Secrets of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan gelen tuhaf sesler ile uyanması ile başlayan ve ardından radyodan gelen görevler ile birlikte hayatta kalma, keşif ve icat yapmaya dayalı, insanlık için umudu yeniden yeşertmeye çalıştığınız bir FPS Survival oyunudur.
 
 ## Ürün Özellikleri
--
--
+- Hayatta kalma
+- Gerçekçilik ve ayrıntılar
+- Dinamik Loot Spawn
+- Özgün hikaye anlatımı
+Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta kalma FPS oyunu yapar. Oyunda taktik becerilerinizi kullanırken heyecan verici bir deneyim yaşayabilir ve zorlu koşullarda hayatta kalmak için mücadele edebilirsiniz.
+  
 
 ## Hedef Kitle
 -Hikayeli Oyun Severler
@@ -32,11 +36,13 @@ Secrets of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan ge
 
 ------------
 # *Sprint1* 
+-**Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
+https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 110 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verdik. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board update**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
-- **Ürün Durumu**: ----
+- **Ürün Durumu**: 
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
   Assetlerin ve ses efektlerinin büyük bir kısmı bulundu.
   Eksik olunan kısımlar ile ilgili çalışmalar yapıldı. 
