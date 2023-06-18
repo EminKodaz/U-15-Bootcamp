@@ -10,12 +10,18 @@ public class ShootManager : MonoBehaviour
 
     public Camera fpsCam;
     public Animator camAnim;
-    bool focus = false;
+    public bool focus = false;
 
     public bool rifle;
     public bool gun;
     public GameObject scopeOverlay;
+    WeaponManager weaponManager;
 
+
+    private void Start()
+    {
+        weaponManager = GetComponent<WeaponManager>();
+    }
 
     void Update()
     {
@@ -61,7 +67,7 @@ public class ShootManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
 
-        if (_focus)
+        if (_focus && weaponManager.isRifle == true)
         {
             GetComponentInParent<FirstPersonController>().MoveSpeed = 2;
 
@@ -70,13 +76,17 @@ public class ShootManager : MonoBehaviour
         }
         else
         {
-            GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
-
-            fpsCam.cullingMask = fpsCam.cullingMask | (1 << 11);
-            fpsCam.fieldOfView = 75;
+            BackField();
         }
         scopeOverlay.SetActive(_focus);
     }
+    public void BackField()
+    {
+        focus = false;
+        GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
 
+        fpsCam.cullingMask = fpsCam.cullingMask | (1 << 11);
+        fpsCam.fieldOfView = 75;
 
+    }
 }

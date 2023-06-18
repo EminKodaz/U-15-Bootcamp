@@ -15,6 +15,7 @@ public class WeaponManager : MonoBehaviour
 
     AudioSource pistolShootSound;
     ShootManager shootManager;
+    public bool isRifle;
 
     private void Start()
     {
@@ -87,10 +88,12 @@ public class WeaponManager : MonoBehaviour
                     nextTime = 0;
                 }
             }
+            isRifle = false;
         }
 
         if (pistol != null && rifle.activeSelf)
         {
+            isRifle = true;
             nextTime += Time.deltaTime;
             if (nextTime >= 2f && !isReloading)
             {
@@ -106,6 +109,7 @@ public class WeaponManager : MonoBehaviour
 
         if (ak47 != null && ak47.activeSelf)
         {
+            isRifle = false;
             nextTime += Time.deltaTime;
             if (nextTime >= 2f && !isReloading)
             {
@@ -123,6 +127,11 @@ public class WeaponManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            shootManager.focus = false;
+            if (shootManager.scopeOverlay != null)
+            {
+                shootManager.scopeOverlay.SetActive(false);
+            }
             if (pistol != null)
             {
                 pistol.SetActive(true);
@@ -130,9 +139,11 @@ public class WeaponManager : MonoBehaviour
                 ak47.SetActive(false);
 
             }
+            shootManager.BackField();
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            shootManager.focus = false;
             if (rifle != null)
             {
                 pistol.SetActive(false);
@@ -144,6 +155,11 @@ public class WeaponManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            shootManager.focus = false;
+            if (shootManager.scopeOverlay != null)
+            {
+                shootManager.scopeOverlay.SetActive(false);
+            }
             if (ak47 != null)
             {
                 ak47.SetActive(true);
@@ -151,6 +167,7 @@ public class WeaponManager : MonoBehaviour
                 pistol.SetActive(false);
 
             }
+            shootManager.BackField();
         }
 
 
