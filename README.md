@@ -30,8 +30,11 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 
 ## Hedef Kitle
 -Hikayeli Oyun Severler
+
 -FPS Türünü Severler
+
 -Gerilim ve Bilim Kurgu Severler
+
 -Hayatta Kalma Türünde Oyun Severler
 
 ------------
@@ -42,7 +45,7 @@ https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verdik. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board update**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
-- **Ürün Durumu**: 
+- **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
   Assetlerin ve ses efektlerinin büyük bir kısmı bulundu.
   Eksik olunan kısımlar ile ilgili çalışmalar yapıldı. 
