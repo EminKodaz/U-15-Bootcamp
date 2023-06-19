@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponManager : MonoBehaviour
+public abstract class WeaponManager : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-    public GameObject pistol;
-    public GameObject rifle;
-    public GameObject ak47;
+    public Animator _animator;
 
     public ParticleSystem shootVfx;
-    float nextTime = 0;
-    bool isReloading = false;
+    public float nextTime = 0;
+    public bool isReloading = false;
 
-    AudioSource pistolShootSound;
-    ShootManager shootManager;
+    public AudioSource pistolShootSound;
+    public ShootManager shootManager;
     public bool isRifle;
+    public float AttackTime;
+    public bool focusGuns;
+    public Animator camAnim;
+    public Camera fpsCam;
 
     private void Start()
     {
@@ -23,15 +24,31 @@ public class WeaponManager : MonoBehaviour
         shootManager = GetComponent<ShootManager>();
     }
 
+    public abstract void Shoots();
+    public abstract void Focus();
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading) 
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
             isReloading = true;
             StartCoroutine(ReloadDone(2));
             _animator.SetBool("reload", isReloading);
         }
+        nextTime += Time.deltaTime;
+        if (nextTime >= AttackTime && !isReloading)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Shoots();
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Focus();
+        }
+
 
         bool isWPressed = Input.GetKey(KeyCode.W);
         bool isLeftShiftPressed = Input.GetKey(KeyCode.LeftShift);
@@ -57,127 +74,7 @@ public class WeaponManager : MonoBehaviour
             _animator.SetBool("isRun", false);
         }
 
-
-        //if (isWPressed || isAPressed || isSPressed || isDPressed)
-        //{
-        //    _animator.SetBool("isMove", true);
-
-        //}
-        //if (isWPressed && isLeftShiftPressed)
-        //{
-        //    _animator.SetBool("isMove", false);
-        //    _animator.SetBool("isRun", true);
-        //}
-        //else
-        //{
-        //    _animator.SetBool("isMove", false);
-        //    _animator.SetBool("isRun", false);
-        //}
-
-        if (pistol != null && pistol.activeSelf)
-        {
-            nextTime += Time.deltaTime;
-            if (nextTime >= .5f && !isReloading)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    shootVfx.Play();
-                    pistolShootSound.Play();
-                    shootManager.Shoot();
-                    _animator.SetTrigger("Fire");
-                    nextTime = 0;
-                }
-            }
-            isRifle = false;
-        }
-
-        if (pistol != null && rifle.activeSelf)
-        {
-            isRifle = true;
-            nextTime += Time.deltaTime;
-            if (nextTime >= 2f && !isReloading)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    shootVfx.Play();
-                    _animator.SetTrigger("Fire");
-                    shootManager.Shoot();
-                    nextTime = 0;
-                }
-            }
-        }
-
-        if (ak47 != null && ak47.activeSelf)
-        {
-            isRifle = false;
-            nextTime += Time.deltaTime;
-            if (nextTime >= 2f && !isReloading)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    shootVfx.Play();
-                    _animator.SetTrigger("Fire");
-                    shootManager.Shoot();
-                    nextTime = 0;
-                }
-            }
-        }
-
-
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            shootManager.focus = false;
-            if (shootManager.scopeOverlay != null)
-            {
-                shootManager.scopeOverlay.SetActive(false);
-            }
-            if (pistol != null)
-            {
-                pistol.SetActive(true);
-                rifle.SetActive(false);
-                ak47.SetActive(false);
-
-            }
-            shootManager.BackField();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            shootManager.focus = false;
-            if (rifle != null)
-            {
-                pistol.SetActive(false);
-                ak47.SetActive(false);
-                rifle.SetActive(true);
-
-
-            }
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            shootManager.focus = false;
-            if (shootManager.scopeOverlay != null)
-            {
-                shootManager.scopeOverlay.SetActive(false);
-            }
-            if (ak47 != null)
-            {
-                ak47.SetActive(true);
-                rifle.SetActive(false);
-                pistol.SetActive(false);
-
-            }
-            shootManager.BackField();
-        }
-
-
     }
-
-    //IEnumerator ShootDelay(float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //    _animator.SetBool("isShooting", false);
-    //}
 
     IEnumerator ReloadDone(float delay)
     {
@@ -185,10 +82,4 @@ public class WeaponManager : MonoBehaviour
         isReloading = false;
         _animator.SetBool("reload", isReloading);
     }
-
-    //IEnumerator RunChecker(float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-    //    _animator.SetBool("isMove", false);
-    //}
 }
