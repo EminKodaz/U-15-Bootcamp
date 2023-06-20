@@ -17,6 +17,7 @@ public abstract class WeaponManager : MonoBehaviour
     public bool focusGuns;
     public Animator camAnim;
     public Camera fpsCam;
+    public bool InventoryOpenOrClose = false;
 
     private void Start()
     {
@@ -38,13 +39,13 @@ public abstract class WeaponManager : MonoBehaviour
         nextTime += Time.deltaTime;
         if (nextTime >= AttackTime && !isReloading)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false)
             {
                 Shoots();
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && InventoryOpenOrClose == false)
         {
             Focus();
         }
@@ -58,7 +59,6 @@ public abstract class WeaponManager : MonoBehaviour
             _animator.SetBool("isMove", true);
             if (isLeftShiftPressed)
             {
-                Debug.Log("içerdeyim");
                 _animator.SetBool("isMove", false);
                 _animator.SetBool("isRun", true);
             }
