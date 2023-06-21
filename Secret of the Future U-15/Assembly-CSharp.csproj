@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\WeaponChange.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
-    <Compile Include="Assets\Scripts\ZombieAI.cs" />
     <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\ShootManager.cs" />
     <Compile Include="Assets\Scripts\ShootPistol.cs" />
