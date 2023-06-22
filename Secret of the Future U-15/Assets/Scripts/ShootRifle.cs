@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class ShootRifle : WeaponManager
 {
-    public GameObject scopeOverlay;
     public override void Focus()
     {
         focusGuns = !focusGuns;
         camAnim.SetBool("focus", focusGuns);
+        if (focusGuns)
+        {
+            GetComponentInParent<FirstPersonController>().MoveSpeed = 2;
+        }
+        else
+        {
+            GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
+        }
     }
 
     public override void Shoots()
