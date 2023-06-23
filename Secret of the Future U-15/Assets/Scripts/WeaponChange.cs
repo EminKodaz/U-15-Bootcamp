@@ -7,7 +7,11 @@ public class WeaponChange : MonoBehaviour
 {
     public GameObject pistol;
     public GameObject rifle;
+    public GameObject rifleweapon;
+    public GameObject rifleImage;
     public GameObject ak47;
+    public GameObject ak47weapon;
+    public GameObject ak47Image;
 
     public GameObject Inventory;
     bool OpenInventory = false;
@@ -29,9 +33,9 @@ public class WeaponChange : MonoBehaviour
         {
             if (rifle != null && rifleActive == true)
             {
-                pistol.SetActive(false);
                 ak47.SetActive(false);
                 rifle.SetActive(true);
+                pistol.SetActive(false);
             }
             if (ak47 != null && ak47Active == true)
             {
@@ -59,6 +63,18 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<Animator>().enabled = true;
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
             }
+            if (ak47Active == true)
+            {
+                ak47Image.gameObject.SetActive(true);
+                rifleImage.gameObject.SetActive(false);
+
+            }
+            if (rifleActive == true)
+            {
+
+                ak47Image.gameObject.SetActive(false);
+                rifleImage.gameObject.SetActive(true);
+            }
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -75,9 +91,9 @@ public class WeaponChange : MonoBehaviour
         Collider[] Guns = Physics.OverlapSphere(transform.position, radius);
         foreach (var hitCollider in Guns)
         {
-            if (hitCollider.name == "Ak")
+            if (hitCollider.CompareTag("AK"))
             {
-                if (pistolActive == false)
+                if (pistolActive == false && !ak47Active)
                 {
                     rifleActive = false;
                     ak47Active = true;
@@ -85,6 +101,8 @@ public class WeaponChange : MonoBehaviour
                     ak47.SetActive(true);
                     rifle.SetActive(false);
                     pistol.SetActive(false);
+                    Instantiate(rifleweapon, transform.position, transform.rotation);
+                    Destroy(hitCollider.gameObject);
                 }
                 else
                 {
@@ -94,12 +112,13 @@ public class WeaponChange : MonoBehaviour
                     ak47.SetActive(true);
                     rifle.SetActive(false);
                     pistol.SetActive(false);
+                    Destroy(hitCollider.gameObject);
 
                 }
             }
-            if (hitCollider.name == "Rifle")
+            if (hitCollider.CompareTag("RÝFLE"))
             {
-                if (pistolActive == false)
+                if (pistolActive == false && !rifleActive)
                 {
                     rifleActive = true;
                     ak47Active = false;
@@ -107,6 +126,8 @@ public class WeaponChange : MonoBehaviour
                     ak47.SetActive(false);
                     rifle.SetActive(true);
                     pistol.SetActive(false);
+                    Instantiate(ak47weapon, transform.position, transform.rotation);
+                    Destroy(hitCollider.gameObject);
                 }
                 else
                 {
@@ -116,6 +137,7 @@ public class WeaponChange : MonoBehaviour
                     ak47.SetActive(false);
                     rifle.SetActive(true);
                     pistol.SetActive(false);
+                    Destroy(hitCollider.gameObject);
                 }
             }
         }

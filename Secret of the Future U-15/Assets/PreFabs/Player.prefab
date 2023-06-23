@@ -2724,7 +2724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2508593260673612401}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2955,7 +2955,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2673284177004571520}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -5317,7 +5317,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4870754962121360481}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -7223,7 +7223,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6617342789092252482}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -8206,7 +8206,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pistol: {fileID: 8887548947196671822}
   rifle: {fileID: 8887548946387132574}
+  rifleweapon: {fileID: 2885769596065662058, guid: f86f1846b58940449a6fa6b3504c7444, type: 3}
+  rifleImage: {fileID: 0}
   ak47: {fileID: 8887548946128160566}
+  ak47weapon: {fileID: 2860068627011395606, guid: daa13060b5df2d14385a6ba97d5dcb24, type: 3}
+  ak47Image: {fileID: 0}
+  Inventory: {fileID: 0}
+  radius: 2
 --- !u!1 &7884070411867471781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9680,6 +9686,7 @@ MonoBehaviour:
   focusGuns: 0
   camAnim: {fileID: 8617500981785913604}
   fpsCam: {fileID: 8617500981785913605}
+  InventoryOpenOrClose: 0
 --- !u!1 &8887548946387132574
 GameObject:
   m_ObjectHideFlags: 0
@@ -9778,7 +9785,7 @@ MonoBehaviour:
   focusGuns: 0
   camAnim: {fileID: 8617500981140115929}
   fpsCam: {fileID: 8617500981126516329}
-  scopeOverlay: {fileID: 0}
+  InventoryOpenOrClose: 0
 --- !u!1 &8887548947196671822
 GameObject:
   m_ObjectHideFlags: 0
@@ -9991,6 +9998,7 @@ MonoBehaviour:
   focusGuns: 0
   camAnim: {fileID: 8617500981929894884}
   fpsCam: {fileID: 8617500981388206838}
+  InventoryOpenOrClose: 0
 --- !u!1 &9005366531199735940
 GameObject:
   m_ObjectHideFlags: 0
