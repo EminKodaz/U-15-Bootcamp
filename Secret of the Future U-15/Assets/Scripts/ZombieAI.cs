@@ -8,7 +8,6 @@ using UnityEngine.AI;
 public class ZombieAI : MonoBehaviour
 {
     public GameObject target;
-    public Transform player;
     public bool triggered = false;
     NavMeshAgent agent;
     Animator animator;
@@ -28,7 +27,7 @@ public class ZombieAI : MonoBehaviour
         if (triggered)
         {
             transform.LookAt(target.gameObject.transform);
-            agent.destination = player.position;
+            agent.destination = target.transform.position;
         }
 
 
@@ -39,10 +38,8 @@ public class ZombieAI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             animator.SetBool("Scream", true);
-            animator.SetBool("Run", true);
-            Debug.Log("Sa");
 
-
+            StartCoroutine(WaitRun());
         }
     }
 
@@ -55,6 +52,12 @@ public class ZombieAI : MonoBehaviour
             animator.SetBool("Attack", false);
             animator.SetBool("Scream", false);
         }
+    }
+    IEnumerator WaitRun()
+    {
+        yield return new WaitForSeconds(2.5f);
+
+        animator.SetBool("Run", true);
     }
 
 }

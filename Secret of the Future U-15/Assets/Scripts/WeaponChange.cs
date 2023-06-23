@@ -16,9 +16,9 @@ public class WeaponChange : MonoBehaviour
     public GameObject Inventory;
     bool OpenInventory = false;
     [SerializeField] private float radius;
-    bool pistolActive = true;
-    bool rifleActive = false;
-    bool ak47Active = false;
+    public bool pistolActive = true;
+    public bool rifleActive = false;
+    public bool ak47Active = false;
 
     private void Update()
     {
@@ -56,12 +56,16 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<Animator>().enabled = false;
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = true;
                 GetComponentInChildren<WeaponManager>().camAnim.SetBool("focus", false);
+                GetComponentInParent<FirstPersonController>().RotationSpeed = 0;
+                Cursor.lockState = CursorLockMode.Confined;
             }
             else
             {
                 GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
                 GetComponentInChildren<Animator>().enabled = true;
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
+                GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             if (ak47Active == true)
             {

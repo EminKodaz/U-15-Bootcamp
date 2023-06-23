@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338737530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.612, z: 1.371}
+  m_LocalPosition: {x: 0, y: 1.612, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8246,6 +8246,9 @@ MonoBehaviour:
   ak47Image: {fileID: 0}
   Inventory: {fileID: 0}
   radius: 2
+  pistolActive: 1
+  rifleActive: 0
+  ak47Active: 0
 --- !u!114 &8617500981705719567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9646,7 +9649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8078677083538955660
 Transform:
   m_ObjectHideFlags: 0
@@ -9847,7 +9850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8078677084609555956
 Transform:
   m_ObjectHideFlags: 0

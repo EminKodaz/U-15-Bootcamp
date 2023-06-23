@@ -7,36 +7,33 @@ public class ZombieAtacker : MonoBehaviour
 
     public Animator animator;
     public ZombieAI zombieAI;
-    
-    
+    public float radius;
+    Vector3 AttackOverPos;
+    public float AttackOverOffset;
 
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        AttackOverPos = new Vector3(transform.position.x,transform.position.y + AttackOverOffset, transform.position.z);
+        Collider[] solider = Physics.OverlapSphere(AttackOverPos, radius);
+        foreach (var player in solider)
         {
-            animator.SetBool("Attack", true);
-            zombieAI.triggered = false;
+            // player.damage
+            if (player.CompareTag("Player"))
+            {
+                animator.SetBool("Attack", true);
+                zombieAI.triggered = false;
 
+            }
         }
     }
-
-    private void OnTriggerExit(Collider other)
+    private void OnDrawGizmos()
     {
-        if (other.CompareTag("Player"))
-        {
-            animator.SetBool("Attack", false);
-            zombieAI.triggered = true;
-        }
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(AttackOverPos, radius);
     }
 }

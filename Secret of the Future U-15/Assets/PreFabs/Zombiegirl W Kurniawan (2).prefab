@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 546492853}
-  - component: {fileID: 546492855}
   - component: {fileID: 546492854}
   m_Layer: 0
   m_Name: AttackRange
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 4433477870950408042}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &546492855
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546492852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4394994
-  m_Center: {x: 0, y: 0.9394994, z: 0}
 --- !u!114 &546492854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7739097820433483024}
   zombieAI: {fileID: 7925961773350253557}
+  radius: 1.3
+  AttackOverOffset: 1
 --- !u!1 &41643021434868427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1446,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.32306623
-  m_Height: 1.7370081
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: -0.005051613, y: 0.8612447, z: 0}
 --- !u!65 &7925961773350253558
@@ -1472,7 +1460,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 1, z: 10}
+  m_Size: {x: 12, y: 1, z: 12}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7925961773350253557
 MonoBehaviour:
@@ -1486,9 +1474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29454bd29b8f24982986f56123a385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieHealth: 50
   target: {fileID: 0}
-  player: {fileID: 0}
   triggered: 0
 --- !u!195 &6398933169123355645
 NavMeshAgent:

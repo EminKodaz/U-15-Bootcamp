@@ -14,8 +14,9 @@ public class ShootManager : MonoBehaviour
     public void Shoot()
     {
         RaycastHit hit;
+        Vector3 firePos = new Vector3(fpsCam.transform.position.x,fpsCam.transform.position.y,fpsCam.transform.position.z+0.2f);
 
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(firePos, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
 

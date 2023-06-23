@@ -11,15 +11,16 @@ public class PickUp : MonoBehaviour
     private ObjectGrable objectGrables;
     private Animator anim;
     WeaponManager weaponManager;
+    WeaponChange weaponChange;
 
     private void Start()
     {
-        anim = GetComponentInChildren<Animator>();
-        weaponManager = GetComponentInChildren<WeaponManager>();
+        weaponChange = GetComponent<WeaponChange>();
     }
 
     private void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (objectGrables == null)
@@ -29,9 +30,13 @@ public class PickUp : MonoBehaviour
                 {
                     if (raycastHit.transform.TryGetComponent(out objectGrables))
                     {
+                        anim = GetComponentInChildren<Animator>();
+                        weaponManager = GetComponentInChildren<WeaponManager>();
+
                         objectGrables.Grab(objectGrablePoint);
 
                         anim.SetBool("Hold", true);
+
                         weaponManager.InventoryOpenOrClose = true;
 
                     }

@@ -18,11 +18,12 @@ public class EnemyDamage : MonoBehaviour
             animator.SetBool("isDead", true);
             agent.enabled = false;
             zombieAI.enabled = false;
+            Die();
         }
     }
 
     void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject,20f);
     }
 }
