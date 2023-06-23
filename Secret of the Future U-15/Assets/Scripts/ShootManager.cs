@@ -7,6 +7,7 @@ public class ShootManager : MonoBehaviour
 {
     public float pistolDamage = 10f;
     public float range = 100f;
+    
 
     public Camera fpsCam;
 

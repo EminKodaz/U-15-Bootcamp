@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\ShootPistol.cs" />
     <Compile Include="Assets\Scripts\ShootRifle.cs" />
     <Compile Include="Assets\Deneme\asdasd.cs" />
+    <Compile Include="Assets\Scripts\ZombieAI.cs" />
+    <Compile Include="Assets\Scripts\ZombieAtacker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
