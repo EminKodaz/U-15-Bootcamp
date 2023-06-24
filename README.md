@@ -45,7 +45,7 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
    https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
-- **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verdik. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
+- **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
 - **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
@@ -56,7 +56,13 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 -  Görevlerin daha detaylı dağıtılması, proje ekipleri arasındaki iletişimi ve işbirliğini güçlendirecek önemli bir adımdır. Bu şekilde her bir görev, belirlenen hedeflere daha etkili bir şekilde yönelik olarak planlanmıştır.
 -  Kodlama ve oyun geliştirme sürecinde daha verimli bir şekilde çalışarak zamanı daha iyi yönetmek ve oyunun temel özelliklerinin hızla geliştirilmesi için çalışmalar yapılması gerektiğine karar verildi.  
 
-
+# *Sprint2* 
+- **Sprint içinde tamamlanması tahmin edilen puan**:
+- **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
+- **Sprint board updates-screenshots**:
+- **Ürün Durumu**:
+- **Sprint Review**:
+- **Sprint Retrospective**:
 
 
 
