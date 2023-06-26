@@ -82,7 +82,6 @@ public abstract class WeaponManager : MonoBehaviour
             _animator.SetBool("isMove", true);
             if (isLeftShiftPressed)
             {
-                Debug.Log("içerdeyim");
                 _animator.SetBool("isMove", false);
                 _animator.SetBool("isRun", true);
             }

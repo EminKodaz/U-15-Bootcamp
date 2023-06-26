@@ -6,17 +6,32 @@ using UnityEngine.AI;
 public class EnemyDamage : MonoBehaviour
 {
     public float health = 100f;
+    public float radius;
     public Animator animator;
-    public ZombieAI zombieAI;
-    public NavMeshAgent agent;
+    public GameObject HeadPos;
+    ZombieAI zombieAI;
+    NavMeshAgent agent;
+
+    private void Start()
+    {
+        zombieAI = GetComponent<ZombieAI>();
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
+    {
+        Collider[] damage = Physics.OverlapSphere(HeadPos.transform.position, radius);
+
+
+    }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
         if (health <= 0f)
         {
-            animator.SetBool("isDead", true);
             agent.enabled = false;
+            animator.SetBool("isDead", true);
             zombieAI.enabled = false;
             Die();
         }
@@ -25,5 +40,11 @@ public class EnemyDamage : MonoBehaviour
     void Die()
     {
         Destroy(gameObject,20f);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(HeadPos.transform.position, radius);
     }
 }

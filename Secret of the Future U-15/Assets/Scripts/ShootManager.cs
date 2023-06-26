@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ShootManager : MonoBehaviour
 {
-    public float pistolDamage = 10f;
+    public float Damage;
     public float range = 100f;
     public GameObject impactEffect;
     public float impactForce = 30;
@@ -23,7 +23,7 @@ public class ShootManager : MonoBehaviour
 
             if (enemy != null)
             {
-                enemy.TakeDamage(pistolDamage);
+                enemy.TakeDamage(Damage);
             }
 
             if (hit.rigidbody != null)

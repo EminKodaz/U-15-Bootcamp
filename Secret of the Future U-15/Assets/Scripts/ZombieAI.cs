@@ -7,57 +7,58 @@ using UnityEngine.AI;
 
 public class ZombieAI : MonoBehaviour
 {
-    public GameObject target;
-    public bool triggered = false;
-    NavMeshAgent agent;
-    Animator animator;
-
-
+    public float radius = 10f;
+    public NavMeshAgent agent;
+    private Animator animator;
+    private Transform target;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (triggered)
+        Collider[] solider = Physics.OverlapSphere(transform.position, radius);
+        foreach (var player in solider)
         {
-            transform.LookAt(target.gameObject.transform);
-            agent.destination = target.transform.position;
+            // player.damage
+            if (player.CompareTag("Player"))
+            {
+                animator.SetBool("Scream", true);
+                StartCoroutine(ScreamTime(player));
+            }
         }
 
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
         {
-            animator.SetBool("Scream", true);
-
-            StartCoroutine(WaitRun());
+            animator.SetBool("Run", false);
+        }
+        else
+        {
+            animator.SetBool("Run", true);
         }
     }
+    //animator.SetBool("Scream", true);
+    //animator.SetBool("Attack", false);
+    //animator.SetBool("Scream", false);
+    //animator.SetBool("Run", true);
 
-
-    private void OnTriggerExit(Collider other)
+    private void OnDrawGizmos()
     {
-        if (other.CompareTag("Player"))
-        {
-            triggered = true;
-            animator.SetBool("Attack", false);
-            animator.SetBool("Scream", false);
-        }
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
-    IEnumerator WaitRun()
-    {
-        yield return new WaitForSeconds(2.5f);
 
-        animator.SetBool("Run", true);
+    IEnumerator ScreamTime(Collider player)
+    {
+        yield return new WaitForSeconds(2);
+        animator.SetBool("Scream", false);
+        if (agent.isActiveAndEnabled)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 
 }

@@ -2902,7 +2902,7 @@ MonoBehaviour:
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
   CinemachineCameraTarget: {fileID: 7792999159809065770}
   TopClamp: 89
   BottomClamp: -89
@@ -8293,6 +8293,7 @@ GameObject:
   - component: {fileID: 7792999159809065773}
   - component: {fileID: 7792999159809065765}
   - component: {fileID: 8617500981705719567}
+  - component: {fileID: 888650859}
   m_Layer: 0
   m_Name: PlayerCameraRoot
   m_TagString: CinemachineTarget
@@ -8361,6 +8362,19 @@ MonoBehaviour:
   pickUpLayerMask:
     serializedVersion: 2
     m_Bits: 2423
+--- !u!114 &888650859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792999159809065770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c7b994aa3deff43a6ceec0aa9fb4b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &7884070411867471781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9744,7 +9758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8078677083538955660
 Transform:
   m_ObjectHideFlags: 0
@@ -9800,7 +9814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08ccea71943b348b8ae2c9e89cb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistolDamage: 10
+  Damage: 25
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
   impactForce: 100
@@ -9910,7 +9924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08ccea71943b348b8ae2c9e89cb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistolDamage: 10
+  Damage: 50
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
   impactForce: 200
@@ -9966,7 +9980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8078677084609555956
 Transform:
   m_ObjectHideFlags: 0
@@ -10119,7 +10133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08ccea71943b348b8ae2c9e89cb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistolDamage: 10
+  Damage: 10
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
   impactForce: 30
