@@ -11,14 +11,14 @@ public class ShootManager : MonoBehaviour
     public float impactForce = 30;
     public Camera fpsCam;
     public bool rifle = false;
+    public Rigidbody bulletShell;
+    public Transform shellInsPos;
 
     public void Shoot()
     {
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,~LayerMask.GetMask("lens")))
         {
-            Debug.Log(hit.transform.name);
-
             EnemyDamage enemy = hit.transform.GetComponent<EnemyDamage>();
 
             if (enemy != null)
@@ -35,6 +35,12 @@ public class ShootManager : MonoBehaviour
             Destroy(impactGo, .1f);
         }
 
+    }
+
+    public void Shell()
+    {
+        Rigidbody clone = Instantiate(bulletShell, shellInsPos.transform.position,shellInsPos.transform.rotation) as Rigidbody;
+        clone.velocity = transform.right * 5;
     }
 
 }

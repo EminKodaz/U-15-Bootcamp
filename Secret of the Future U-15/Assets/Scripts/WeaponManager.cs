@@ -19,6 +19,10 @@ public abstract class WeaponManager : MonoBehaviour
     public Camera fpsCam;
     public bool InventoryOpenOrClose = false;
     public bool serialAttack = false;
+    public int bulletLength;
+    public int bulletNumber;
+    public bool finishedBullet = false;
+    public float reloadTime;
 
     private void Start()
     {
@@ -31,24 +35,37 @@ public abstract class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && InventoryOpenOrClose == false)
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && InventoryOpenOrClose == false || finishedBullet == true)
         {
             isReloading = true;
-            StartCoroutine(ReloadDone(2));
             _animator.SetBool("reload", isReloading);
+            StartCoroutine(ReloadDone(reloadTime));
+            finishedBullet = false;
+            bulletNumber = bulletLength;
+
         }
         nextTime += Time.deltaTime;
         if (nextTime >= AttackTime && !isReloading)
         {
-            if (Input.GetMouseButton(0) && InventoryOpenOrClose == false && serialAttack == true)
+            if (Input.GetMouseButton(0) && InventoryOpenOrClose == false && serialAttack == true && bulletNumber > 0)
             {
                 Shoots();
                 nextTime = 0;
+                bulletNumber -= 1;
+                if (bulletNumber <= 0)
+                {
+                    finishedBullet = true;
+                }
             }
-            else if(Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false)
+            else if(Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false && bulletNumber > 0)
             {
                 Shoots();
                 nextTime = 0;
+                bulletNumber -= 1;
+                if (bulletNumber <= 0)
+                {
+                    finishedBullet = true;
+                }
             }
         }
 
