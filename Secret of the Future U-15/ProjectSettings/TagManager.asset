@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - AK
   - "R\u0130FLE"
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - ground
   - 
   - weapon
-  - 
-  - 
+  - lens
+  - Camera
   - 
   - 
   - 

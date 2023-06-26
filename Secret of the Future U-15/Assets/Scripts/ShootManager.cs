@@ -10,13 +10,12 @@ public class ShootManager : MonoBehaviour
     public GameObject impactEffect;
     public float impactForce = 30;
     public Camera fpsCam;
+    public bool rifle = false;
 
     public void Shoot()
     {
         RaycastHit hit;
-        Vector3 firePos = new Vector3(fpsCam.transform.position.x,fpsCam.transform.position.y,fpsCam.transform.position.z+0.2f);
-
-        if (Physics.Raycast(firePos, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,~LayerMask.GetMask("lens")))
         {
             Debug.Log(hit.transform.name);
 
@@ -29,12 +28,13 @@ public class ShootManager : MonoBehaviour
 
             if (hit.rigidbody != null)
             {
-                hit.rigidbody.AddForce(-hit.normal* impactForce);
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
-            GameObject impactGo = Instantiate(impactEffect,hit.point,Quaternion.LookRotation(hit.normal));
-            Destroy(impactGo,.3f);
+            GameObject impactGo = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGo, .1f);
         }
+
     }
 
 }

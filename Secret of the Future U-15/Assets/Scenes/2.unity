@@ -2127,5 +2127,25 @@ PrefabInstance:
       propertyPath: rifleImage
       value: 
       objectReference: {fileID: 1575440424}
+    - target: {fileID: 8617500981729103689, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: rifle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617500982695466809, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617500982695466815, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887548946387132574, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887548947196671822, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a687d19507de0d14083785c65e2b375f, type: 3}
