@@ -18,7 +18,9 @@ public class WeaponChange : MonoBehaviour
     [SerializeField] private float radius;
     public bool pistolActive = true;
     public bool rifleActive = false;
+    public bool rifleActiveReceived = false;
     public bool ak47Active = false;
+    public bool ak47ActiveReceived = false;
 
     private void Update()
     {
@@ -36,13 +38,14 @@ public class WeaponChange : MonoBehaviour
                 ak47.SetActive(false);
                 rifle.SetActive(true);
                 pistol.SetActive(false);
+                pistolActive = false;
             }
             if (ak47 != null && ak47Active == true)
             {
                 ak47.SetActive(true);
                 rifle.SetActive(false);
                 pistol.SetActive(false);
-
+                pistolActive = false;
             }
         }
 
@@ -107,6 +110,21 @@ public class WeaponChange : MonoBehaviour
                     pistol.SetActive(false);
                     Instantiate(rifleweapon, transform.position, transform.rotation);
                     Destroy(hitCollider.gameObject);
+                    rifleActiveReceived = false;
+                    ak47ActiveReceived = true;
+                }
+                else if(pistolActive == true && rifleActiveReceived == true)
+                {
+                    rifleActive = false;
+                    ak47Active = true;
+                    pistolActive = false;
+                    ak47.SetActive(true);
+                    rifle.SetActive(false);
+                    pistol.SetActive(false);
+                    Instantiate(rifleweapon, transform.position, transform.rotation);
+                    Destroy(hitCollider.gameObject);
+                    rifleActiveReceived = false;
+                    ak47ActiveReceived = true;
                 }
                 else
                 {
@@ -117,6 +135,8 @@ public class WeaponChange : MonoBehaviour
                     rifle.SetActive(false);
                     pistol.SetActive(false);
                     Destroy(hitCollider.gameObject);
+                    ak47ActiveReceived = true;
+                    rifleActiveReceived = false;
 
                 }
             }
@@ -132,6 +152,21 @@ public class WeaponChange : MonoBehaviour
                     pistol.SetActive(false);
                     Instantiate(ak47weapon, transform.position, transform.rotation);
                     Destroy(hitCollider.gameObject);
+                    ak47ActiveReceived = false;
+                    rifleActiveReceived = true;
+                }
+                else if(pistolActive == true && ak47ActiveReceived == true)
+                {
+                    rifleActive = true;
+                    ak47Active = false;
+                    pistolActive = false;
+                    ak47.SetActive(false);
+                    rifle.SetActive(true);
+                    pistol.SetActive(false);
+                    Instantiate(ak47weapon, transform.position, transform.rotation);
+                    Destroy(hitCollider.gameObject);
+                    ak47ActiveReceived = false;
+                    rifleActiveReceived = true;
                 }
                 else
                 {
@@ -142,6 +177,8 @@ public class WeaponChange : MonoBehaviour
                     rifle.SetActive(true);
                     pistol.SetActive(false);
                     Destroy(hitCollider.gameObject);
+                    rifleActiveReceived = true;
+                    ak47ActiveReceived = false;
                 }
             }
         }

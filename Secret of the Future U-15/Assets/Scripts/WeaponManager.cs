@@ -18,6 +18,7 @@ public abstract class WeaponManager : MonoBehaviour
     public Animator camAnim;
     public Camera fpsCam;
     public bool InventoryOpenOrClose = false;
+    public bool serialAttack = false;
 
     private void Start()
     {
@@ -39,9 +40,15 @@ public abstract class WeaponManager : MonoBehaviour
         nextTime += Time.deltaTime;
         if (nextTime >= AttackTime && !isReloading)
         {
-            if (Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false)
+            if (Input.GetMouseButton(0) && InventoryOpenOrClose == false && serialAttack == true)
             {
                 Shoots();
+                nextTime = 0;
+            }
+            else if(Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false)
+            {
+                Shoots();
+                nextTime = 0;
             }
         }
 
