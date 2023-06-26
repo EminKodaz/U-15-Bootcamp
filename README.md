@@ -57,6 +57,9 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 -  Kodlama ve oyun geliştirme sürecinde daha verimli bir şekilde çalışarak zamanı daha iyi yönetmek ve oyunun temel özelliklerinin hızla geliştirilmesi için çalışmalar yapılması gerektiğine karar verildi.  
 
 # *Sprint2* 
+- **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
+
+  https://trello.com/invite/b/r9QGAqyy/ATTI5dae93c50e42642fa8f2cba176795a120140DEB1/u-15-bootcamp-sprint2
 - **Sprint içinde tamamlanması tahmin edilen puan**:
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
