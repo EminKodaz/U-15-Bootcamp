@@ -41,6 +41,7 @@ public class ShootManager : MonoBehaviour
     {
         Rigidbody clone = Instantiate(bulletShell, shellInsPos.transform.position,shellInsPos.transform.rotation) as Rigidbody;
         clone.velocity = transform.right * 5;
+        Destroy(clone.gameObject,2f);
     }
 
 }

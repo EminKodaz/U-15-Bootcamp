@@ -23,7 +23,6 @@ public abstract class WeaponManager : MonoBehaviour
     public int bulletLength;
     public int bulletNumber;
     public bool finishedBullet = false;
-    public float reloadTime;
     public Text bulletLenghtText;
 
     private void Start()
@@ -37,11 +36,10 @@ public abstract class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && InventoryOpenOrClose == false || finishedBullet == true)
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading || finishedBullet == true)
         {
             isReloading = true;
             _animator.SetBool("reload", isReloading);
-            StartCoroutine(ReloadDone(reloadTime));
             finishedBullet = false;
 
         }
@@ -104,13 +102,10 @@ public abstract class WeaponManager : MonoBehaviour
             bulletLenghtText.text = bulletNumber.ToString() + " / " + bulletLength;
         }
     }
-
-    IEnumerator ReloadDone(float delay)
+    public void ReloadTime()
     {
-        yield return new WaitForSeconds(delay);
         isReloading = false;
-        _animator.SetBool("reload", isReloading);
-
         bulletNumber = bulletLength;
+        _animator.SetBool("reload", isReloading);
     }
 }
