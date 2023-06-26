@@ -1432,10 +1432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  wanderRadius: 5
-  wanderTimer: 5
-  target: {fileID: 0}
-  attacked: 0
+  agent: {fileID: 6398933169123355645}
 --- !u!195 &6398933169123355645
 NavMeshAgent:
   m_ObjectHideFlags: 0
