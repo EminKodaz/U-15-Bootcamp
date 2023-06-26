@@ -2127,5 +2127,17 @@ PrefabInstance:
       propertyPath: rifleImage
       value: 
       objectReference: {fileID: 1575440424}
+    - target: {fileID: 8617500981186474127, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: bulletLenghtText
+      value: 
+      objectReference: {fileID: 879954129}
+    - target: {fileID: 8617500981729103690, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: bulletLenghtText
+      value: 
+      objectReference: {fileID: 1659775013}
+    - target: {fileID: 8887548946128160561, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+      propertyPath: bulletLenghtText
+      value: 
+      objectReference: {fileID: 1227524596}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a687d19507de0d14083785c65e2b375f, type: 3}

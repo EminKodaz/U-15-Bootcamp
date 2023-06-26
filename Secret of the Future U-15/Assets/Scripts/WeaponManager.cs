@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class WeaponManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public abstract class WeaponManager : MonoBehaviour
     public int bulletNumber;
     public bool finishedBullet = false;
     public float reloadTime;
+    public Text bulletLenghtText;
 
     private void Start()
     {
@@ -41,7 +43,6 @@ public abstract class WeaponManager : MonoBehaviour
             _animator.SetBool("reload", isReloading);
             StartCoroutine(ReloadDone(reloadTime));
             finishedBullet = false;
-            bulletNumber = bulletLength;
 
         }
         nextTime += Time.deltaTime;
@@ -98,7 +99,10 @@ public abstract class WeaponManager : MonoBehaviour
             _animator.SetBool("isMove", false);
             _animator.SetBool("isRun", false);
         }
-
+        if (bulletLenghtText != null)
+        {
+            bulletLenghtText.text = bulletNumber.ToString() + " / " + bulletLength;
+        }
     }
 
     IEnumerator ReloadDone(float delay)
@@ -106,5 +110,7 @@ public abstract class WeaponManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         isReloading = false;
         _animator.SetBool("reload", isReloading);
+
+        bulletNumber = bulletLength;
     }
 }
