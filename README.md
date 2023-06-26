@@ -59,8 +59,8 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 # *Sprint2* 
 - **Sprint içinde tamamlanması tahmin edilen puan**:
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
-- **Sprint board updates-screenshots**:
-- **Ürün Durumu**:
+- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
+- **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
 - **Sprint Review**:
 - **Sprint Retrospective**:
 
