@@ -6,9 +6,7 @@ using UnityEngine.AI;
 public class EnemyDamage : MonoBehaviour
 {
     public float health = 100f;
-    public float radius;
     public Animator animator;
-    public GameObject HeadPos;
     ZombieAI zombieAI;
     NavMeshAgent agent;
 
@@ -16,13 +14,6 @@ public class EnemyDamage : MonoBehaviour
     {
         zombieAI = GetComponent<ZombieAI>();
         agent = GetComponent<NavMeshAgent>();
-    }
-
-    private void Update()
-    {
-        Collider[] damage = Physics.OverlapSphere(HeadPos.transform.position, radius);
-
-
     }
 
     public void TakeDamage(float amount)
@@ -40,11 +31,5 @@ public class EnemyDamage : MonoBehaviour
     void Die()
     {
         Destroy(gameObject,20f);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(HeadPos.transform.position, radius);
     }
 }

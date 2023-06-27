@@ -17,9 +17,16 @@ public class ShootManager : MonoBehaviour
     public void Shoot()
     {
         RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range,~LayerMask.GetMask("lens")))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, ~LayerMask.GetMask("lens")))
         {
-            EnemyDamage enemy = hit.transform.GetComponent<EnemyDamage>();
+
+            EnemyDamage enemy = hit.collider.GetComponent<EnemyDamage>();
+            EnemyDamage enemyhead = hit.collider.GetComponentInParent<EnemyDamage>();
+
+            if (hit.collider.name == "AttackHead" && enemyhead != null)
+            {
+                enemyhead.TakeDamage(50);
+            }
 
             if (enemy != null)
             {
@@ -39,9 +46,9 @@ public class ShootManager : MonoBehaviour
 
     public void Shell()
     {
-        Rigidbody clone = Instantiate(bulletShell, shellInsPos.transform.position,shellInsPos.transform.rotation) as Rigidbody;
+        Rigidbody clone = Instantiate(bulletShell, shellInsPos.transform.position, shellInsPos.transform.rotation) as Rigidbody;
         clone.velocity = transform.right * 5;
-        Destroy(clone.gameObject,2f);
+        Destroy(clone.gameObject, 2f);
     }
 
 }

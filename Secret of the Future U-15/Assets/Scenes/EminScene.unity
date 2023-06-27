@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44129148, g: 0.4900921, b: 0.5701455, a: 1}
+  m_IndirectSpecularColor: {r: 0.4412918, g: 0.49009252, b: 0.570146, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -674,10 +674,6 @@ PrefabInstance:
     - target: {fileID: 3948865288371275216, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: m_Name
       value: Zombiegirl W Kurniawan (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3948865288371275216, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4433477870950408042, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: m_RootOrder
