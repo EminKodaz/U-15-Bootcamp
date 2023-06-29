@@ -10,7 +10,8 @@ public class ZombieAI : MonoBehaviour
     public float radius = 10f;
     public NavMeshAgent agent;
     private Animator animator;
-    private Transform target;
+    public Transform target;
+    bool atackStart = false;
 
     void Start()
     {
@@ -27,17 +28,42 @@ public class ZombieAI : MonoBehaviour
             if (player.CompareTag("Player"))
             {
                 animator.SetBool("Scream", true);
-                StartCoroutine(ScreamTime(player));
+                atackStart = true;
             }
+        }
+
+        if (atackStart)
+        {
+            StartCoroutine(ScreamTime());
+        }
+        else
+        {
+
+            SetRandomDestination(); // Yeni bir rastgele hedef belirle
+
         }
 
         if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
         {
-            animator.SetBool("Run", false);
+            if (atackStart)
+            {
+                animator.SetBool("Run", false);
+            }
+            else
+            {
+                animator.SetBool("walk",false);
+            }
         }
         else
         {
-            animator.SetBool("Run", true);
+            if (atackStart)
+            {
+                animator.SetBool("Run", true);
+            }
+            else
+            {
+                animator.SetBool("walk", true);
+            }
         }
     }
     //animator.SetBool("Scream", true);
@@ -51,14 +77,26 @@ public class ZombieAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    IEnumerator ScreamTime(Collider player)
+    IEnumerator ScreamTime()
     {
         yield return new WaitForSeconds(2);
         animator.SetBool("Scream", false);
         if (agent.isActiveAndEnabled)
         {
-            agent.SetDestination(player.transform.position);
+            NavMeshHit hit;
+            NavMesh.SamplePosition(target.position, out hit, 10f, NavMesh.AllAreas);
+            Vector3 finalPosition = hit.position;
+            agent.SetDestination(finalPosition);
         }
+    }
+
+    private void SetRandomDestination()
+    {
+        Vector3 randomPoint = Random.insideUnitSphere * 10f; // Rastgele bir nokta oluþtur
+        NavMeshHit hit;
+        NavMesh.SamplePosition(transform.position + randomPoint, out hit, 10f, NavMesh.AllAreas); // O noktanýn geçerli bir NavMesh alaný içinde olduðunu kontrol et
+        Vector3 finalPosition = hit.position;
+        agent.SetDestination(finalPosition); // NPC'nin hedefi olarak rastgele noktayý ayarla
     }
 
 }

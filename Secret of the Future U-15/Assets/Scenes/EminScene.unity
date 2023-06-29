@@ -257,6 +257,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &520751161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+  m_PrefabInstance: {fileID: 1893170852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &647380341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5818886909523432912, guid: 73cf205b2163a134ebaa4b2639e5d27d, type: 3}
@@ -562,7 +567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.67
+      value: -23.57
       objectReference: {fileID: 0}
     - target: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -570,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.62
+      value: 56.58
       objectReference: {fileID: 0}
     - target: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -671,6 +676,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1607144471, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_Height
+      value: 1.5941563
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607144471, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_Center.y
+      value: 0.82792187
+      objectReference: {fileID: 0}
     - target: {fileID: 3948865288371275216, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: m_Name
       value: Zombiegirl W Kurniawan (2)
@@ -718,6 +731,50 @@ PrefabInstance:
     - target: {fileID: 4433477870950408042, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_BaseOffset
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_Acceleration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: avoidancePriority
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 520751161}
+    - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: waitTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
+      propertyPath: walkSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92cfa6e025d8e640900f28604490261, type: 3}
