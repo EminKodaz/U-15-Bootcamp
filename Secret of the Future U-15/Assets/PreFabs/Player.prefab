@@ -9817,6 +9817,7 @@ MonoBehaviour:
   Damage: 25
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
+  BloodEffect: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
   impactForce: 100
   fpsCam: {fileID: 8617500981785913605}
   rifle: 0
@@ -9927,6 +9928,7 @@ MonoBehaviour:
   Damage: 50
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
+  BloodEffect: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
   impactForce: 200
   fpsCam: {fileID: 8617500981126516329}
   rifle: 1
@@ -10136,6 +10138,7 @@ MonoBehaviour:
   Damage: 10
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
+  BloodEffect: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}
   impactForce: 30
   fpsCam: {fileID: 8617500981388206838}
   rifle: 0

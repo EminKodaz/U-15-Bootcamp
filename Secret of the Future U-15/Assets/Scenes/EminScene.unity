@@ -676,14 +676,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1607144471, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_Height
-      value: 1.5941563
-      objectReference: {fileID: 0}
-    - target: {fileID: 1607144471, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_Center.y
-      value: 0.82792187
-      objectReference: {fileID: 0}
     - target: {fileID: 3948865288371275216, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: m_Name
       value: Zombiegirl W Kurniawan (2)
@@ -732,50 +724,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_Height
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_BaseOffset
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_Acceleration
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: avoidancePriority
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398933169123355645, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: m_AutoTraverseOffMeshLink
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 520751161}
-    - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: waitTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7925961773350253557, guid: c92cfa6e025d8e640900f28604490261, type: 3}
-      propertyPath: walkSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92cfa6e025d8e640900f28604490261, type: 3}
 --- !u!4 &5191527525626744117 stripped

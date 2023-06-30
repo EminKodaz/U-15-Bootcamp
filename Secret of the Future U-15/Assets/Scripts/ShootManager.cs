@@ -8,6 +8,7 @@ public class ShootManager : MonoBehaviour
     public float Damage;
     public float range = 100f;
     public GameObject impactEffect;
+    public GameObject BloodEffect;
     public float impactForce = 30;
     public Camera fpsCam;
     public bool rifle = false;
@@ -38,8 +39,16 @@ public class ShootManager : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
-            GameObject impactGo = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGo, .1f);
+            if (hit.collider.name == "Zombiegirl W Kurniawan (2)")
+            {
+                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGo, .2f);
+            }
+            else
+            {
+                GameObject impactGo = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGo, .1f);
+            }
         }
 
     }
