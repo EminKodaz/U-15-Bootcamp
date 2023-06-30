@@ -26,6 +26,8 @@ public class ShootManager : MonoBehaviour
 
             if (hit.collider.name == "AttackHead" && enemyhead != null)
             {
+                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGo, .2f);
                 enemyhead.TakeDamage(50);
             }
 
