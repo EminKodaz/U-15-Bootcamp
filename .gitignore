@@ -13,6 +13,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+Assets/AssetStoreTools*
 
 # VS/MD specific files
 /*.VisualState.xml
@@ -91,3 +92,7 @@ xcuserdata/
 
 # Visual Studio Code
 .vscode/
+
+# Ignore TerrainSampleAssets
+**/TerrainSampleAssets/
+
