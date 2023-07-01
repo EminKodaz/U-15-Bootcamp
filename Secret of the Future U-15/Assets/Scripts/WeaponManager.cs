@@ -74,21 +74,31 @@ public abstract class WeaponManager : MonoBehaviour
         }
 
 
-        bool isWPressed = Input.GetKey(KeyCode.W);
+        bool isWPressedW = Input.GetKey(KeyCode.W);
+        bool isWPressedA = Input.GetKey(KeyCode.A);
+        bool isWPressedS = Input.GetKey(KeyCode.S);
+        bool isWPressedD = Input.GetKey(KeyCode.D);
         bool isLeftShiftPressed = Input.GetKey(KeyCode.LeftShift);
+        bool isCtrlPressed = Input.GetKey(KeyCode.LeftControl);
 
-        if (isWPressed)
+        if (isWPressedW || isWPressedA || isWPressedS || isWPressedD)
         {
             _animator.SetBool("isMove", true);
             if (isLeftShiftPressed)
             {
                 _animator.SetBool("isMove", false);
                 _animator.SetBool("isRun", true);
+                GetComponentInParent<CharacterController>().height = 2f;
+            }
+            else if(isCtrlPressed)
+            {
+                GetComponentInParent<CharacterController>().height = 1f;
             }
             else
             {
                 _animator.SetBool("isMove", true);
                 _animator.SetBool("isRun", false);
+                GetComponentInParent<CharacterController>().height = 2f;
             }
         }
         else
