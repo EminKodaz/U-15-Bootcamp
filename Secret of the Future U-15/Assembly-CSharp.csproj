@@ -91,10 +91,13 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\CharachterController\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\Scripts\ZombieAtacker.cs" />
+     <Compile Include="Assets\Scripts\SoundLevelScripts\Sound.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Scripts\PickUp.cs" />
+     <Compile Include="Assets\Scripts\SoundLevelScripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\ShootManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\Scripts\SoundLevelScripts\AudioOptionsManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Scripts\ObjectGrable.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
@@ -110,9 +113,6 @@
      <Compile Include="Assets\Deneme\asdasd.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Scripts\SoundLevelScripts\Sound.cs" />
-     <Compile Include="Assets\Scripts\SoundLevelScripts\AudioManager.cs" />
-     <Compile Include="Assets\Scripts\SoundLevelScripts\AudioOptionsManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
      <Folder Include="Assets\BloodDecalsAndEffects\BloodGushFX\Models" />
