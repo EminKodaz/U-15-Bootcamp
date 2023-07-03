@@ -65,7 +65,7 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
 - **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
 - **Sprint Review**: Main menu, gerekli assetlerin toplanması, şehir planlama ve asset yerleşimi, gerekli mekanikler yapıldı.
-- **Sprint Retrospective**: 
+- **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiği, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
 
 
 
