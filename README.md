@@ -60,7 +60,7 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/r9QGAqyy/ATTI5dae93c50e42642fa8f2cba176795a120140DEB1/u-15-bootcamp-sprint2
-- **Sprint içinde tamamlanması tahmin edilen puan**: Sprint boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 130 puan ile devam etmesi gerektiğine karar verildi.
+- **Sprint içinde tamamlanması tahmin edilen puan**: Sprint boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 120 puan ile devam etmesi gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
 - **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
