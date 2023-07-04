@@ -21,12 +21,14 @@ public abstract class WeaponManager : MonoBehaviour
     public bool InventoryOpenOrClose = false;
     public bool serialAttack = false;
     public int TotalBullet;
+    public int CurrentBullet;
     public int bulletNumber;
     public bool finishedBullet = false;
     public Text bulletLenghtText;
 
     private void Start()
     {
+        CurrentBullet = bulletNumber;
         pistolShootSound = GetComponent<AudioSource>();
         shootManager = GetComponent<ShootManager>();
     }
@@ -36,11 +38,10 @@ public abstract class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading || finishedBullet == true)
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && TotalBullet >= CurrentBullet || finishedBullet == true)
         {
             isReloading = true;
             _animator.SetBool("reload", isReloading);
-            TotalBullet -= bulletNumber;
             finishedBullet = false;
 
         }
@@ -52,17 +53,17 @@ public abstract class WeaponManager : MonoBehaviour
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
-                if (bulletNumber <= 0)
+                if (bulletNumber <= 0 && TotalBullet >= CurrentBullet)
                 {
                     finishedBullet = true;
                 }
             }
-            else if(Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false && bulletNumber > 0)
+            else if (Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false && bulletNumber > 0)
             {
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
-                if (bulletNumber <= 0)
+                if (bulletNumber <= 0 && TotalBullet >= CurrentBullet)
                 {
                     finishedBullet = true;
                 }
@@ -91,7 +92,7 @@ public abstract class WeaponManager : MonoBehaviour
                 _animator.SetBool("isRun", true);
                 GetComponentInParent<CharacterController>().height = 2f;
             }
-            else if(isCtrlPressed)
+            else if (isCtrlPressed)
             {
                 GetComponentInParent<CharacterController>().height = 1f;
             }
@@ -115,7 +116,8 @@ public abstract class WeaponManager : MonoBehaviour
     public void ReloadTime()
     {
         isReloading = false;
-        bulletNumber = TotalBullet;
+        bulletNumber = CurrentBullet;
+        TotalBullet -= CurrentBullet;
         _animator.SetBool("reload", isReloading);
     }
 }

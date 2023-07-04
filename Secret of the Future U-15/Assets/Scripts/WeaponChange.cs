@@ -181,6 +181,11 @@ public class WeaponChange : MonoBehaviour
                     ak47ActiveReceived = false;
                 }
             }
+            if (hitCollider.CompareTag("Mag"))
+            {
+                // eklnecek slot kodlarý
+                Destroy(hitCollider.gameObject);
+            }
         }
     }
 }
