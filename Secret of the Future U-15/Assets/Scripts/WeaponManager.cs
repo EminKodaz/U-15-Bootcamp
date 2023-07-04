@@ -20,7 +20,7 @@ public abstract class WeaponManager : MonoBehaviour
     public Camera fpsCam;
     public bool InventoryOpenOrClose = false;
     public bool serialAttack = false;
-    public int bulletLength;
+    public int TotalBullet;
     public int bulletNumber;
     public bool finishedBullet = false;
     public Text bulletLenghtText;
@@ -40,6 +40,7 @@ public abstract class WeaponManager : MonoBehaviour
         {
             isReloading = true;
             _animator.SetBool("reload", isReloading);
+            TotalBullet -= bulletNumber;
             finishedBullet = false;
 
         }
@@ -108,13 +109,13 @@ public abstract class WeaponManager : MonoBehaviour
         }
         if (bulletLenghtText != null)
         {
-            bulletLenghtText.text = bulletNumber.ToString() + " / " + bulletLength;
+            bulletLenghtText.text = bulletNumber.ToString() + " / " + TotalBullet;
         }
     }
     public void ReloadTime()
     {
         isReloading = false;
-        bulletNumber = bulletLength;
+        bulletNumber = TotalBullet;
         _animator.SetBool("reload", isReloading);
     }
 }
