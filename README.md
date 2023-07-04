@@ -60,12 +60,26 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/r9QGAqyy/ATTI5dae93c50e42642fa8f2cba176795a120140DEB1/u-15-bootcamp-sprint2
-- **Sprint içinde tamamlanması tahmin edilen puan**: Sprint boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 120 puan ile devam etmesi gerektiğine karar verildi.
+- **Sprint içinde tamamlanması tahmin edilen puan**: 120
+-  **Puan tamamlama mantığı** Sprint boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 120 puan ile devam etmesi gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
 - **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
 - **Sprint Review**: Main menu, gerekli assetlerin toplanması, şehir planlama ve asset yerleşimi, gerekli mekanikler yapıldı.
 - **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiği, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
+
+# *Sprint3* 
+- **Sprint Notları**:
+
+https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C7/sprint3
+- **Sprint içinde tamamlanması tahmin edilen puan**:
+- **Puan tamamlama mantığı**:
+- **Daily Scrum**:
+- **Sprint boar updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
+- **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
+- **Sprint Review**:
+- **Sprint Retrospective**: 
+
 
 
 
