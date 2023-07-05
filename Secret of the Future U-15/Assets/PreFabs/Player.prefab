@@ -2851,7 +2851,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2277768737943400036}
   - {fileID: 7792999159809065773}
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   SprintSpeed: 6
   RotationSpeed: 1
   SpeedChangeRate: 10
-  JumpHeight: 1.2
+  JumpHeight: 0.8
   Gravity: -15
   JumpTimeout: 0.1
   FallTimeout: 0.15
@@ -8294,6 +8294,7 @@ GameObject:
   - component: {fileID: 7792999159809065765}
   - component: {fileID: 8617500981705719567}
   - component: {fileID: 888650859}
+  - component: {fileID: 740788114}
   m_Layer: 0
   m_Name: PlayerCameraRoot
   m_TagString: CinemachineTarget
@@ -8375,6 +8376,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &740788114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792999159809065770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b08347acae4de4cb96d143969b1abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "\u0130tems": []
+  itemContent: {fileID: 0}
+  "Inventory\u0130tem": {fileID: 2205824066929903922, guid: 1fa4395b4d3a9a34ea19052e811939c4, type: 3}
 --- !u!1 &7884070411867471781
 GameObject:
   m_ObjectHideFlags: 0

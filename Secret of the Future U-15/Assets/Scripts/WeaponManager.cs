@@ -26,6 +26,13 @@ public abstract class WeaponManager : MonoBehaviour
     public bool finishedBullet = false;
     public Text bulletLenghtText;
 
+    public static WeaponManager instanceW;
+
+    private void Awake()
+    {
+        instanceW = this;
+    }
+
     private void Start()
     {
         CurrentBullet = bulletNumber;
@@ -119,5 +126,27 @@ public abstract class WeaponManager : MonoBehaviour
         bulletNumber = CurrentBullet;
         TotalBullet -= CurrentBullet;
         _animator.SetBool("reload", isReloading);
+    }
+
+    public void AddBullet(int id,Item item, GameObject gameObject)
+    {
+        if (id == 2 && GetComponentInParent<WeaponChange>().pistolActive)
+        {
+            TotalBullet += CurrentBullet;
+            InventoryManager.Instance.Remove(item);
+            Destroy(gameObject);
+        }
+        if(id == 1 && GetComponentInParent<WeaponChange>().ak47ActiveReceived)
+        {
+            TotalBullet += CurrentBullet;
+            InventoryManager.Instance.Remove(item);
+            Destroy(gameObject);
+        }
+        if (id == 3 && GetComponentInParent<WeaponChange>().rifleActiveReceived)
+        {
+            TotalBullet += CurrentBullet;
+            InventoryManager.Instance.Remove(item);
+            Destroy(gameObject);
+        }
     }
 }

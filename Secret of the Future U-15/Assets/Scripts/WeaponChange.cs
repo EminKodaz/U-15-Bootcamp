@@ -61,6 +61,8 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<WeaponManager>().camAnim.SetBool("focus", false);
                 GetComponentInParent<FirstPersonController>().RotationSpeed = 0;
                 Cursor.lockState = CursorLockMode.Confined;
+
+                InventoryManager.Instance.ListÝtems();
             }
             else
             {
@@ -183,8 +185,7 @@ public class WeaponChange : MonoBehaviour
             }
             if (hitCollider.CompareTag("Mag"))
             {
-                // eklnecek slot kodlarý
-                Destroy(hitCollider.gameObject);
+                hitCollider.GetComponent<PickUpÝtem>().Pickup();
             }
         }
     }
