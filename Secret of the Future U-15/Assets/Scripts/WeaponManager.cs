@@ -88,7 +88,7 @@ public abstract class WeaponManager : MonoBehaviour
         bool isWPressedS = Input.GetKey(KeyCode.S);
         bool isWPressedD = Input.GetKey(KeyCode.D);
         bool isLeftShiftPressed = Input.GetKey(KeyCode.LeftShift);
-        bool isCtrlPressed = Input.GetKey(KeyCode.LeftControl);
+        bool isCtrlPressed = Input.GetKey(KeyCode.C);
 
         if (isWPressedW || isWPressedA || isWPressedS || isWPressedD)
         {
