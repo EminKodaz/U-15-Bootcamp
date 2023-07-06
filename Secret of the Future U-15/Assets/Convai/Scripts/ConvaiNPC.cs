@@ -150,6 +150,7 @@ public class ConvaiNPC : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 // Start recording audio
+                audioSource.PlayOneShot(audioSource.clip);
                 await grpcAPI.StartRecordAudio(client, isActionActive, recordingFrequency, recordingLength, CharacterID, actionConfig, enableTestMode, testUserQuery);
             }
 
