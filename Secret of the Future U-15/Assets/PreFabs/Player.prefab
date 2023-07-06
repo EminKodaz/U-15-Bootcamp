@@ -8297,7 +8297,7 @@ GameObject:
   - component: {fileID: 740788114}
   m_Layer: 0
   m_Name: PlayerCameraRoot
-  m_TagString: CinemachineTarget
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8391,6 +8391,8 @@ MonoBehaviour:
   "\u0130tems": []
   itemContent: {fileID: 0}
   "Inventory\u0130tem": {fileID: 2205824066929903922, guid: 1fa4395b4d3a9a34ea19052e811939c4, type: 3}
+  "Total\u0130temCount": 4
+  "Current\u0130tem": 0
 --- !u!1 &7884070411867471781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9374,7 +9376,7 @@ GameObject:
   - component: {fileID: 8617500981929894884}
   m_Layer: 0
   m_Name: MainCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9491,13 +9493,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8617500981785913611}
-  m_LocalRotation: {x: -1.4210856e-14, y: -0.00000005960465, z: 0.00000016292074, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2367195, z: -0.07918201}
+  m_LocalRotation: {x: 0.0000000018626449, y: -0.000000059604638, z: 0.00000016391276, w: 1}
+  m_LocalPosition: {x: 0, y: 0.23671897, z: -0.079193115}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677083538955660}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8617500981785913605
 Camera:
@@ -9791,8 +9793,8 @@ Transform:
   - {fileID: 6346591795890404721}
   - {fileID: 1451366090598652962}
   - {fileID: 5732215820053828519}
-  - {fileID: 8617500981785913610}
   - {fileID: 8375648012032671106}
+  - {fileID: 8617500981785913610}
   - {fileID: 1133335773}
   m_Father: {fileID: 7792999159809065773}
   m_RootOrder: 2
@@ -9868,7 +9870,6 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 30
   finishedBullet: 0
-  bulletLenghtText: {fileID: 0}
 --- !u!1 &8887548946387132574
 GameObject:
   m_ObjectHideFlags: 0
@@ -9980,7 +9981,6 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 5
   finishedBullet: 0
-  bulletLenghtText: {fileID: 0}
 --- !u!1 &8887548947196671822
 GameObject:
   m_ObjectHideFlags: 0
@@ -10191,7 +10191,6 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 17
   finishedBullet: 0
-  bulletLenghtText: {fileID: 0}
 --- !u!1 &9005366531199735940
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,7 +10723,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264520514954343661, guid: ab3efdcb3e4feb14d882aa1cac56309f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 264520514954343661, guid: ab3efdcb3e4feb14d882aa1cac56309f, type: 3}
       propertyPath: m_LocalScale.x

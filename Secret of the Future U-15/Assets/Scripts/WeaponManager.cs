@@ -24,7 +24,6 @@ public abstract class WeaponManager : MonoBehaviour
     public int CurrentBullet;
     public int bulletNumber;
     public bool finishedBullet = false;
-    public Text bulletLenghtText;
 
     public static WeaponManager instanceW;
 
@@ -45,7 +44,7 @@ public abstract class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading && TotalBullet >= CurrentBullet || finishedBullet == true)
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && TotalBullet > 0 || finishedBullet == true)
         {
             isReloading = true;
             _animator.SetBool("reload", isReloading);
@@ -60,7 +59,7 @@ public abstract class WeaponManager : MonoBehaviour
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
-                if (bulletNumber <= 0 && TotalBullet >= CurrentBullet)
+                if (bulletNumber <= 0 && TotalBullet > 0)
                 {
                     finishedBullet = true;
                 }
@@ -70,7 +69,7 @@ public abstract class WeaponManager : MonoBehaviour
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
-                if (bulletNumber <= 0 && TotalBullet >= CurrentBullet)
+                if (bulletNumber <= 0 && TotalBullet > 0)
                 {
                     finishedBullet = true;
                 }
@@ -115,16 +114,21 @@ public abstract class WeaponManager : MonoBehaviour
             _animator.SetBool("isMove", false);
             _animator.SetBool("isRun", false);
         }
-        if (bulletLenghtText != null)
-        {
-            bulletLenghtText.text = bulletNumber.ToString() + " / " + TotalBullet;
-        }
     }
     public void ReloadTime()
     {
+        TotalBullet += bulletNumber;
         isReloading = false;
-        bulletNumber = CurrentBullet;
-        TotalBullet -= CurrentBullet;
+        if (TotalBullet >= CurrentBullet)
+        {
+            TotalBullet -= CurrentBullet;
+            bulletNumber = CurrentBullet;
+        }
+        else
+        {
+            bulletNumber = TotalBullet;
+            TotalBullet -= TotalBullet;
+        }
         _animator.SetBool("reload", isReloading);
     }
 

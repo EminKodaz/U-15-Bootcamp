@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RifleMag
   m_EditorClassIdentifier: 
   id: 3
-  itemName: "R\u0130FLEMAG"
+  itemName: 7.62 x 54
   icon: {fileID: 21300000, guid: f497954b739c7ee4eb2e46977aebe222, type: 3}

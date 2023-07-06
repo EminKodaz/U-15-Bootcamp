@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PistolMag
   m_EditorClassIdentifier: 
   id: 2
-  itemName: "P\u0130STOLMAG"
+  itemName: 9 x 19 mm
   icon: {fileID: 21300000, guid: 4237d33d32dd95b4b919d677e2869346, type: 3}

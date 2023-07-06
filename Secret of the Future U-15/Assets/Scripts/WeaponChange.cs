@@ -22,6 +22,12 @@ public class WeaponChange : MonoBehaviour
     public bool ak47Active = false;
     public bool ak47ActiveReceived = false;
 
+    InventoryManager ýnventoryManager;
+    private void Start()
+    {
+        ýnventoryManager = GetComponent<InventoryManager>();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -183,7 +189,7 @@ public class WeaponChange : MonoBehaviour
                     ak47ActiveReceived = false;
                 }
             }
-            if (hitCollider.CompareTag("Mag"))
+            if (hitCollider.CompareTag("Mag") && ýnventoryManager.TotalÝtemCount> ýnventoryManager.CurrentÝtem)
             {
                 hitCollider.GetComponent<PickUpÝtem>().Pickup();
             }

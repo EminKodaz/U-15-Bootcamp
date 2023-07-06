@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
 
     public Transform itemContent;
     public GameObject Inventory›tem;
+    public int Total›temCount = 4;
+    public int Current›tem = 0;
 
     private void Awake()
     {
@@ -18,7 +20,12 @@ public class InventoryManager : MonoBehaviour
 
     public void Add(Item item)
     {
-        ›tems.Add(item);
+        if (Total›temCount > Current›tem)
+        {
+            Current›tem++;
+            ›tems.Add(item);
+
+        }
     }
 
     public void Remove(Item item)
@@ -38,11 +45,13 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(Inventory›tem, itemContent);
             //var itemName = obj.transform.Find("Item/itemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("icon").GetComponent<Image>();
+            var itemName = obj.transform.Find("BulletType").GetComponent<Text>();
             obj.transform.GetComponent<Button›tem>().id = item.id;
             obj.transform.GetComponent<Button›tem>().item = item;
 
             //itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+            itemName.text = item.itemName;
         }
     }
 }

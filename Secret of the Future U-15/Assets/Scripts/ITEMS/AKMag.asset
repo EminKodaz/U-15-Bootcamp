@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AKMag
   m_EditorClassIdentifier: 
   id: 1
-  itemName: AKMAG
+  itemName: 7.62 x  39
   icon: {fileID: 21300000, guid: 8ce9409a8f0443a47ad9da2c6c72baf2, type: 3}
