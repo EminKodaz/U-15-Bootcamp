@@ -24,13 +24,6 @@ public class ShootManager : MonoBehaviour
             EnemyDamage enemy = hit.collider.GetComponent<EnemyDamage>();
             EnemyDamage enemyhead = hit.collider.GetComponentInParent<EnemyDamage>();
 
-            if (hit.collider.name == "AttackHead" && enemyhead != null)
-            {
-                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGo, .2f);
-                enemyhead.TakeDamage(50);
-            }
-
             if (enemy != null)
             {
                 enemy.TakeDamage(Damage);
@@ -41,7 +34,14 @@ public class ShootManager : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
 
-            if (hit.collider.name == "Zombiegirl W Kurniawan (2)")
+
+            if (hit.collider.name == "AttackHead" && enemyhead != null)
+            {
+                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGo, .2f);
+                enemyhead.TakeDamage(50);
+            }
+            else if (hit.collider.name == "Zombiegirl W Kurniawan (2)")
             {
                 GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(impactGo, .2f);
