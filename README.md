@@ -75,7 +75,7 @@ https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C
 - **Sprint içinde tamamlanması tahmin edilen puan**:
 - **Puan tamamlama mantığı**:
 - **Daily Scrum**:
-- **Sprint boar updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
+- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
 - **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
 - **Sprint Review**:
 - **Sprint Retrospective**: 
