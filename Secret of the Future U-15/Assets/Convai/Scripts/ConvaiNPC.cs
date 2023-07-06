@@ -12,7 +12,6 @@ using Service;
 using TMPro;
 
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 // This script uses gRPC for streaming and is a work in progress
 // Edit this script directly to customize your intelligent NPC character
@@ -42,7 +41,7 @@ public class ConvaiNPC : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Animator characterAnimator;
-
+        
     [SerializeField] private TextMeshProUGUI CharacterText;
 
     bool animationPlaying = false;
@@ -74,7 +73,7 @@ public class ConvaiNPC : MonoBehaviour
     }
 
     [SerializeField] private CharacterActionConfig characterActionConfig;
-
+    
     private Channel channel;
     private ConvaiService.ConvaiServiceClient client;
 
@@ -143,13 +142,15 @@ public class ConvaiNPC : MonoBehaviour
         // this block starts and stops audio recording and processing
         if (isCharacterActive)
         {
-
+            
             CharacterText.text = stringCharacterText;
 
             // Start recording when the left control is pressed
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 // Start recording audio
+                audioSource.PlayOneShot(audioSource.clip);
+
                 await grpcAPI.StartRecordAudio(client, isActionActive, recordingFrequency, recordingLength, CharacterID, actionConfig, enableTestMode, testUserQuery);
             }
 

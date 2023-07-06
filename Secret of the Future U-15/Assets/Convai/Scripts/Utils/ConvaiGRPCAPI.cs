@@ -50,7 +50,7 @@ namespace Convai.gRPCAPI
 
         private void Update()
         {
-            //UserText.text = stringUserText;
+            UserText.text = stringUserText;
         }
 
         /// <summary>
