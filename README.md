@@ -69,13 +69,13 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 - **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiği, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
 
 # *Sprint3* 
-- **Sprint Notları**:
+- **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
-https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C7/sprint3
+  https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C7/sprint3
 - **Sprint içinde tamamlanması tahmin edilen puan**:
 - **Puan tamamlama mantığı**:
-- **Daily Scrum**:
-- **Sprint boar updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
+- **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
+- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
 - **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
 - **Sprint Review**:
 - **Sprint Retrospective**: 
