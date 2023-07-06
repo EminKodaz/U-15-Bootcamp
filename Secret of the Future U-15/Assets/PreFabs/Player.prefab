@@ -8389,7 +8389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "\u0130tems": []
-  itemContent: {fileID: 0}
+  itemContentBullet: {fileID: 0}
+  itemContentHealth: {fileID: 0}
   "Inventory\u0130tem": {fileID: 2205824066929903922, guid: 1fa4395b4d3a9a34ea19052e811939c4, type: 3}
   "Total\u0130temCount": 4
   "Current\u0130tem": 0
