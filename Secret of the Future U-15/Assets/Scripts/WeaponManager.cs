@@ -152,5 +152,11 @@ public abstract class WeaponManager : MonoBehaviour
             InventoryManager.Instance.Remove(item);
             Destroy(gameObject);
         }
+
+        if (id == 4)
+        {
+            GetComponentInParent<PlayerHealthManager>().CurrentHealth += 70;
+            GetComponentInParent<PlayerHealthManager>().UpdatedImage(); 
+        }
     }
 }

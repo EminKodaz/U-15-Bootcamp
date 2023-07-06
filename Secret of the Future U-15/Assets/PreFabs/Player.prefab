@@ -8376,6 +8376,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  CurrentHealth: 0
+  hurtImage: {fileID: 0}
+  hurtTimer: 0
+  Camera: {fileID: 8617500981388206836}
+  maxX: 2
+  minX: 1
 --- !u!114 &740788114
 MonoBehaviour:
   m_ObjectHideFlags: 0
