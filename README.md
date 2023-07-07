@@ -14,11 +14,11 @@ Bulletproof Bananas
 # *Ürün İle İlgili Bilgiler*
 
 ## Ürün İsmi
-The Secret of the Future
+Secret of the Future
 ## Product Backlog URL
 https://trello.com/b/ube9LM4u/u-15-bootcamp
 ## Ürün Açıklaması
-Secrets of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan gelen tuhaf sesler ile uyanması ile başlayan ve ardından radyodan gelen görevler ile birlikte hayatta kalma, keşif ve icat yapmaya dayalı, insanlık için umudu yeniden yeşertmeye çalıştığınız bir FPS Survival oyunudur.
+Secret of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan gelen tuhaf sesler ile uyanması ile başlayan ve ardından radyodan gelen görevler ile birlikte hayatta kalma, keşif ve icat yapmaya dayalı, insanlık için umudu yeniden yeşertmeye çalıştığınız bir FPS Survival oyunudur.
 
 ## Ürün Özellikleri
 - Hayatta kalma
