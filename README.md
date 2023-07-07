@@ -44,7 +44,7 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 
    https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 365 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
 - **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
@@ -60,19 +60,19 @@ Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/r9QGAqyy/ATTI5dae93c50e42642fa8f2cba176795a120140DEB1/u-15-bootcamp-sprint2
-- **Sprint içinde tamamlanması tahmin edilen puan**: 120
+- **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
 -  **Puan tamamlama mantığı** Sprint boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 120 puan ile devam etmesi gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
 - **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
 - **Sprint Review**: Main menu, gerekli assetlerin toplanması, şehir planlama ve asset yerleşimi, gerekli mekanikler yapıldı.
-- **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiği, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
+- **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiğine, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
 
 # *Sprint3* 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C7/sprint3
-- **Sprint içinde tamamlanması tahmin edilen puan**:
+- **Sprint içinde tamamlanması tahmin edilen puan**: 110 Puan
 - **Puan tamamlama mantığı**:
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
