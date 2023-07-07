@@ -9,9 +9,9 @@ public class SpawnController : MonoBehaviour
 
     private void Start()
     {
-        foreach (GameObject Sobject in spawnObject)
+        for (int i = 0; i < spawnPoint.Count; i++)
         {
-            Instantiate(Sobject, RandomPoint());
+            Instantiate(SpanObject(), RandomPoint());
         }
     }
 
@@ -27,5 +27,12 @@ public class SpawnController : MonoBehaviour
         Transform pos = spawnPoint[random].transform;
         spawnPoint.RemoveAt(random); // Kullanýlan spawn noktasýný listeden çýkar
         return pos;
+    }
+
+    public GameObject SpanObject()
+    {
+        int random = Random.Range(0, spawnObject.Count);
+        GameObject currentSpawnObject = spawnObject[random];
+        return currentSpawnObject;
     }
 }

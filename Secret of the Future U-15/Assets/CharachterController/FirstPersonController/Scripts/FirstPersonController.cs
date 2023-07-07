@@ -42,6 +42,7 @@ namespace StarterAssets
 		public float GroundedRadius = 0.5f;
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
+		[SerializeField] float fallThresholdVelocity;
 
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -112,9 +113,20 @@ namespace StarterAssets
 
 		private void Update()
 		{
+			bool previousGrounded = Grounded;
+
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
+			if (!previousGrounded && Grounded)
+			{
+				if (_controller.velocity.y < -fallThresholdVelocity)
+				{
+					float damage = Mathf.Abs(_controller.velocity.y + fallThresholdVelocity);
+                    GetComponentInChildren<PlayerHealthManager>().TakeDamage(damage * 0.5f);
+                }
+			}
 		}
 
 		private void LateUpdate()

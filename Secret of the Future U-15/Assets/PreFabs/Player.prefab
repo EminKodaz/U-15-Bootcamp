@@ -2873,7 +2873,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.25
+  m_StepOffset: 0.37
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.93, z: 0}
@@ -2903,6 +2903,7 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 512
+  fallThresholdVelocity: 15
   CinemachineCameraTarget: {fileID: 7792999159809065770}
   TopClamp: 89
   BottomClamp: -89
