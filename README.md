@@ -26,7 +26,7 @@ Secret of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan gel
 - Dinamik Loot Spawn
 - Özgün hikaye anlatımı
 
-Bu özellikler, Secrets of Future'ı gerçekçi, zorlu ve stratejik bir hayatta kalma FPS oyunu yapar. Oyunda taktik becerilerinizi kullanırken heyecan verici bir deneyim yaşayabilir ve zorlu koşullarda hayatta kalmak için mücadele edebilirsiniz.
+Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta kalma FPS oyunu yapar. Oyunda taktik becerilerinizi kullanırken heyecan verici bir deneyim yaşayabilir ve zorlu koşullarda hayatta kalmak için mücadele edebilirsiniz.
   
 
 ## Hedef Kitle
