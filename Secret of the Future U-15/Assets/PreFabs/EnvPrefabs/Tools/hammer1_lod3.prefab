@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 3699448462561830336}
   - component: {fileID: 1767070205038163132}
   - component: {fileID: 5638143669514352808}
+  - component: {fileID: 1602684272656983641}
   m_Layer: 0
   m_Name: hammer1_lod3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3699448462561830336
 Transform:
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1602684272656983641
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473109728164826597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1703659863141956007, guid: 2c19d96d9cd76384eb4a12bffea491c6, type: 3}

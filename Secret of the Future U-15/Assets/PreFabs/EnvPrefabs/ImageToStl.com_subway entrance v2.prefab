@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 886708469329302040}
   - component: {fileID: 2544110006112913525}
   - component: {fileID: 6985526236164515038}
+  - component: {fileID: 2588969714814726170}
   m_Layer: 0
   m_Name: SubwayWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &886708469329302040
 Transform:
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2588969714814726170
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511660860526775430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4135076864755349419, guid: 76cd15c5503b0e6498f3463da794c3c2, type: 3}
 --- !u!1 &1971101890257908136
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,12 +145,13 @@ GameObject:
   - component: {fileID: 7597227058843018387}
   - component: {fileID: 9180155105305252917}
   - component: {fileID: 5491307793278931804}
+  - component: {fileID: 5635264587048227824}
   m_Layer: 0
   m_Name: Subway_steps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7597227058843018387
 Transform:
@@ -202,6 +218,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5635264587048227824
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2286378975653567101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4588689525779430240, guid: 76cd15c5503b0e6498f3463da794c3c2, type: 3}
 --- !u!1 &3481304032858590226
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,12 +243,13 @@ GameObject:
   - component: {fileID: 6694886727018840756}
   - component: {fileID: 5735661453329141975}
   - component: {fileID: 5741214866747100909}
+  - component: {fileID: 8378215181124976058}
   m_Layer: 0
   m_Name: Tubeway Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6694886727018840756
 Transform:
@@ -285,6 +316,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8378215181124976058
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481304032858590226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8290918609369831575, guid: 76cd15c5503b0e6498f3463da794c3c2, type: 3}
 --- !u!1 &3688696629424697805
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,12 +341,13 @@ GameObject:
   - component: {fileID: 6696811608445296432}
   - component: {fileID: 3696159814750519324}
   - component: {fileID: 4909299940593342015}
+  - component: {fileID: 8344198573016478810}
   m_Layer: 0
   m_Name: Subway_ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6696811608445296432
 Transform:
@@ -368,6 +414,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8344198573016478810
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688696629424697805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7187376166720088634, guid: 76cd15c5503b0e6498f3463da794c3c2, type: 3}
 --- !u!1 &4362805383723826753
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,12 +439,13 @@ GameObject:
   - component: {fileID: 2393583448061213350}
   - component: {fileID: 751994242614286377}
   - component: {fileID: 1264608237137257704}
+  - component: {fileID: 5868351070149567409}
   m_Layer: 0
   m_Name: Subway_Rails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2393583448061213350
 Transform:
@@ -451,3 +512,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5868351070149567409
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362805383723826753}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4048180178626700640, guid: 76cd15c5503b0e6498f3463da794c3c2, type: 3}

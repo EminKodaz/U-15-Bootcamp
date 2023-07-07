@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 5341649537044821056}
   - component: {fileID: 1455697507831298230}
   - component: {fileID: 2578594696004162637}
+  - component: {fileID: 2267136838252277688}
   m_Layer: 0
   m_Name: Buil.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5341649537044821056
 Transform:
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2267136838252277688
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004543465768911039}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2308542896899666000, guid: 4e000a4568caa784aac0e81fba89bfe1, type: 3}
 --- !u!1 &7056214696069722290
 GameObject:
   m_ObjectHideFlags: 0

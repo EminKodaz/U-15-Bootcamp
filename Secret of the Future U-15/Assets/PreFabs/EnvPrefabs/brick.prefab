@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3970041929029815903}
   - component: {fileID: 51711736641061370}
   - component: {fileID: 2833679805518804272}
-  - component: {fileID: 7371914088833308112}
+  - component: {fileID: 4102648547610336165}
   m_Layer: 0
   m_Name: brick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3970041929029815903
 Transform:
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7371914088833308112
-CapsuleCollider:
+--- !u!64 &4102648547610336165
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.03714193
-  m_Height: 0.2936829
-  m_Direction: 0
-  m_Center: {x: -0.023854183, y: -0.04816806, z: 0.076794334}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2513384353952080797, guid: 9b0ad9cda656d444c838f2d6b30b3df1, type: 3}
