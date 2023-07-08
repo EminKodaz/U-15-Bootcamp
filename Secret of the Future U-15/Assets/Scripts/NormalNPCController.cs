@@ -1,4 +1,5 @@
 using StarterAssets;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,39 +10,45 @@ public class NormalNPCController : MonoBehaviour
     public float npcMoveSpeed = 2f;
     Animator animator;
 
-    private FirstPersonController fpsController;
-
 
     private bool isFollowingPlayer = false;
     void Start()
     {
         animator = GetComponent<Animator>();
-        fpsController = FindObjectOfType<FirstPersonController>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-        float playerMoveSpeed = fpsController.MoveSpeed;
-        if (Vector3.Distance(transform.position, playerTransform.position) < 2f)
+
+        if (Vector3.Distance(transform.position, playerTransform.position) < 3f)
         {
             Talk();
-            isFollowingPlayer = true;
             animator.SetBool("playerIsHere", true);
+            StartCoroutine(TalkDelay());
         }
+
+        if (Vector3.Distance(transform.position, playerTransform.position) < 1.5f)
+        {
+            isFollowingPlayer = false;
+        }
+
+
+
 
         if (isFollowingPlayer)
         {
+            isFollowingPlayer = true;
             animator.SetBool("followPlayer", true);
-            transform.LookAt(playerTransform); // NPC, oyuncuya doðru yöneliyor
-            transform.Translate(Vector3.forward * npcMoveSpeed * Time.deltaTime); // NPC, oyuncuyu takip ediyor
+            FollowPlayer();
         }
 
-        // Oyuncu kýpýrdamadýðýnda NPC de kýpýrdamayý býrakýyor
-        if (isFollowingPlayer && playerMoveSpeed < 0.1f)
+        if (!isFollowingPlayer)
         {
-            animator.SetBool("followPlayer", false);
+
             isFollowingPlayer = false;
+            animator.SetBool("followPlayer", false);
+            transform.Translate(Vector3.forward * npcMoveSpeed * 0);
         }
 
     }
@@ -54,16 +61,14 @@ public class NormalNPCController : MonoBehaviour
     void FollowPlayer()
     {
         transform.LookAt(playerTransform);
-        transform.Translate(Vector3.forward * npcMoveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * npcMoveSpeed * Time.deltaTime);  
     }
 
-    private void OnTriggerEnter(Collider other)
+    IEnumerator TalkDelay()
     {
-        if (isFollowingPlayer && other.gameObject.CompareTag("Player")) 
-        {
-            isFollowingPlayer = false;
 
-        }
+        yield return new WaitForSeconds(3f);
+        isFollowingPlayer = true;
     }
 
 }

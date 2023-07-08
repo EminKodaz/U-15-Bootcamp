@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1675207933}
-  npcMoveSpeed: 2
+  npcMoveSpeed: 1
 --- !u!1 &1364658223
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,8 +472,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1675207927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2508593260673612401, guid: a687d19507de0d14083785c65e2b375f, type: 3}
+  m_PrefabInstance: {fileID: 975207423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1675207933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
   m_PrefabInstance: {fileID: 975207423}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1675207934
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675207927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: -0.08, y: 1.08, z: 0}
