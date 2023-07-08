@@ -3,18 +3,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NormalNPCController : MonoBehaviour
 {
     public Transform playerTransform;
-    public float npcMoveSpeed = 2f;
     Animator animator;
+    NavMeshAgent agent;
 
 
     private bool isFollowingPlayer = false;
     void Start()
     {
         animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -48,7 +50,7 @@ public class NormalNPCController : MonoBehaviour
 
             isFollowingPlayer = false;
             animator.SetBool("followPlayer", false);
-            transform.Translate(Vector3.forward * npcMoveSpeed * 0);
+            //agent.SetDestination(transform.position);
         }
 
     }
@@ -61,7 +63,7 @@ public class NormalNPCController : MonoBehaviour
     void FollowPlayer()
     {
         transform.LookAt(playerTransform);
-        transform.Translate(Vector3.forward * npcMoveSpeed * Time.deltaTime);  
+        agent.SetDestination(playerTransform.position);
     }
 
     IEnumerator TalkDelay()
