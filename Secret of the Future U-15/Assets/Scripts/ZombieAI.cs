@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class ZombieAI : MonoBehaviour
 {
     public float radius = 10f;
+    public float Soundradius = 20f;
     public NavMeshAgent agent;
     private Animator animator;
     public Transform target;
@@ -26,6 +27,17 @@ public class ZombieAI : MonoBehaviour
         {
             // player.damage
             if (player.CompareTag("Player"))
+            {
+                animator.SetBool("Scream", true);
+                atackStart = true;
+            }
+        }
+
+        Collider[] soliders = Physics.OverlapSphere(transform.position, Soundradius);
+        foreach (var player in soliders)
+        {
+            // player.damage
+            if (player.CompareTag("Player") && player.GetComponentInChildren<WeaponManager>().fire)
             {
                 animator.SetBool("Scream", true);
                 atackStart = true;
@@ -75,6 +87,9 @@ public class ZombieAI : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radius);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, Soundradius);
     }
 
     IEnumerator ScreamTime()

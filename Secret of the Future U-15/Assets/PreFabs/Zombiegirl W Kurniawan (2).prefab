@@ -1445,6 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
+  Soundradius: 25
   agent: {fileID: 6398933169123355645}
   target: {fileID: 0}
 --- !u!195 &6398933169123355645

@@ -26,6 +26,7 @@ public abstract class WeaponManager : MonoBehaviour
     public int CurrentBullet;
     public int bulletNumber;
     public bool finishedBullet = false;
+    public bool fire = false;
 
     public GameObject[] zombies;
     public static WeaponManager instanceW;
@@ -59,6 +60,7 @@ public abstract class WeaponManager : MonoBehaviour
         {
             if (Input.GetMouseButton(0) && InventoryOpenOrClose == false && serialAttack == true && bulletNumber > 0)
             {
+                fire = true;
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
@@ -69,6 +71,7 @@ public abstract class WeaponManager : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(0) && InventoryOpenOrClose == false && serialAttack == false && bulletNumber > 0)
             {
+                fire = true;
                 Shoots();
                 nextTime = 0;
                 bulletNumber -= 1;
@@ -197,5 +200,10 @@ public abstract class WeaponManager : MonoBehaviour
 
             }
         }
+    }
+
+    public void FireFalseChange()
+    {
+        fire = false;
     }
 }
