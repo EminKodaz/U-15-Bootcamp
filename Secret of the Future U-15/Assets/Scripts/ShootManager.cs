@@ -41,7 +41,7 @@ public class ShootManager : MonoBehaviour
                 Destroy(impactGo, .2f);
                 enemyhead.TakeDamage(50);
             }
-            else if (hit.collider.name == "Zombiegirl W Kurniawan (2)")
+            if (hit.collider.tag == "Zombies")
             {
                 GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(impactGo, .2f);

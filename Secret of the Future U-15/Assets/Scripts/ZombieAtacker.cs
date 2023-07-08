@@ -13,6 +13,7 @@ public class ZombieAtacker : MonoBehaviour
     Vector3 AttackOverPos;
     public float AttackOverOffset;
     public GameObject AttackPos;
+    public float speed;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class ZombieAtacker : MonoBehaviour
             else
             {
                 animator.SetBool("Attack", false);
-                zombieAI.agent.speed = 1;
+                zombieAI.agent.speed = speed;
             }
         }
     }

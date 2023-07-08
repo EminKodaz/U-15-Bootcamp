@@ -9878,6 +9878,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 30
   finishedBullet: 0
+  zombies: []
 --- !u!1 &8887548946387132574
 GameObject:
   m_ObjectHideFlags: 0
@@ -9989,6 +9990,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 5
   finishedBullet: 0
+  zombies: []
 --- !u!1 &8887548947196671822
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,6 +10201,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 17
   finishedBullet: 0
+  zombies: []
 --- !u!1 &9005366531199735940
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ TagManager:
   - "R\u0130FLE"
   - FxTemporaire
   - Mag
+  - Character
+  - Zombies
   layers:
   - Default
   - TransparentFX

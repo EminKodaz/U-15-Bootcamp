@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 1607144471}
   m_Layer: 6
   m_Name: Zombiegirl W Kurniawan (2)
-  m_TagString: Untagged
+  m_TagString: Zombies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1500,6 +1500,7 @@ MonoBehaviour:
   Attackradius: 0.2
   AttackOverOffset: 1.2
   AttackPos: {fileID: 8119382240631891114}
+  speed: 1
 --- !u!136 &1607144471
 CapsuleCollider:
   m_ObjectHideFlags: 0

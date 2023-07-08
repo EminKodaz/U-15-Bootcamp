@@ -1,6 +1,8 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public abstract class WeaponManager : MonoBehaviour
@@ -25,6 +27,7 @@ public abstract class WeaponManager : MonoBehaviour
     public int bulletNumber;
     public bool finishedBullet = false;
 
+    public GameObject[] zombies;
     public static WeaponManager instanceW;
 
     private void Awake()
@@ -98,10 +101,6 @@ public abstract class WeaponManager : MonoBehaviour
                 _animator.SetBool("isRun", true);
                 GetComponentInParent<CharacterController>().height = 2f;
             }
-            else if (isCtrlPressed)
-            {
-                GetComponentInParent<CharacterController>().height = 1f;
-            }
             else
             {
                 _animator.SetBool("isMove", true);
@@ -113,6 +112,11 @@ public abstract class WeaponManager : MonoBehaviour
         {
             _animator.SetBool("isMove", false);
             _animator.SetBool("isRun", false);
+        }
+
+        if (isCtrlPressed)
+        {
+            GetComponentInParent<CharacterController>().height = 1f;
         }
     }
     public void ReloadTime()
@@ -132,7 +136,7 @@ public abstract class WeaponManager : MonoBehaviour
         _animator.SetBool("reload", isReloading);
     }
 
-    public void AddBullet(int id,Item item, GameObject gameObject)
+    public void AddBullet(int id, Item item, GameObject gameObject)
     {
         if (id == 2 && GetComponentInParent<WeaponChange>().pistolActive)
         {
@@ -140,7 +144,7 @@ public abstract class WeaponManager : MonoBehaviour
             InventoryManager.Instance.Remove(item);
             Destroy(gameObject);
         }
-        if(id == 1 && GetComponentInParent<WeaponChange>().ak47ActiveReceived)
+        if (id == 1 && GetComponentInParent<WeaponChange>().ak47ActiveReceived)
         {
             TotalBullet += CurrentBullet;
             InventoryManager.Instance.Remove(item);
@@ -156,7 +160,42 @@ public abstract class WeaponManager : MonoBehaviour
         if (id == 4)
         {
             GetComponentInParent<PlayerHealthManager>().CurrentHealth += 70;
-            GetComponentInParent<PlayerHealthManager>().UpdatedImage(); 
+            GetComponentInParent<PlayerHealthManager>().UpdatedImage();
+            InventoryManager.Instance.Remove(item);
+            Destroy(gameObject);
+        }
+
+
+
+        if (id == 5)
+        {
+            zombies = GameObject.FindGameObjectsWithTag("Zombies");
+
+            foreach (var zombi in zombies)
+            {
+                zombi.GetComponent<ZombieAtacker>().speed = 0.5f;
+                GetComponentInParent<FirstPersonController>().MoveSpeed = 6;
+            }
+
+
+            InventoryManager.Instance.Remove(item);
+            StartCoroutine(BackSpeedZombies(zombies));
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator BackSpeedZombies(GameObject[] zombies)
+    {
+        yield return new WaitForSeconds(5);
+
+        foreach (var zombi in zombies)
+        {
+            if (zombi != null)
+            {
+                zombi.GetComponent<ZombieAtacker>().speed = 1f;
+                GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
+
+            }
         }
     }
 }
