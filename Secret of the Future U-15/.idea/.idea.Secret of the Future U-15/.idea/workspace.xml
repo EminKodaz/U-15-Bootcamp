@@ -8,7 +8,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gamma.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundLevelScripts/AudioOptionsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundLevelScripts/Sound.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -70,6 +69,7 @@
       <updated>1687779093176</updated>
       <workItem from="1687779103214" duration="1920000" />
       <workItem from="1688375651925" duration="5218000" />
+      <workItem from="1688844082503" duration="1720000" />
     </task>
     <servers />
   </component>
