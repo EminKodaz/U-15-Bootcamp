@@ -8341,6 +8341,7 @@ MonoBehaviour:
   ak47weapon: {fileID: 2860068627011395606, guid: daa13060b5df2d14385a6ba97d5dcb24, type: 3}
   ak47Image: {fileID: 0}
   Inventory: {fileID: 0}
+  OpenInventory: 0
   radius: 2
   pistolActive: 1
   rifleActive: 0
@@ -9878,6 +9879,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 30
   finishedBullet: 0
+  fire: 0
   zombies: []
 --- !u!1 &8887548946387132574
 GameObject:
@@ -9990,6 +9992,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 5
   finishedBullet: 0
+  fire: 0
   zombies: []
 --- !u!1 &8887548947196671822
 GameObject:
@@ -10201,6 +10204,7 @@ MonoBehaviour:
   CurrentBullet: 0
   bulletNumber: 17
   finishedBullet: 0
+  fire: 0
   zombies: []
 --- !u!1 &9005366531199735940
 GameObject:

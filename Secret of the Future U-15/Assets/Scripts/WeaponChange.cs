@@ -14,7 +14,7 @@ public class WeaponChange : MonoBehaviour
     public GameObject ak47Image;
 
     public GameObject Inventory;
-    bool OpenInventory = false;
+    public bool OpenInventory = false;
     [SerializeField] private float radius;
     public bool pistolActive = true;
     public bool rifleActive = false;

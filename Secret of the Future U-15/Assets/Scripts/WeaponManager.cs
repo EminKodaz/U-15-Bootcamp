@@ -98,7 +98,7 @@ public abstract class WeaponManager : MonoBehaviour
         if (isWPressedW || isWPressedA || isWPressedS || isWPressedD)
         {
             _animator.SetBool("isMove", true);
-            if (isLeftShiftPressed)
+            if (isLeftShiftPressed && GetComponentInParent<WeaponChange>().OpenInventory == false)
             {
                 _animator.SetBool("isMove", false);
                 _animator.SetBool("isRun", true);
