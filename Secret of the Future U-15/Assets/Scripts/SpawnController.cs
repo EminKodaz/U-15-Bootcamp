@@ -11,7 +11,7 @@ public class SpawnController : MonoBehaviour
     {
         for (int i = 0; i < spawnPoint.Count; i++)
         {
-            Instantiate(SpanObject(), RandomPoint());
+            Instantiate(SpanObject(), RandomPoint().position,Quaternion.identity);
         }
     }
 
