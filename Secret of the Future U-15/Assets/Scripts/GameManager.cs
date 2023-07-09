@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject PauseObject;
 
     public bool open;
+    public bool isFollowingDad = false;
 
     public static GameManager instance;
 

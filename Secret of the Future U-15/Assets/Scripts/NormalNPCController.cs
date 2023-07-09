@@ -8,8 +8,10 @@ using UnityEngine.AI;
 public class NormalNPCController : MonoBehaviour
 {
     public Transform playerTransform;
+    public Transform DadTransform;
     Animator animator;
     NavMeshAgent agent;
+    bool dad;
 
 
     private bool isFollowingPlayer = false;
@@ -23,7 +25,12 @@ public class NormalNPCController : MonoBehaviour
     void Update()
     {
 
-        if (Vector3.Distance(transform.position, playerTransform.position) < 3f)
+        if (GameManager.instance.isFollowingDad == true)
+        {
+            ChangeTarget();
+        }
+
+        if (Vector3.Distance(transform.position, playerTransform.position) < 3f && !dad)
         {
             Talk();
             animator.SetBool("playerIsHere", true);
@@ -38,19 +45,19 @@ public class NormalNPCController : MonoBehaviour
 
 
 
-        if (isFollowingPlayer)
+        if (isFollowingPlayer && !dad)
         {
             isFollowingPlayer = true;
-            animator.SetBool("followPlayer", true);
             FollowPlayer();
         }
 
-        if (!isFollowingPlayer)
+        if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
         {
-
-            isFollowingPlayer = false;
             animator.SetBool("followPlayer", false);
-            //agent.SetDestination(transform.position);
+        }
+        else
+        {
+            animator.SetBool("followPlayer", true);
         }
 
     }
@@ -71,6 +78,13 @@ public class NormalNPCController : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         isFollowingPlayer = true;
+    }
+
+    public void ChangeTarget()
+    {
+        agent.SetDestination(DadTransform.position);
+        dad = true;
+        isFollowingPlayer = false;
     }
 
 }

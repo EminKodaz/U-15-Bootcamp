@@ -12,6 +12,7 @@ TagManager:
   - Character
   - Zombies
   - GameLoad
+  - HumanHome
   layers:
   - Default
   - TransparentFX

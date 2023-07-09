@@ -8,12 +8,26 @@ public class LoadSceneManager : MonoBehaviour
 {
     public GameObject LoadScene;
     public Image LoadingFillImage;
-
+    public GameObject Menu;
+    public GameObject MenuBG;
+    public GameObject ButtonBG;
+    public GameObject ButtonStartBG;
+    bool open;
     public static LoadSceneManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            open = !open;
+            Resume(open);
+        }
     }
 
     public void LoadScenes(int Scene›d)
@@ -36,6 +50,22 @@ public class LoadSceneManager : MonoBehaviour
             LoadingFillImage.fillAmount = progressValue;
 
             yield return null;
+        }
+    }
+
+    public void Resume(bool open)
+    {
+        Menu.SetActive(open);
+        MenuBG.SetActive(open);
+        ButtonBG.SetActive(open);
+        ButtonStartBG.SetActive(false);
+        if (open)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
