@@ -1,14 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void StartGame()
+    private void Start()
     {
-        //SceneManager.LoadScene("kaanScene")
-        Debug.Log("Game Started");
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    public void StartGameOrCrdeits(int Scene›D)
+    {
+        SceneManager.LoadScene(Scene›D);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -16,12 +19,6 @@ public class MainMenu : MonoBehaviour
     {
         //Application.Quit();
         Debug.Log("Game Quit");
-    }
-
-    public void Credits()
-    {
-        //SceneManager.LoadScene("Credits");
-        Debug.Log("Credits");
     }
 }
 

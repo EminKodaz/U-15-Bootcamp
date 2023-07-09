@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    public GameObject PressText;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        PressText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,5 +26,21 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         gameObject.transform.Translate(speed / 10 * horizontal, 0.0f, speed / 10 * vertical);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("GameLoad"))
+        {
+            PressText.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("GameLoad"))
+        {
+            PressText.SetActive(false);
+        }
     }
 }

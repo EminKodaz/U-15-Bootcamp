@@ -32,6 +32,7 @@ public class ZombieAI : MonoBehaviour
         }
 
         Collider[] soliders = Physics.OverlapSphere(transform.position, Soundradius);
+        bool foundPlayer = false;
         foreach (var player in soliders)
         {
             // player.damage
@@ -39,18 +40,27 @@ public class ZombieAI : MonoBehaviour
             {
                 animator.SetBool("Scream", true);
                 atackStart = true;
+                foundPlayer = true;
+                agent.enabled = true;
+                break;
             }
+            else if(player.CompareTag("Player"))
+            {
+                foundPlayer = true;
+                agent.enabled = true;
+                SetRandomDestination();
+                break;
+            }
+        }
+
+        if (!foundPlayer && !atackStart)
+        {
+            agent.enabled = false;
         }
 
         if (atackStart)
         {
             StartCoroutine(ScreamTime());
-        }
-        else
-        {
-
-            SetRandomDestination(); // Yeni bir rastgele hedef belirle
-
         }
 
         if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
@@ -61,7 +71,7 @@ public class ZombieAI : MonoBehaviour
             }
             else
             {
-                animator.SetBool("walk",false);
+                animator.SetBool("walk", false);
             }
         }
         else
@@ -110,6 +120,7 @@ public class ZombieAI : MonoBehaviour
         NavMesh.SamplePosition(transform.position + randomPoint, out hit, 10f, NavMesh.AllAreas); // O noktanýn geçerli bir NavMesh alaný içinde olduðunu kontrol et
         Vector3 finalPosition = hit.position;
         agent.SetDestination(finalPosition); // NPC'nin hedefi olarak rastgele noktayý ayarla
+
     }
 
 }
