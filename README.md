@@ -1,7 +1,15 @@
-# -Oyun ve Uygulama Akademisi U-15 BOOTCAMP 2023 Projesi-
+# -Oyun ve Uygulama Akademisi U-15 BOOTCAMP Projesi
+
+
+
+
+
+
+
 
 # *Takım İsmi*
-Bulletproof Bananas
+![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/66da432e-ad21-42f0-8e65-0ebb52328f15)
+   
 ## Takım Elemanları
 -Almina İnce: Scrum Master
 
@@ -16,7 +24,8 @@ Bulletproof Bananas
 # *Ürün İle İlgili Bilgiler*
 
 ## Ürün İsmi
-Secret of the Future
+  ![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/81e66509-c303-4757-bdfb-e898815dd3f4)
+
 ## Product Backlog URL
 https://trello.com/b/ube9LM4u/u-15-bootcamp
 ## Ürün Açıklaması
