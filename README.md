@@ -1,3 +1,5 @@
+# Oyun ve Uygulama Akademisi U-15 BOOTCAMP 2023 Projesi 
+
 # *Takım İsmi*
 Bulletproof Bananas
 ## Takım Elemanları
@@ -77,7 +79,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
 - **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
-- **Sprint Review**:
+- **Sprint Review**: 
 - **Sprint Retrospective**: 
 
 
