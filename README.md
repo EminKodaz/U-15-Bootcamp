@@ -1,4 +1,4 @@
-# Oyun ve Uygulama Akademisi U-15 BOOTCAMP 2023 Projesi 
+# -Oyun ve Uygulama Akademisi U-15 BOOTCAMP 2023 Projesi-
 
 # *Takım İsmi*
 Bulletproof Bananas
