@@ -4524,7 +4524,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677084609555956}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2411198721269591582
 SkinnedMeshRenderer:
@@ -5286,7 +5286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677084609555956}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -136.66699, y: 55.730003, z: -57.38098}
 --- !u!137 &4035343070603989527
 SkinnedMeshRenderer:
@@ -6397,7 +6397,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677084609555956}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &822337457883393060
 SkinnedMeshRenderer:
@@ -8345,9 +8345,7 @@ MonoBehaviour:
   radius: 2
   pistolActive: 1
   rifleActive: 0
-  rifleActiveReceived: 0
   ak47Active: 0
-  ak47ActiveReceived: 0
 --- !u!114 &8617500981705719567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8785,7 +8783,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677084609555956}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &406952578891994928
 SkinnedMeshRenderer:
@@ -9398,12 +9396,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8617500981388206837}
   m_LocalRotation: {x: -0.017965091, y: -0.05647767, z: 0.048317604, w: 0.9970722}
-  m_LocalPosition: {x: -0.017289357, y: 0.23971793, z: -0.022414254}
+  m_LocalPosition: {x: -0.017288934, y: 0.2397181, z: -0.02241406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8078677084609555956}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &8617500981388206838
 Camera:
@@ -9429,7 +9427,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 10
@@ -10027,11 +10025,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 913649441562852714}
+  - {fileID: 8617500981388206836}
   - {fileID: 6346591794811407625}
   - {fileID: 3840627315884961554}
   - {fileID: 2059709642872042653}
   - {fileID: 2972021422788182281}
-  - {fileID: 8617500981388206836}
   - {fileID: 8375648012115556080}
   - {fileID: 1308679258}
   m_Father: {fileID: 7792999159809065773}

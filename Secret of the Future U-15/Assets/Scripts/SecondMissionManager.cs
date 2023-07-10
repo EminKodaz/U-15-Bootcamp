@@ -5,6 +5,8 @@ using UnityEngine;
 public class SecondMissionManager : MonoBehaviour
 {
     public Animator dadAnim;
+    public GameObject Rifle;
+    [SerializeField] private Transform InstateRiflePosition;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +14,7 @@ public class SecondMissionManager : MonoBehaviour
         {
             GameManager.instance.isFollowingDad = true;
             dadAnim.SetBool("Sit",true);
+            Instantiate(Rifle,InstateRiflePosition);
         }
     }
 }

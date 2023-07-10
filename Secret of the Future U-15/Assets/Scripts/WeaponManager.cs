@@ -147,13 +147,13 @@ public abstract class WeaponManager : MonoBehaviour
             InventoryManager.Instance.Remove(item);
             Destroy(gameObject);
         }
-        if (id == 1 && GetComponentInParent<WeaponChange>().ak47ActiveReceived)
+        if (id == 1 && GetComponentInParent<WeaponChange>().ak47Active)
         {
             TotalBullet += CurrentBullet;
             InventoryManager.Instance.Remove(item);
             Destroy(gameObject);
         }
-        if (id == 3 && GetComponentInParent<WeaponChange>().rifleActiveReceived)
+        if (id == 3 && GetComponentInParent<WeaponChange>().rifleActive)
         {
             TotalBullet += CurrentBullet;
             InventoryManager.Instance.Remove(item);
