@@ -14,6 +14,7 @@ TagManager:
   - GameLoad
   - HumanHome
   - HumanOffice
+  - grass
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - weapon
   - lens
   - Camera
-  - 
+  - subway
   - 
   - 
   - 
