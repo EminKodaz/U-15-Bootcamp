@@ -218,6 +218,7 @@
     <None Include="Assets\Convai\Plugins\Microsoft.Extensions.Logging.Abstractions\Microsoft.Extensions.Logging.Abstractions.dll" />
     <None Include="Assets\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Leaves_301.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Abandoned_Asylum\Read_me.txt" />
     <None Include="Assets\Convai\Plugins\System.Diagnostics.DiagnosticSource\System.Diagnostics.DiagnosticSource.dll" />
     <None Include="Assets\Convai\Plugins\Grpc.Core\runtimes\win\x64\grpc_csharp_ext.dll" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
