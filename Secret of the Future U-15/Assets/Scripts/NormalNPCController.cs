@@ -1,7 +1,4 @@
-using StarterAssets;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,7 +9,7 @@ public class NormalNPCController : MonoBehaviour
     Animator animator;
     NavMeshAgent agent;
     bool dad;
-
+    public GameObject MissionText;
 
     private bool isFollowingPlayer = false;
     void Start()
@@ -30,11 +27,19 @@ public class NormalNPCController : MonoBehaviour
             ChangeTarget();
         }
 
-        if (Vector3.Distance(transform.position, playerTransform.position) < 3f && !dad)
+        if (Vector3.Distance(transform.position, playerTransform.position) < 3f && !dad && GameManager.instance.MissionFirst == true)
         {
             Talk();
             animator.SetBool("playerIsHere", true);
             StartCoroutine(TalkDelay());
+        }
+        else if (Vector3.Distance(transform.position, playerTransform.position) < 3f && !dad && GameManager.instance.MissionFirst == false)
+        {
+            MissionText.SetActive(true);
+        }
+        else
+        {
+            MissionText.SetActive(false);
         }
 
         if (Vector3.Distance(transform.position, playerTransform.position) < 1.5f)
@@ -49,6 +54,7 @@ public class NormalNPCController : MonoBehaviour
         {
             isFollowingPlayer = true;
             FollowPlayer();
+
         }
 
         if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool isFollowingDad = false;
 
     public static GameManager instance;
+    public bool MissionFirst = false, MissionSecond = false, MissionThird = false;
 
     private void Awake()
     {

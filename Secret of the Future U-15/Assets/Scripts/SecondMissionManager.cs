@@ -10,11 +10,21 @@ public class SecondMissionManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && GameManager.instance.MissionSecond == false && GameManager.instance.MissionFirst == true)
         {
             GameManager.instance.isFollowingDad = true;
-            dadAnim.SetBool("Sit",true);
-            Instantiate(Rifle,InstateRiflePosition);
+            if (dadAnim != null && Rifle != null && InstateRiflePosition != null)
+            {
+                dadAnim.SetBool("Sit", true);
+                Instantiate(Rifle, InstateRiflePosition);
+
+            }
+            GameManager.instance.MissionSecond = true;
+        }
+
+        if (other.gameObject.CompareTag("Player") && GameManager.instance.MissionFirst == false)
+        {
+            Debug.Log("görev start");
         }
     }
 }

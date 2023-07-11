@@ -13,6 +13,7 @@ TagManager:
   - Zombies
   - GameLoad
   - HumanHome
+  - HumanOffice
   layers:
   - Default
   - TransparentFX
