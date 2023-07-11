@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7587341401524483202}
   - component: {fileID: 6837727965752867623}
   - component: {fileID: 8719120690909073389}
-  - component: {fileID: 4452374588180018173}
+  - component: {fileID: 8668193473705946197}
   m_Layer: 0
   m_Name: oldcarwreck
   m_TagString: Untagged
@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7061774382112927288}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 724.96533, y: 9.91, z: 841.33}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.5, y: 1.5000001, z: 1.5000001}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &6837727965752867623
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4452374588180018173
-MeshCollider:
+--- !u!65 &8668193473705946197
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9186633843763367028, guid: 08a95e975005d0e47a8c24b92ad25a33, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.8109032, y: 4.620925, z: 1.4526068}
+  m_Center: {x: 0, y: 0.0074638147, z: 0.9148307}
