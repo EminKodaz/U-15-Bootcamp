@@ -37,19 +37,16 @@ public class ShootManager : MonoBehaviour
 
             if (hit.collider.name == "AttackHead" && enemyhead != null)
             {
-                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGo, .2f);
+                StartCoroutine(ImpactEffectDelay(hit,BloodEffect));
                 enemyhead.TakeDamage(50);
             }
             if (hit.collider.tag == "Zombies")
             {
-                GameObject impactGo = Instantiate(BloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGo, .2f);
+                StartCoroutine(ImpactEffectDelay(hit, BloodEffect));
             }
             else
             {
-                GameObject impactGo = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGo, .1f);
+                StartCoroutine(ImpactEffectDelay(hit, impactEffect));
             }
         }
 
@@ -60,6 +57,14 @@ public class ShootManager : MonoBehaviour
         Rigidbody clone = Instantiate(bulletShell, shellInsPos.transform.position, shellInsPos.transform.rotation) as Rigidbody;
         clone.velocity = transform.right * 5;
         Destroy(clone.gameObject, 2f);
+    }
+
+    IEnumerator ImpactEffectDelay(RaycastHit hit,GameObject effect)
+    {
+        yield return new WaitForSeconds(0.2f);
+        GameObject impactGo = Instantiate(effect, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(impactGo, .2f);
+
     }
 
 }
