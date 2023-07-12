@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2005632125269590790}
   - component: {fileID: 3205072408948067491}
   - component: {fileID: 837180342586685545}
-  - component: {fileID: 960121114849500486}
+  - component: {fileID: 9156528702418274497}
   m_Layer: 0
   m_Name: SleepingBag
   m_TagString: Untagged
@@ -26,10 +26,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197604996581824956}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13464585, y: -0.15269999, z: -0.31160012}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &960121114849500486
-MeshCollider:
+--- !u!65 &9156528702418274497
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4493585093827132993, guid: 9591d2b93515d514f9e24c1fec6472d2, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.010022103, y: 0.00139662, z: 0.020000005}
+  m_Center: {x: -0.00000023841858, y: 0.00000008940697, z: 0}
