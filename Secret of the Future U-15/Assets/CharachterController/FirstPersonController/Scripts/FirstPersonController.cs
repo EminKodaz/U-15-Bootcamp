@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -51,7 +52,6 @@ namespace StarterAssets
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
-
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -118,6 +118,15 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
+			if (_controller.velocity.x != 0 && _controller.velocity.z != 0 && _controller.velocity.y < 0.5f)
+			{
+				GetComponent<FootSteps>().Footstep(true);
+            }
+			else
+			{
+                GetComponent<FootSteps>().Footstep(false);
+            }
 
 			if (!previousGrounded && Grounded)
 			{
@@ -204,6 +213,7 @@ namespace StarterAssets
 			{
 				// move
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+				
 			}
 
 			// move the player

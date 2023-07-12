@@ -68,8 +68,13 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<WeaponManager>().camAnim.SetBool("focus", false);
                 GetComponentInParent<FirstPersonController>().RotationSpeed = 0;
                 Cursor.lockState = CursorLockMode.Confined;
+                GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
+                hurtýmage.SetActive(false);
 
-                InventoryManager.Instance.ListÝtems();
+                if (InventoryManager.Instance != null)
+                {
+                    InventoryManager.Instance.ListÝtems();
+                }
             }
             else
             {
@@ -78,6 +83,8 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
                 GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
                 Cursor.lockState = CursorLockMode.Locked;
+                GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
+                hurtýmage.SetActive(true);
             }
             if (ak47Active == true)
             {

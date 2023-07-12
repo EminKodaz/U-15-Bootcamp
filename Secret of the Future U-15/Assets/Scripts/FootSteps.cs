@@ -4,35 +4,39 @@ using UnityEngine;
 
 public class FootSteps : MonoBehaviour
 {
-    public AudioSource AudioSource;
-
-    public AudioClip grass;
-
-
-    RaycastHit hit;
-    public Transform RayStart;
+    public GameObject audioSource;
+    public Transform rayStart;
     public float range;
     public LayerMask layerMask;
 
-    public void Footstep()
+    public void Footstep(bool Clýb)
     {
-        if(Physics.Raycast(RayStart.position, RayStart.transform.up * -1, out hit, range, layerMask))
+        if (Clýb)
         {
-            if(hit.collider.CompareTag("grass"))
+            RaycastHit hit;
+
+            if (Physics.Raycast(rayStart.position, -rayStart.transform.up, out hit, range, layerMask))
             {
-                PlayFootstepSound(grass);
+                if (hit.collider.CompareTag("grass"))
+                {
+                    PlayFootstepSound(audioSource , true);
+                }
             }
+        }
+        else
+        {
+            PlayFootstepSound(audioSource, false);
         }
     }
 
-    void PlayFootstepSound(AudioClip audio)
+    void PlayFootstepSound(GameObject audioSource,bool Clýb)
     {
-        AudioSource.pitch = Random.Range(0.8f, 1f);
-        AudioSource.PlayOneShot(audio);
+        audioSource.SetActive(Clýb);
+        //audioSource.pitch = Random.Range(0.8f, 1f);
     }
 
     private void Update()
     {
-        Debug.DrawRay(RayStart.position, -1 * range * RayStart.transform.up , Color.green);
+        Debug.DrawRay(rayStart.position, -range * rayStart.transform.up, Color.green);
     }
 }

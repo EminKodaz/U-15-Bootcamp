@@ -11,6 +11,7 @@ public class ZombieAI : MonoBehaviour
     private Animator animator;
     public Transform target;
     bool atackStart = false;
+    [SerializeField] private bool ZombiMod;
 
     void Start()
     {
@@ -20,48 +21,67 @@ public class ZombieAI : MonoBehaviour
 
     void FixedUpdate()
     {
-        Collider[] solider = Physics.OverlapSphere(transform.position, radius);
-        foreach (var player in solider)
+        if (ZombiMod == false)
         {
-            // player.damage
-            if (player.CompareTag("Player"))
+            Collider[] solider = Physics.OverlapSphere(transform.position, radius);
+            foreach (var player in solider)
             {
-                animator.SetBool("Scream", true);
-                atackStart = true;
+                // player.damage
+                if (player.CompareTag("Player"))
+                {
+                    animator.SetBool("Scream", true);
+                    atackStart = true;
+                }
             }
+
+            Collider[] soliders = Physics.OverlapSphere(transform.position, Soundradius);
+            bool foundPlayer = false;
+            foreach (var player in soliders)
+            {
+                // player.damage
+                if (player.CompareTag("Player") && player.GetComponentInChildren<WeaponManager>().fire)
+                {
+                    animator.SetBool("Scream", true);
+                    atackStart = true;
+                    foundPlayer = true;
+                    agent.enabled = true;
+                    break;
+                }
+                else if (player.CompareTag("Player"))
+                {
+                    foundPlayer = true;
+                    agent.enabled = true;
+                    SetRandomDestination();
+                    break;
+                }
+            }
+
+            if (!foundPlayer && !atackStart)
+            {
+                agent.enabled = false;
+            }
+
+            if (atackStart)
+            {
+                StartCoroutine(ScreamTime());
+            }
+
+           
+        }
+        else
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+
+            if (agent.isActiveAndEnabled)
+            {
+                NavMeshHit hit;
+                NavMesh.SamplePosition(target.position, out hit, 10f, NavMesh.AllAreas);
+                Vector3 finalPosition = hit.position;
+                agent.SetDestination(finalPosition);
+            }
+            atackStart = true;
         }
 
-        Collider[] soliders = Physics.OverlapSphere(transform.position, Soundradius);
-        bool foundPlayer = false;
-        foreach (var player in soliders)
-        {
-            // player.damage
-            if (player.CompareTag("Player") && player.GetComponentInChildren<WeaponManager>().fire)
-            {
-                animator.SetBool("Scream", true);
-                atackStart = true;
-                foundPlayer = true;
-                agent.enabled = true;
-                break;
-            }
-            else if(player.CompareTag("Player"))
-            {
-                foundPlayer = true;
-                agent.enabled = true;
-                SetRandomDestination();
-                break;
-            }
-        }
-
-        if (!foundPlayer && !atackStart)
-        {
-            agent.enabled = false;
-        }
-
-        if (atackStart)
-        {
-            StartCoroutine(ScreamTime());
-        }
 
         if (agent.velocity.x == 0 && agent.velocity.y == 0 && agent.velocity.z == 0)
         {
@@ -93,11 +113,14 @@ public class ZombieAI : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        if (!ZombiMod)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, radius);
 
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, Soundradius);
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, Soundradius);
+        }
     }
 
     IEnumerator ScreamTime()

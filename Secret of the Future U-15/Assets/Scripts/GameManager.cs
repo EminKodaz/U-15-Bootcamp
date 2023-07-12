@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public bool MissionFirst = false, MissionSecond = false, MissionThird = false;
+    public GameObject HurtImage;
 
     private void Awake()
     {
@@ -34,12 +35,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             PauseObject.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
+            HurtImage.SetActive(false);
         }
         else
         {
             Time.timeScale = 1;
             PauseObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
+            HurtImage.SetActive(true);
         }
     }
 

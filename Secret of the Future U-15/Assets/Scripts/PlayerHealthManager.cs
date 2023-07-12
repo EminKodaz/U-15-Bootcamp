@@ -8,16 +8,8 @@ public class PlayerHealthManager : MonoBehaviour
     public float health;
     public float CurrentHealth;
 
-    [SerializeField] private Image hurtImage;
+    public Image hurtImage;
     [SerializeField] private float hurtTimer;
-
-    private bool titremeDevamEdiyor = false;
-    private Vector3 orijinalPozisyon;
-    public Transform Camera;
-    private float titremeSiddeti = 0.1f;
-    private float titremeSure = 1f;
-    public float maxX;
-    public float minX;
 
     private void Start()
     {
