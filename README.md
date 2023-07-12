@@ -1,4 +1,4 @@
-# -Oyun ve Uygulama Akademisi U-15 BOOTCAMP Projesi
+# Oyun ve Uygulama Akademisi U-15 BOOTCAMP Projesi
 
 
 
@@ -8,22 +8,28 @@
 
 
 # *Takım İsmi*
+   - Bulletproof Bananas
+
+
 ![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/66da432e-ad21-42f0-8e65-0ebb52328f15)
    
 ## Takım Elemanları
--Almina İnce: Scrum Master
+- Almina İnce: Scrum Master
 
--Emin Kodaz: Product Owner / Developer
+- Emin Kodaz: Product Owner / Developer
 
--Özgür Kaan Kuru: Developer
+- Özgür Kaan Kuru: Developer
 
--Yusuf Arslan: Developer
+- Yusuf Arslan: Developer
 
--Tuğba Acar: Aktif Olmayan Üye
+- Tuğba Acar: Aktif Olmayan Üye
 
 # *Ürün İle İlgili Bilgiler*
 
-## Ürün İsmi
+## Ürün İsmi ve Logosu
+   - Secret of the Future
+
+
   ![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/81e66509-c303-4757-bdfb-e898815dd3f4)
 
 ## Product Backlog URL
@@ -50,14 +56,15 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 -Hayatta Kalma Türünde Oyun Severler
 
 ------------
-# *Sprint1* 
+# *Sprint 1* 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
    https://trello.com/b/ube9LM4u/u-15-bootcamp
 - **Sprint içinde tamamlanması tahmin edilen puan**: 125 Puan
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 365 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
-- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing 
+- **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing
+
 - **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
   Assetlerin ve ses efektlerinin büyük bir kısmı bulundu.
@@ -67,7 +74,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 -  Görevlerin daha detaylı dağıtılması, proje ekipleri arasındaki iletişimi ve işbirliğini güçlendirecek önemli bir adımdır. Bu şekilde her bir görev, belirlenen hedeflere daha etkili bir şekilde yönelik olarak planlanmıştır.
 -  Kodlama ve oyun geliştirme sürecinde daha verimli bir şekilde çalışarak zamanı daha iyi yönetmek ve oyunun temel özelliklerinin hızla geliştirilmesi için çalışmalar yapılması gerektiğine karar verildi.  
 
-# *Sprint2* 
+# *Sprint 2* 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/r9QGAqyy/ATTI5dae93c50e42642fa8f2cba176795a120140DEB1/u-15-bootcamp-sprint2
@@ -79,7 +86,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 - **Sprint Review**: Main menu, gerekli assetlerin toplanması, şehir planlama ve asset yerleşimi, gerekli mekanikler yapıldı.
 - **Sprint Retrospective**: İkinci sprintin değerlendirilmesi yapıldığında kodlama alanında ilerleme kaydedildiğine, oyunun genel hatlarıyla ortaya çıktığına, son sprintte eksikler tamamlanarak oyunun tamamlanması gerektiğine ve daha aktif olunması gerektiğine karar verildi.
 
-# *Sprint3* 
+# *Sprint 3* 
 - **Sprint Notları**: Toplantı notları ve puanlar backlog itemların açıklama kısmında bulunmaktadır.
 
   https://trello.com/invite/b/4NbdK9d4/ATTI1fea9b0d07665e449bdc65447efa6fbdBEBDB0C7/sprint3
