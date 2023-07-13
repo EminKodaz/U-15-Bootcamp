@@ -18,6 +18,8 @@ public class SecondMissionManager : MonoBehaviour
                 dadAnim.SetBool("Sit", true);
                 Instantiate(Rifle, InstateRiflePosition);
 
+                //Talk
+
             }
             GameManager.instance.MissionSecond = true;
         }
