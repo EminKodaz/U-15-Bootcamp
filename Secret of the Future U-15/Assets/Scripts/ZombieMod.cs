@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ZombieMod : MonoBehaviour
 {
+    [Header("Zombi Spawn")]
     public List<GameObject> ZombiePrefabs = new List<GameObject>();
     public List<Transform> spawnPoint = new List<Transform>();
 
     [SerializeField] private float RoundTime;
-
 
     private void Start()
     {
