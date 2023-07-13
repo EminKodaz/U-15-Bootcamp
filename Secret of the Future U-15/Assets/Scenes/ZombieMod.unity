@@ -20272,6 +20272,48 @@ MonoBehaviour:
     isLoop: 0
     playOnAwake: 0
     volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: AK-Reload
+    audioClip: {fileID: 8300000, guid: 18675b438cd95fc4e99117f327ab19b1, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: AK-Fire
+    audioClip: {fileID: 8300000, guid: 5b91370e85bfe844abd0fad903c1769b, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Rifle-FireReload
+    audioClip: {fileID: 8300000, guid: 889492e09a8269c4c85aeedef5a0b166, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Computer-Idle
+    audioClip: {fileID: 8300000, guid: 5bee455620065024abd873b99fbadc05, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Gravel-Grass-Walk
+    audioClip: {fileID: 8300000, guid: 56ebbc36e2803f14a89aae707be354ba, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: WalkieTalkie
+    audioClip: {fileID: 8300000, guid: 0fb38a25863165546a4366a2e6354a6d, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 1
 --- !u!114 &1902046455
 MonoBehaviour:
   m_ObjectHideFlags: 0
