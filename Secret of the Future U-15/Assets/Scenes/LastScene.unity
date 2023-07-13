@@ -457,18 +457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 740788114, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: itemContentBullet
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 740788114, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: itemContentHealth
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 888650859, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: hurtImage
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2508593260673612401, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -516,18 +504,6 @@ PrefabInstance:
     - target: {fileID: 2998131724133851339, guid: a687d19507de0d14083785c65e2b375f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7792999159809065765, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: Inventory
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7792999159809065765, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: ak47Image
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7792999159809065765, guid: a687d19507de0d14083785c65e2b375f, type: 3}
-      propertyPath: rifleImage
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a687d19507de0d14083785c65e2b375f, type: 3}

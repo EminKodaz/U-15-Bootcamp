@@ -22,7 +22,7 @@ public class ShootRifle : WeaponManager
     public override void Shoots()
     {
         shootVfx.Play();
-        //pistolShootSound.Play();
+        pistolShootSound.Play();
         shootManager.Shoot();
         _animator.SetTrigger("Fire");
         nextTime = 0;

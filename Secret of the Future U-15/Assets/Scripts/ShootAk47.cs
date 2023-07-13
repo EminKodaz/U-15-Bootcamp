@@ -22,9 +22,18 @@ public class ShootAk47 : WeaponManager
     public override void Shoots()
     {
         shootVfx.Play();
-        //pistolShootSound.Play();
         shootManager.Shoot();
         _animator.SetTrigger("Fire");
         nextTime = 0;
+    }
+
+    public void ShootSound()
+    {
+        pistolShootSound.Play();
+    }
+
+    public void ReoledSound()
+    {
+        ReoledShootSound.Play();
     }
 }

@@ -14,6 +14,7 @@ public abstract class WeaponManager : MonoBehaviour
     public bool isReloading = false;
 
     public AudioSource pistolShootSound;
+    public AudioSource ReoledShootSound;
     public ShootManager shootManager;
     public bool isRifle;
     public float AttackTime;
