@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyDamage : MonoBehaviour
 {
@@ -31,5 +32,6 @@ public class EnemyDamage : MonoBehaviour
     void Die()
     {
         Destroy(gameObject,20f);
+        GameManager.instance.KillCalculate(1);
     }
 }

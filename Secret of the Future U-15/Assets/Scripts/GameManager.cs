@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool MissionFirst = false, MissionSecond = false, MissionThird = false;
     public GameObject HurtImage;
+    [SerializeField] private Text KillCount;
+    private int Kill;
 
     private void Awake()
     {
@@ -25,6 +28,11 @@ public class GameManager : MonoBehaviour
         {
             open = !open;
             PauseObjectOpen(open);
+        }
+
+        if (KillCount != null)
+        {
+            KillCount.text = " Kill : " + Kill;
         }
     }
 
@@ -57,5 +65,10 @@ public class GameManager : MonoBehaviour
     public void LoadFirstGameSceen(int Scene›d)
     {
         SceneManager.LoadScene(Scene›d);
+    }
+
+    public void KillCalculate(int _kill)
+    {
+        Kill += _kill;
     }
 }
