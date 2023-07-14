@@ -27,4 +27,9 @@ public class ShootRifle : WeaponManager
         _animator.SetTrigger("Fire");
         nextTime = 0;
     }
+
+    public void ReoledSound()
+    {
+        ReoledShootSound.Play();
+    }
 }

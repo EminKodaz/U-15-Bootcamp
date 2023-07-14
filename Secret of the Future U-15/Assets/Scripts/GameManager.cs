@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PauseObject;
 
-    [SerializeField] private CharecterController m_Charecter;
-
     public bool open;
     public bool isFollowingDad = false;
 
@@ -46,10 +44,6 @@ public class GameManager : MonoBehaviour
     {
         if (open)
         {
-            if (m_Charecter != null)
-            {
-                m_Charecter.speed = 0;
-            }
             Time.timeScale = 0;
             PauseObject.SetActive(true);
             Cursor.lockState = CursorLockMode.Confined;
@@ -60,11 +54,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (m_Charecter != null)
-            {
-                m_Charecter.speed = 5f;
-            }
-
             Time.timeScale = 1;
             PauseObject.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
