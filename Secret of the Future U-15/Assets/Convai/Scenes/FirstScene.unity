@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Load Game
+  m_text: "Oyun Y\xFCkle"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -1197,7 +1197,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 522436723}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180318191
 GameObject:
@@ -1423,7 +1423,7 @@ RectTransform:
   - {fileID: 1231240555}
   - {fileID: 1788372286}
   m_Father: {fileID: 522436723}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1983,7 +1983,7 @@ Transform:
   - {fileID: 875698683}
   - {fileID: 439953625}
   m_Father: {fileID: 522436723}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385077178
 GameObject:
@@ -2271,7 +2271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Key Bindings
+  m_text: "Tus Atamalar\u0131"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -2532,7 +2532,7 @@ RectTransform:
   - {fileID: 820899264}
   - {fileID: 2058434499}
   m_Father: {fileID: 522436723}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2707,10 +2707,9 @@ RectTransform:
   - {fileID: 802573022}
   - {fileID: 755819947}
   - {fileID: 1744324985}
-  - {fileID: 664380947}
   - {fileID: 2072207075}
   m_Father: {fileID: 522436723}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2960,7 +2959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit Game
+  m_text: Oyunu Kapat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -3209,6 +3208,7 @@ RectTransform:
   - {fileID: 773984928}
   - {fileID: 1480024337}
   - {fileID: 284262727}
+  - {fileID: 664380947}
   - {fileID: 454982935}
   - {fileID: 164087529}
   - {fileID: 378214944}
@@ -3358,7 +3358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YES
+  m_text: EVET
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -3783,7 +3783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664380946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -420.668, y: 45.705566, z: 21.132141}
+  m_LocalPosition: {x: 18.221497, y: 45.705566, z: 21.132141}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3792,8 +3792,8 @@ Transform:
   - {fileID: 737085223}
   - {fileID: 1346702879}
   - {fileID: 456096304}
-  m_Father: {fileID: 454982935}
-  m_RootOrder: 5
+  m_Father: {fileID: 522436723}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674008542
 GameObject:
@@ -3853,7 +3853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back To Options
+  m_text: "Ayarlar'a D\xF6n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -4167,55 +4167,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 109268921}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 802573021}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 755819946}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1744324984}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2072207074}
+      - m_Target: {fileID: 454982934}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4912,7 +4864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Sound Effect
+  m_text: "Ses \xC7al"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -4939,8 +4891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5182,7 +5134,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Effects
+  m_text: Ses Efektleri
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -5317,7 +5269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back To Main Menu
+  m_text: "Ana Men\xFC'ye D\xF6n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -5916,7 +5868,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 522436723}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -6332,7 +6284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Game
+  m_text: Yeni Oyun
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -6619,7 +6571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you sure?
+  m_text: Emin Misin?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -7763,7 +7715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Ayarlar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -8213,6 +8165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429335963}
   - component: {fileID: 1429335962}
+  - component: {fileID: 1429335964}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -8278,6 +8231,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 1.525, y: -196.672, z: -0.193}
+--- !u!81 &1429335964
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429335960}
+  m_Enabled: 1
 --- !u!1 &1431167358
 GameObject:
   m_ObjectHideFlags: 0
@@ -8336,7 +8297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: "M\xFCzik"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -9217,7 +9178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound Levels
+  m_text: Ses Seviyeleri
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -9583,7 +9544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Zombie Mod Play
+  m_text: Sonsuz Mod
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -9718,7 +9679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back To Options
+  m_text: "Ayarlar'a D\xF6n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -10547,7 +10508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.2, y: -6.2}
+  m_AnchoredPosition: {x: -23.6, y: 3.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1802911811
@@ -10570,7 +10531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gamma Correction
+  m_text: "Parlakl\u0131k"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -10604,8 +10565,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10705,31 +10666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Move
-
-
-    Run
-
-
-    Jump
-
-
-    Crouch
-
-
-    Shoot
-
-
-    Aim Down Sight
-
-
-    Interact
-
-
-    Weapons
-
-
-'
+  m_text: "Hareket\n\nKosma\n\nZ\u0131plama\n\nEgilme\n\nAtes Etme\n\nNisan Alma\n\nEtkilesim\n\nSilahlar\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -10850,7 +10787,7 @@ Transform:
   - {fileID: 108481290}
   - {fileID: 354298555}
   m_Father: {fileID: 522436723}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881226697
 GameObject:
@@ -10910,7 +10847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NO
+  m_text: HAYIR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -11045,7 +10982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Music
+  m_text: "M\xFCzik \xC7al"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
   m_sharedMaterial: {fileID: -4205638163622706338, guid: f90b94daeb174804b8b52e32dcab17bc, type: 2}
@@ -11072,8 +11009,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11517,6 +11454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Convai Player Character
       objectReference: {fileID: 0}
+    - target: {fileID: 1883788613673866565, guid: 3fc60925b72651f4d8454f2dc785e354, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4699732255521014023, guid: 3fc60925b72651f4d8454f2dc785e354, type: 3}
       propertyPath: UserText
       value: 
@@ -11890,7 +11831,7 @@ RectTransform:
   - {fileID: 1749802904}
   - {fileID: 362667390}
   m_Father: {fileID: 454982935}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
