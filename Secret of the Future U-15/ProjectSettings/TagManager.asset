@@ -15,6 +15,7 @@ TagManager:
   - HumanHome
   - HumanOffice
   - grass
+  - hospital
   layers:
   - Default
   - TransparentFX
