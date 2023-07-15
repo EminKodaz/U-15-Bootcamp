@@ -57,6 +57,6 @@ public class FootSteps : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(rayStart.position, -range * rayStart.transform.up, Color.green);
+        Debug.DrawRay(rayStart.position, -range * rayStart.transform.up, Color.green);        
     }
 }
