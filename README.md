@@ -64,6 +64,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in minimum 125 ile başlaması gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının kolaylık ve ulaşılabilirlik açısından discord ve whatsapp üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1LuOeVuFWoONF7TIzklAm9sO9led6PhiFATIBqD5gHnM/edit?usp=sharing
+
 ![Ekran Görüntüsü (310)](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/5f4a89b8-fa68-4243-b015-9ea3488c3a77)
 - **Ürün Durumu**: https://docs.google.com/document/d/1S7kdMWv_9vH2rJQEWAfNsi9pAXEFSsMO-ZSvP8yC31w/edit?usp=sharing
 - **Sprint Review**: Oyunun tasarlama kısmı bitirildi, oyun ismine karar verildi, bir kısmı kodlandı.
@@ -82,6 +83,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 -  **Puan tamamlama mantığı**: Sprint 2 boyunca tamamlanması gereken 130 puanlık backlog bulunmaktadır. 2. sprintin minimum 120 puan ile devam etmesi gerektiğine karar verildi.
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1beSRSc8h6cscCfzFvNjEwvjotcgce5BVghHtSia_5zE/edit?usp=sharing
+ 
 ![Ekran Görüntüsü (311)](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/22d88d26-701c-4521-86f4-ac72b0fa9bc4)
 - **Ürün Durumu**: https://docs.google.com/document/d/1FpZw3S9h__KjxCjDAKxvczDqitj5afbXtTnqvVxf1zs/edit?usp=sharing
 - **Sprint Review**: Main menu, gerekli assetlerin toplanması, şehir planlama ve asset yerleşimi, gerekli mekanikler yapıldı.
@@ -95,6 +97,7 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 - **Puan tamamlama mantığı**: Sprint 3 boyunca tamamlanması gereken 145 puanlık backlog bulunmaktadır. 3. sprintin minimum 145 puan ile tamamlanması gerektiğine karar verildi. 
 - **Daily Scrum**: Daily Scrum toplantılarının discord üzerinden yapılmasına karar verildi. Toplantı örnekleri jpeg ve word ile Readme'de paylaşılmaktadır.
 - **Sprint board updates-screenshots**: https://docs.google.com/document/d/1NGzzgZ4mg4STxp5Lj4kdJpzd_nbxIZEoxs2rkO8nGKk/edit
+  
 ![Ekran Görüntüsü (315)](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/25dd4c83-2390-45e1-b140-c331a77bc7fe)
 - **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
 - **Sprint Review**: 
