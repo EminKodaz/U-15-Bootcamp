@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     bool LoadSceneActive;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     void Start()
     {
         PressText.SetActive(false);

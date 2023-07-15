@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,13 +8,27 @@ public class PlayerHealthManager : MonoBehaviour
 {
     public float health;
     public float CurrentHealth;
-
+    public GameObject DiedBg;
+    public GameObject DiedBt;
+    public Image DiedBgF;
+    public Text DiedBgT;
     public Image hurtImage;
-    [SerializeField] private float hurtTimer;
+    bool died = false;
+    [SerializeField]float healthTimer;
 
     private void Start()
     {
         CurrentHealth = health;
+        DiedBg.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (died)
+        {
+            healthTimer += Time.deltaTime + 0.005f;
+
+        }
     }
 
     public void TakeDamage(float damage)
@@ -25,11 +40,20 @@ public class PlayerHealthManager : MonoBehaviour
         if (CurrentHealth <= 0)
         {
             Die();
+            died = true;
         }
     }
     private void Die()
     {
-        Debug.Log("I dead");
+        DiedBg.SetActive(true);
+        GetComponentInChildren<WeaponManager>().enabled = false;
+        GetComponentInParent<FirstPersonController>().enabled = false;
+        GetComponentInChildren<AudioSource>().enabled = false;
+        Color splatterAlpha = DiedBgF.color;
+        splatterAlpha.a = healthTimer;
+        DiedBgF.color = splatterAlpha;
+
+        StartCoroutine(TimeZeroWorld());
     }
 
     public void UpdatedImage()
@@ -37,5 +61,14 @@ public class PlayerHealthManager : MonoBehaviour
         Color splatterAlpha = hurtImage.color;
         splatterAlpha.a =(1) - (CurrentHealth / health);
         hurtImage.color = splatterAlpha;
+    }
+
+    IEnumerator TimeZeroWorld()
+    {
+        yield return new WaitForSeconds(1);
+        DiedBgT.gameObject.SetActive(true);
+        DiedBt.SetActive(true);
+        Time.timeScale = 0;
+
     }
 }

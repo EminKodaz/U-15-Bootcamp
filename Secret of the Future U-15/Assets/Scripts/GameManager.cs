@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject LoadScene;
     public Image LoadingFillImage;
 
+    [SerializeField] private WeaponManager[] gun;
+
     private void Awake()
     {
         instance = this;
@@ -51,6 +53,11 @@ public class GameManager : MonoBehaviour
             {
                 HurtImage.SetActive(false);
             }
+
+            foreach (var guns in gun)
+            {
+                guns.enabled = false;
+            }
         }
         else
         {
@@ -60,6 +67,11 @@ public class GameManager : MonoBehaviour
             if (HurtImage != null)
             {
                 HurtImage.SetActive(true);
+            }
+
+            foreach (var guns in gun)
+            {
+                guns.enabled = true;
             }
         }
     }

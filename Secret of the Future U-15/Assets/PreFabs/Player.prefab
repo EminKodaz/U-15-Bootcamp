@@ -56,11 +56,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119613930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.31308, y: 1.5965214, z: 4.013977}
+  m_LocalPosition: {x: -4.3131104, y: 0.22152138, z: 4.013977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2998131724133851339}
+  m_Father: {fileID: 7792999159809065773}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1119613932
@@ -277,11 +277,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346649163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.31308, y: 1.5965214, z: 4.013977}
+  m_LocalPosition: {x: -4.3131104, y: 0.22152138, z: 4.013977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2998131724133851339}
+  m_Father: {fileID: 7792999159809065773}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1346649165
@@ -3113,9 +3113,6 @@ Transform:
   - {fileID: 2277768737943400036}
   - {fileID: 7792999159809065773}
   - {fileID: 338737531}
-  - {fileID: 1119613931}
-  - {fileID: 946327447066646849}
-  - {fileID: 1346649164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7232,11 +7229,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6156890721376709387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.31308, y: 1.5965214, z: 4.013977}
+  m_LocalPosition: {x: -4.3131104, y: 0.22152138, z: 4.013977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2998131724133851339}
+  m_Father: {fileID: 7792999159809065773}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4894958748841107081
@@ -8726,6 +8723,9 @@ Transform:
   - {fileID: 8078677084609555956}
   - {fileID: 8078677083279931940}
   - {fileID: 8078677083538955660}
+  - {fileID: 1119613931}
+  - {fileID: 946327447066646849}
+  - {fileID: 1346649164}
   m_Father: {fileID: 2998131724133851339}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8785,8 +8785,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   CurrentHealth: 0
+  DiedBg: {fileID: 0}
+  DiedBt: {fileID: 0}
+  DiedBgF: {fileID: 0}
+  DiedBgT: {fileID: 0}
   hurtImage: {fileID: 0}
-  hurtTimer: 0
+  healthTimer: 0
 --- !u!114 &740788114
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class ZombieAtacker : MonoBehaviour
     public GameObject AttackPos;
     public float speed;
 
-    void Start()
+    void Awake()
     {
         zombieAI = GetComponent<ZombieAI>();
     }
