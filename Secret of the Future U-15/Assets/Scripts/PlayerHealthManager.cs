@@ -10,6 +10,7 @@ public class PlayerHealthManager : MonoBehaviour
     public float CurrentHealth;
     public GameObject DiedBg;
     public GameObject DiedBt;
+    public GameObject DiedBr;
     public Image DiedBgF;
     public Text DiedBgT;
     public Image hurtImage;
@@ -26,7 +27,7 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if (died)
         {
-            healthTimer += Time.deltaTime + 0.005f;
+            healthTimer += Time.deltaTime + 0.01f;
 
         }
     }
@@ -39,19 +40,20 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (CurrentHealth <= 0)
         {
-            Die();
+            GameManager.instance.died = true;
             died = true;
+            Die();
         }
     }
     private void Die()
     {
         DiedBg.SetActive(true);
-        GetComponentInChildren<WeaponManager>().enabled = false;
-        GetComponentInParent<FirstPersonController>().enabled = false;
-        GetComponentInChildren<AudioSource>().enabled = false;
         Color splatterAlpha = DiedBgF.color;
         splatterAlpha.a = healthTimer;
         DiedBgF.color = splatterAlpha;
+        GetComponentInChildren<WeaponManager>().enabled = false;
+        GetComponentInParent<FirstPersonController>().enabled = false;
+        GetComponentInChildren<AudioSource>().enabled = false;
 
         StartCoroutine(TimeZeroWorld());
     }
@@ -68,6 +70,8 @@ public class PlayerHealthManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         DiedBgT.gameObject.SetActive(true);
         DiedBt.SetActive(true);
+        DiedBr.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
 
     }

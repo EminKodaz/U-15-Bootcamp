@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public Image LoadingFillImage;
 
     [SerializeField] private WeaponManager[] gun;
+    public GameObject MapImage;
+    bool m_open;
+    public bool died;
 
     private void Awake()
     {
@@ -30,7 +33,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            m_open = !m_open;
+
+            MapImage.SetActive(m_open);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !died)
         {
             open = !open;
             PauseObjectOpen(open);
@@ -38,7 +48,7 @@ public class GameManager : MonoBehaviour
 
         if (KillCount != null)
         {
-            KillCount.text = " Kill : " + Kill;
+            KillCount.text = " Leþ : " + Kill;
         }
     }
 
@@ -87,6 +97,7 @@ public class GameManager : MonoBehaviour
     public void LoadFirstGameSceen(int SceneÝd)
     {
         SceneManager.LoadScene(SceneÝd);
+        Time.timeScale = 1;
     }
 
     public void KillCalculate(int _kill)

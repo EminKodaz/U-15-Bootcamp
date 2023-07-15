@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     [SerializeField] private int Scene›d;
     public GameObject PressText;
+    public Text TalkText;
 
     bool LoadSceneActive;
 
@@ -24,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         PressText.SetActive(false);
+        TalkText.gameObject.SetActive(true);
+        StartCoroutine(TextDest());
     }
 
     // Update is called once per frame
@@ -60,5 +64,11 @@ public class PlayerMovement : MonoBehaviour
             PressText.SetActive(false);
             LoadSceneActive = false;
         }
+    }
+
+    IEnumerator TextDest()
+    {
+        yield return new WaitForSeconds(2);
+        TalkText.gameObject.SetActive(false);
     }
 }
