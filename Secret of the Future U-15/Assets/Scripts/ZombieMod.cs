@@ -7,7 +7,7 @@ public class ZombieMod : MonoBehaviour
     [Header("Zombi Spawn")]
     public List<GameObject> ZombiePrefabs = new List<GameObject>();
     public List<Transform> spawnPoint = new List<Transform>();
-
+    [SerializeField] int ýnstateCount = 5;
     [SerializeField] private float RoundTime;
 
     private void Start()
@@ -31,7 +31,15 @@ public class ZombieMod : MonoBehaviour
 
     IEnumerator ZombieAttackTimeRound()
     {
-        for (int i = 0; i < spawnPoint.Count; i++)
+        if (ýnstateCount < 9)
+        {
+            ýnstateCount++;
+        }
+        else
+        {
+            ýnstateCount = 10;
+        }
+        for (int i = 0; i < ýnstateCount; i++)
         {
             Instantiate(SpanObject(), RandomPoint().position, Quaternion.identity);
         }

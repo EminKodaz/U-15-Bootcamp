@@ -16,6 +16,8 @@ TagManager:
   - HumanOffice
   - grass
   - hospital
+  - Road
+  - Metal
   layers:
   - Default
   - TransparentFX

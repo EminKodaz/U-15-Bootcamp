@@ -2367,11 +2367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29454bd29b8f24982986f56123a385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  Soundradius: 25
   agent: {fileID: 0}
   target: {fileID: 0}
-  ZombiMod: 1
+  distance: 0
 --- !u!195 &7716856083503114026
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2406,7 +2404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1763ee0b30d417a4bb1cdf664c9bf23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 200
   animator: {fileID: 4465296406487121239}
 --- !u!114 &7716856083503114024
 MonoBehaviour:

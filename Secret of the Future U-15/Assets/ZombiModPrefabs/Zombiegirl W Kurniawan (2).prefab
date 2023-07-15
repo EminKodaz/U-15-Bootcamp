@@ -2615,11 +2615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29454bd29b8f24982986f56123a385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  Soundradius: 25
   agent: {fileID: 1219463384277268096}
   target: {fileID: 0}
-  ZombiMod: 1
+  distance: 0
 --- !u!195 &1219463384277268096
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2654,7 +2652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1763ee0b30d417a4bb1cdf664c9bf23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 80
   animator: {fileID: 2542063023888980077}
 --- !u!114 &5197704466760321388
 MonoBehaviour:
@@ -2673,7 +2671,7 @@ MonoBehaviour:
   Attackradius: 0.2
   AttackOverOffset: 1.2
   AttackPos: {fileID: 4074670855437973975}
-  speed: 1
+  speed: 3
 --- !u!136 &5197704466760321386
 CapsuleCollider:
   m_ObjectHideFlags: 0

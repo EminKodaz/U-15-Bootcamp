@@ -38,7 +38,7 @@ public class ShootManager : MonoBehaviour
             if (hit.collider.name == "AttackHead" && enemyhead != null)
             {
                 StartCoroutine(ImpactEffectDelay(hit,BloodEffect));
-                enemyhead.TakeDamage(50);
+                enemyhead.TakeDamage(80);
             }
             if (hit.collider.tag == "Zombies")
             {

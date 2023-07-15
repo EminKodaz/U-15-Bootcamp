@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FootSteps : MonoBehaviour
 {
-    public GameObject audioSource;
+    public GameObject audioSourceGrass;
+    public GameObject audioSourceasphalt;
+    public GameObject audioSourceMetal;
     public Transform rayStart;
     public float range;
     public LayerMask layerMask;
@@ -19,13 +21,31 @@ public class FootSteps : MonoBehaviour
             {
                 if (hit.collider.CompareTag("grass"))
                 {
-                    PlayFootstepSound(audioSource , true);
+                    PlayFootstepSound(audioSourceGrass, true);
+                    PlayFootstepSound(audioSourceasphalt, false);
+                    PlayFootstepSound(audioSourceMetal, false);
+                }
+
+                if (hit.collider.CompareTag("Road"))
+                {
+                    PlayFootstepSound(audioSourceasphalt, true);
+                    PlayFootstepSound(audioSourceGrass, false);
+                    PlayFootstepSound(audioSourceMetal, false);
+                }
+
+                if (hit.collider.CompareTag("Metal"))
+                {
+                    PlayFootstepSound(audioSourceMetal, true);
+                    PlayFootstepSound(audioSourceGrass, false);
+                    PlayFootstepSound(audioSourceasphalt, false);
                 }
             }
         }
         else
         {
-            PlayFootstepSound(audioSource, false);
+            PlayFootstepSound(audioSourceGrass, false);
+            PlayFootstepSound(audioSourceasphalt, false);
+            PlayFootstepSound(audioSourceMetal, false);
         }
     }
 

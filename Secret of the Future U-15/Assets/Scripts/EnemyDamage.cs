@@ -31,7 +31,7 @@ public class EnemyDamage : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject,20f);
+        Destroy(gameObject,5f);
         GameManager.instance.KillCalculate(1);
     }
 }

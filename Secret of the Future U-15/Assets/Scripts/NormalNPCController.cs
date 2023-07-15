@@ -10,12 +10,14 @@ public class NormalNPCController : MonoBehaviour
     NavMeshAgent agent;
     bool dad;
     public GameObject MissionText;
+    public GameObject ZombieAttackManager;
 
     private bool isFollowingPlayer = false;
     void Start()
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        ZombieAttackManager.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class NormalNPCController : MonoBehaviour
             Talk();
             animator.SetBool("playerIsHere", true);
             StartCoroutine(TalkDelay());
+            ZombieAttackManager.SetActive(true);
         }
         else if (Vector3.Distance(transform.position, playerTransform.position) < 3f && !dad && GameManager.instance.MissionFirst == false)
         {

@@ -361,11 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29454bd29b8f24982986f56123a385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
-  Soundradius: 25
   agent: {fileID: 0}
   target: {fileID: 0}
-  ZombiMod: 1
+  distance: 0
 --- !u!195 &5656506878205470480
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -419,7 +417,7 @@ MonoBehaviour:
   Attackradius: 0.2
   AttackOverOffset: 1.2
   AttackPos: {fileID: 2239809229583588212}
-  speed: 1
+  speed: 6
 --- !u!136 &5656506878205470492
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class SecondMissionManager : MonoBehaviour
     public Animator dadAnim;
     public GameObject Rifle;
     [SerializeField] private Transform InstateRiflePosition;
+    [SerializeField] private Transform[] ZombieInstatePos;
+    [SerializeField] private BoxCollider Collider;
+    [SerializeField] private GameObject[] Zombie;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,7 +29,10 @@ public class SecondMissionManager : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player") && GameManager.instance.MissionFirst == false)
         {
-            Debug.Log("görev start");
+            GameManager.instance.MissionFirst = true;
+            Collider.enabled = false;
+            Instantiate(Zombie[0] , ZombieInstatePos[0].position , Quaternion.identity);
+            Instantiate(Zombie[1] , ZombieInstatePos[1].position, Quaternion.identity);
         }
     }
 }
