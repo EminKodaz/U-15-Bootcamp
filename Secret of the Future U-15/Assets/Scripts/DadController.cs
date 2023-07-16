@@ -20,4 +20,10 @@ public class DadController : MonoBehaviour
             Destroy(gameObject,5f);
         }
     }
+
+
+    IEnumerator sdasDelay()
+    {
+        yield return new WaitForSeconds(2f);
+    }
 }

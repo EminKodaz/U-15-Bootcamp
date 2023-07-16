@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13451919, g: 0.14826024, b: 0.16117287, a: 1}
+  m_IndirectSpecularColor: {r: 0.13492846, g: 0.14825267, b: 0.16133204, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29042,7 +29042,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 56ebbc36e2803f14a89aae707be354ba, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -36194,7 +36194,7 @@ MonoBehaviour:
   ReoledShootSound: {fileID: 8617500980935633638}
   shootManager: {fileID: 8617500982079825130}
   isRifle: 0
-  AttackTime: 0.05
+  AttackTime: 0.15
   focusGuns: 0
   camAnim: {fileID: 8617500980880375028}
   fpsCam: {fileID: 8617500980880375029}
