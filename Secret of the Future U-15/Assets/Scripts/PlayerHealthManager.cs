@@ -72,7 +72,10 @@ public class PlayerHealthManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         DiedBgT.gameObject.SetActive(true);
         DiedBt.SetActive(true);
-        DiedBr.SetActive(true);
+        if (DiedBr != null)
+        {
+            DiedBr.SetActive(true);
+        }
         Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
 

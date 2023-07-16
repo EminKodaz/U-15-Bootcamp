@@ -13,6 +13,24 @@ public class SecondMissionManager : MonoBehaviour
     [SerializeField] private GameObject[] Zombie;
     [SerializeField] private Text TalkText;
 
+    [SerializeField] private GameObject ZombieAttackTime;
+    [SerializeField] private AudioSource ZombieAttackMusic;
+    bool fight = false;
+
+    private void Update()
+    {
+        if (ZombieAttackMusic != null && fight == true)
+        {
+            ZombieAttackMusic.volume -= Time.deltaTime / 10;
+            if (ZombieAttackMusic.volume <= 0.01f)
+            {
+                fight = false;
+                ZombieAttackMusic.volume = .5f;
+                ZombieAttackTime.SetActive(false);
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player") && GameManager.instance.MissionSecond == false && GameManager.instance.MissionFirst == true)
@@ -35,6 +53,10 @@ public class SecondMissionManager : MonoBehaviour
             Collider.enabled = false;
             Instantiate(Zombie[0] , ZombieInstatePos[0].position , Quaternion.identity);
             Instantiate(Zombie[1] , ZombieInstatePos[1].position, Quaternion.identity);
+
+            ZombieAttackTime.SetActive(true);
+
+            StartCoroutine(ReduceSound());
         }
     }
 
@@ -44,5 +66,11 @@ public class SecondMissionManager : MonoBehaviour
         {
             TalkText.gameObject.SetActive(false);
         }
+    }
+
+    IEnumerator ReduceSound()
+    {
+        yield return new WaitForSeconds(20);
+        fight = true;
     }
 }
