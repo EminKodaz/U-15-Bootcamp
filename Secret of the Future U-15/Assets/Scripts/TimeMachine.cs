@@ -27,7 +27,8 @@ public class TimeMachine : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                StartCoroutine(GameManager.instance.LoadMenuAsync(0));
+                PressText.SetActive(false);
+                StartCoroutine(GameManager.instance.LoadMenuAsync(4));
             }
         }
     }

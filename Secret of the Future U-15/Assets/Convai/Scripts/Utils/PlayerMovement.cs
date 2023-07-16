@@ -25,8 +25,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        PressText.SetActive(false);
-        TalkText.gameObject.SetActive(true);
+        if (PressText != null)
+        {
+            PressText.SetActive(false);
+        }
+        if (TalkText != null)
+        {
+            TalkText.gameObject.SetActive(true);
+        }
         StartCoroutine(TextDest());
     }
 
@@ -69,6 +75,9 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator TextDest()
     {
         yield return new WaitForSeconds(2);
-        TalkText.gameObject.SetActive(false);
+        if (TalkText != null)
+        {
+            TalkText.gameObject.SetActive(false);
+        }
     }
 }

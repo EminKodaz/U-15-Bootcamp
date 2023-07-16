@@ -82,7 +82,10 @@ public class GameManager : MonoBehaviour
         if (open)
         {
             Time.timeScale = 0;
-            PauseObject.SetActive(true);
+            if (PauseObject != null)
+            {
+                PauseObject.SetActive(true);
+            }
             Cursor.lockState = CursorLockMode.Confined;
             if (HurtImage != null)
             {

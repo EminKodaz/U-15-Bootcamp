@@ -12,7 +12,6 @@ public class NormalNPCController : MonoBehaviour
     bool dad;
     public GameObject MissionText;
     public GameObject ZombieAttackManager;
-
     private bool isFollowingPlayer = false;
 
     [SerializeField] private Text TalkText;
@@ -78,7 +77,10 @@ public class NormalNPCController : MonoBehaviour
 
     void Talk()
     {
-        TalkText.gameObject.SetActive(true);
+        if (TalkText != null)
+        {
+            TalkText.gameObject.SetActive(true);
+        }
     }
 
     void FollowPlayer()
@@ -92,7 +94,7 @@ public class NormalNPCController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         isFollowingPlayer = true;
         yield return new WaitForSeconds(1f);
-        TalkText.gameObject.SetActive(false);
+        Destroy(TalkText);
     }
 
     public void ChangeTarget()

@@ -11,9 +11,9 @@ public class MissionController : MonoBehaviour
 
     [SerializeField] private bool isPolice;
     [SerializeField] private bool isPaper;
-    [SerializeField] private Text PressText;
-    [SerializeField] private Text p_TalkText;
-    [SerializeField] private Text W_TalkText;
+    [SerializeField] private GameObject PressText;
+    [SerializeField] private GameObject p_TalkText;
+    [SerializeField] private GameObject W_TalkText;
     [SerializeField] GameObject paper;
     [SerializeField] GameObject m_paperworld;
     [SerializeField] GameObject m_worldpaper;
@@ -36,12 +36,12 @@ public class MissionController : MonoBehaviour
 
         if (p_TalkText != null)
         {
-            p_TalkText.gameObject.SetActive(false);
+            p_TalkText.SetActive(false);
         }
 
         if (W_TalkText != null)
         {
-            W_TalkText.gameObject.SetActive(false);
+            W_TalkText.SetActive(false);
         }
 
         if (PlayerTalk != null)
@@ -69,7 +69,7 @@ public class MissionController : MonoBehaviour
             m_policeAnim.SetBool("trigger",true);
 
             //talk
-            p_TalkText.gameObject.SetActive(true);
+            p_TalkText.SetActive(true);
         }
 
         if (other.gameObject.CompareTag("Player") && isPolice)
@@ -77,7 +77,7 @@ public class MissionController : MonoBehaviour
             isPolice = false;
             m_policeAnim.SetBool("trigger", true);
             //talk
-            W_TalkText.gameObject.SetActive(true);
+            W_TalkText.SetActive(true);
 
             Collider.SetActive(false);
         }
@@ -87,7 +87,7 @@ public class MissionController : MonoBehaviour
             isPaper = false;
             PressText.gameObject.SetActive(true);
             activePaper = true;
-            PlayerTalk.SetActive(true);
+            StartCoroutine(TimeMachineUSe());
             RoomR.SetActive(false);
             RoomL.SetActive(false);
         }
@@ -97,7 +97,7 @@ public class MissionController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && isPaper)
         {
-            PressText.gameObject.SetActive(false);
+            PressText.SetActive(false);
             paper.SetActive(false);
             activePaper = false;
         }
@@ -105,13 +105,20 @@ public class MissionController : MonoBehaviour
         {
             if (p_TalkText != null)
             {
-                p_TalkText.gameObject.SetActive(false);
+                p_TalkText.SetActive(false);
             }
 
             if (W_TalkText != null)
             {
-                W_TalkText.gameObject.SetActive(false);
+                W_TalkText.SetActive(false);
             }
         }
+    }
+
+    IEnumerator TimeMachineUSe()
+    {
+        yield return new WaitForSeconds(5);
+        PlayerTalk.SetActive(true);
+
     }
 }
