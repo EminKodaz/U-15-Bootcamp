@@ -13,7 +13,7 @@ public class CreditsEnd : MonoBehaviour
 
     IEnumerator CreditDelay()
     {
-        yield return new WaitForSeconds(45.0f);
+        yield return new WaitForSeconds(41.5f);
         SceneManager.LoadScene("FirstScene");
     }
 }
