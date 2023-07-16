@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [Header("Load Options")]
     public GameObject LoadScene;
     public Image LoadingFillImage;
+    public GameObject LoadMenu;
+    public Image LoadMenuI;
+
 
     [SerializeField] private WeaponManager[] gun;
     public GameObject MapImage;
@@ -37,7 +40,10 @@ public class GameManager : MonoBehaviour
         {
             m_open = !m_open;
 
-            MapImage.SetActive(m_open);
+            if (MapImage != null)
+            {
+                MapImage.SetActive(m_open);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && !died)
@@ -96,8 +102,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadFirstGameSceen(int Scene›d)
     {
-        SceneManager.LoadScene(Scene›d);
         Time.timeScale = 1;
+        StartCoroutine(LoadMenuAsync(Scene›d));
     }
 
     public void KillCalculate(int _kill)
@@ -123,6 +129,24 @@ public class GameManager : MonoBehaviour
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
 
             LoadingFillImage.fillAmount = progressValue;
+
+            yield return null;
+        }
+    }
+
+    IEnumerator LoadMenuAsync(int Scene›d)
+    {
+        LoadMenu.SetActive(true);
+
+        yield return new WaitForEndOfFrame();
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(Scene›d);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+
+            LoadMenuI.fillAmount = progressValue;
 
             yield return null;
         }
