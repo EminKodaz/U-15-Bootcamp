@@ -26,12 +26,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private WeaponManager[] gun;
     public GameObject MapImage;
+    public GameObject MapImagem2;
+    public GameObject MapImagem3;
     bool m_open;
     public bool died;
+    public bool TabOpen;
 
     private void Awake()
     {
         instance = this;
+        TabOpen = false;
     }
 
     private void Update()
@@ -40,16 +44,31 @@ public class GameManager : MonoBehaviour
         {
             m_open = !m_open;
 
-            if (MapImage != null)
+            if (MapImage != null && !MissionFirst)
             {
                 MapImage.SetActive(m_open);
+            }
+            else if(MapImage != null && MissionFirst && !MissionSecond)
+            {
+                MapImagem2.SetActive(m_open);
+            }
+            else if(MapImage != null && MissionFirst && MissionSecond && !MissionThird)
+            {
+                MapImagem3.SetActive(m_open);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && !died)
         {
             open = !open;
+            TabOpen = !TabOpen;
             PauseObjectOpen(open);
+            if(MapImage != null)
+                MapImage.SetActive(false);
+            if (MapImagem2 != null)
+                MapImagem2.SetActive(false);
+            if (MapImagem3 != null)
+                MapImagem3.SetActive(false);
         }
 
         if (KillCount != null)

@@ -3314,7 +3314,7 @@ MonoBehaviour:
   audioSourceasphalt: {fileID: 1119613930}
   audioSourceMetal: {fileID: 1346649163}
   rayStart: {fileID: 2998131724133851339}
-  range: 0.15
+  range: 0.25
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -8754,6 +8754,7 @@ MonoBehaviour:
   pistolActive: 1
   rifleActive: 0
   ak47Active: 0
+  escapeActive: 0
 --- !u!114 &8617500981705719567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8787,10 +8788,12 @@ MonoBehaviour:
   CurrentHealth: 0
   DiedBg: {fileID: 0}
   DiedBt: {fileID: 0}
+  DiedBr: {fileID: 0}
   DiedBgF: {fileID: 0}
   DiedBgT: {fileID: 0}
   hurtImage: {fileID: 0}
   healthTimer: 0
+  DiedSound: {fileID: 0}
 --- !u!114 &740788114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10973,7 +10976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d08ccea71943b348b8ae2c9e89cb1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 20
   range: 100
   impactEffect: {fileID: 100002, guid: caa8bd0d2623acf4d915f16e0ab71218, type: 3}
   BloodEffect: {fileID: 1000013355911406, guid: d32aa916f50cac94db11e6f19821a58f, type: 3}

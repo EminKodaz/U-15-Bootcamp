@@ -16,11 +16,13 @@ public class PlayerHealthManager : MonoBehaviour
     public Image hurtImage;
     bool died = false;
     [SerializeField]float healthTimer;
+    [SerializeField] GameObject DiedSound;
 
     private void Start()
     {
         CurrentHealth = health;
         DiedBg.SetActive(false);
+        DiedSound.SetActive(false);
     }
 
     private void Update()
@@ -54,7 +56,7 @@ public class PlayerHealthManager : MonoBehaviour
         GetComponentInChildren<WeaponManager>().enabled = false;
         GetComponentInParent<FirstPersonController>().enabled = false;
         GetComponentInChildren<AudioSource>().enabled = false;
-
+        DiedSound.SetActive(true);
         StartCoroutine(TimeZeroWorld());
     }
 

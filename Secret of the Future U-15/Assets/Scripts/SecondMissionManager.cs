@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SecondMissionManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SecondMissionManager : MonoBehaviour
     [SerializeField] private Transform[] ZombieInstatePos;
     [SerializeField] private BoxCollider Collider;
     [SerializeField] private GameObject[] Zombie;
+    [SerializeField] private Text TalkText;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +24,7 @@ public class SecondMissionManager : MonoBehaviour
                 Instantiate(Rifle, InstateRiflePosition);
 
                 //Talk
-
+                TalkText.gameObject.SetActive(true);
             }
             GameManager.instance.MissionSecond = true;
         }
@@ -33,6 +35,14 @@ public class SecondMissionManager : MonoBehaviour
             Collider.enabled = false;
             Instantiate(Zombie[0] , ZombieInstatePos[0].position , Quaternion.identity);
             Instantiate(Zombie[1] , ZombieInstatePos[1].position, Quaternion.identity);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (TalkText != null)
+        {
+            TalkText.gameObject.SetActive(false);
         }
     }
 }

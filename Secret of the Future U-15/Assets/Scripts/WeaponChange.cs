@@ -19,7 +19,7 @@ public class WeaponChange : MonoBehaviour
     public bool pistolActive = true;
     public bool rifleActive = false;
     public bool ak47Active = false;
-
+    public bool escapeActive = false;
     InventoryManager ýnventoryManager;
     private void Start()
     {
@@ -56,7 +56,18 @@ public class WeaponChange : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (GameManager.instance.TabOpen == true)
+        {
+            escapeActive = true;
+            TabClose();
+            Inventory.SetActive(false);
+        }
+        else
+        {
+            escapeActive = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab) && escapeActive == false)
         {
             OpenInventory = !OpenInventory;
             Inventory.SetActive(OpenInventory);
@@ -78,13 +89,7 @@ public class WeaponChange : MonoBehaviour
             }
             else
             {
-                GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
-                GetComponentInChildren<Animator>().enabled = true;
-                GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
-                GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
-                Cursor.lockState = CursorLockMode.Locked;
-                GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
-                hurtýmage.SetActive(true);
+                TabClose();
             }
             if (ak47Active == true)
             {
@@ -177,5 +182,16 @@ public class WeaponChange : MonoBehaviour
                 hitCollider.GetComponent<PickUpÝtem>().Pickup();
             }
         }
+    }
+
+    public void TabClose()
+    {
+        GetComponentInParent<FirstPersonController>().MoveSpeed = 4;
+        GetComponentInChildren<Animator>().enabled = true;
+        GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
+        GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
+        hurtýmage.SetActive(true);
     }
 }
