@@ -11,8 +11,8 @@
    - Bulletproof Bananas
 
 
-![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/66da432e-ad21-42f0-8e65-0ebb52328f15)
-   
+![Ekran Görüntüsü (271)](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/9a14ad7a-a3f6-4043-af4e-d461a8c4c1fa)
+
 ## Takım Elemanları
 - Almina İnce: Scrum Master
 
@@ -26,11 +26,9 @@
 
 # *Ürün İle İlgili Bilgiler*
 
-## Ürün İsmi ve Logosu
+## Ürün İsmi 
    - Secret of the Future
 
-
-  ![image](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/c293623f-99a3-42da-a871-c99a8e603d64)
 
 ## Product Backlog URL
 https://trello.com/b/ube9LM4u/u-15-bootcamp
@@ -100,8 +98,10 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
   
 ![Ekran Görüntüsü (315)](https://github.com/EminKodaz/U-15-Bootcamp/assets/119960977/25dd4c83-2390-45e1-b140-c331a77bc7fe)
 - **Ürün Durumu**: https://docs.google.com/document/d/153fsOGPBbSuLwawYt7R-9IwQkRy7A8NV4VGF4NjYHqI/edit
-- **Sprint Review**: 
-- **Sprint Retrospective**: 
+- **Sprint Review**: Bir önceki sprintten kalan görevler ve yeni hedefler tamamlandığı verimli bir süreç oldu. Mekanikler ve şehir dizaynı tamamlandı, ses efektleri, seslendirmeler ve oyunun son durumuna göre değişiklikler yapıldı. 
+- **Sprint Retrospective**: Güzel ve yoğun bir sürecin sonunda projemiz tamamlandı.
+
+- **NOT**: Uzun bir sürecin sonuna geldik. Sunulan imkanlar ve bu verimli süreç için akademiye minnettarlığımızı ve teşekkürlerimizi sunuyoruz.
 
 
 
