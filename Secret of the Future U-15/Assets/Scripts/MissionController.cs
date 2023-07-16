@@ -10,11 +10,19 @@ public class MissionController : MonoBehaviour
     [SerializeField] private AudioSource TalkSound;
 
     [SerializeField] private bool isPolice;
-    [SerializeField] private bool isRaper;
+    [SerializeField] private bool isPaper;
     [SerializeField] private Text PressText;
+    [SerializeField] private Text p_TalkText;
+    [SerializeField] private Text W_TalkText;
     [SerializeField] GameObject paper;
     [SerializeField] GameObject m_paperworld;
     [SerializeField] GameObject m_worldpaper;
+    [SerializeField] GameObject Collider;
+    [SerializeField] GameObject PlayerTalk;
+
+    [SerializeField] GameObject RoomR;
+    [SerializeField] GameObject RoomL;
+
 
     bool open;
     bool activePaper = false;
@@ -24,6 +32,21 @@ public class MissionController : MonoBehaviour
         if (paper != null)
         {
             paper.SetActive(false);
+        }
+
+        if (p_TalkText != null)
+        {
+            p_TalkText.gameObject.SetActive(false);
+        }
+
+        if (W_TalkText != null)
+        {
+            W_TalkText.gameObject.SetActive(false);
+        }
+
+        if (PlayerTalk != null)
+        {
+            PlayerTalk.SetActive(false);
         }
     }
 
@@ -40,36 +63,55 @@ public class MissionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && !comploted && isPolice)
+        if (other.gameObject.CompareTag("Player") && comploted)
         {
-            comploted = true;
+            comploted = false;
             m_policeAnim.SetBool("trigger",true);
 
             //talk
+            p_TalkText.gameObject.SetActive(true);
         }
 
-        if (other.gameObject.CompareTag("Player") && !comploted && !isPolice)
+        if (other.gameObject.CompareTag("Player") && isPolice)
         {
-            comploted = true;
+            isPolice = false;
             m_policeAnim.SetBool("trigger", true);
-
             //talk
+            W_TalkText.gameObject.SetActive(true);
+
+            Collider.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("Player") &&  isRaper)
+        if (other.gameObject.CompareTag("Player") && isPaper)
         {
+            isPaper = false;
             PressText.gameObject.SetActive(true);
             activePaper = true;
+            PlayerTalk.SetActive(true);
+            RoomR.SetActive(false);
+            RoomL.SetActive(false);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && isRaper)
+        if (other.gameObject.CompareTag("Player") && isPaper)
         {
             PressText.gameObject.SetActive(false);
             paper.SetActive(false);
             activePaper = false;
+        }
+        else if(other.gameObject.CompareTag("Player"))
+        {
+            if (p_TalkText != null)
+            {
+                p_TalkText.gameObject.SetActive(false);
+            }
+
+            if (W_TalkText != null)
+            {
+                W_TalkText.gameObject.SetActive(false);
+            }
         }
     }
 }

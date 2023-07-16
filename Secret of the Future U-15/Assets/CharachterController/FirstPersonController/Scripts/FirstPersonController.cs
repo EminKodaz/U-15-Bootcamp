@@ -133,7 +133,10 @@ namespace StarterAssets
 				if (_controller.velocity.y < -fallThresholdVelocity)
 				{
 					float damage = Mathf.Abs(_controller.velocity.y + fallThresholdVelocity);
-                    GetComponentInChildren<PlayerHealthManager>().TakeDamage(damage * 0.5f);
+					if (GetComponentInChildren<PlayerHealthManager>() != null)
+					{
+                        GetComponentInChildren<PlayerHealthManager>().TakeDamage(damage * 0.5f);
+                    }
                 }
 			}
 		}

@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadMenuAsync(int Scene›d)
+    public IEnumerator LoadMenuAsync(int Scene›d)
     {
         LoadMenu.SetActive(true);
 

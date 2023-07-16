@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class NormalNPCController : MonoBehaviour
 {
@@ -13,11 +14,15 @@ public class NormalNPCController : MonoBehaviour
     public GameObject ZombieAttackManager;
 
     private bool isFollowingPlayer = false;
+
+    [SerializeField] private Text TalkText;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         ZombieAttackManager.SetActive(false);
+        TalkText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,7 +78,7 @@ public class NormalNPCController : MonoBehaviour
 
     void Talk()
     {
-
+        TalkText.gameObject.SetActive(true);
     }
 
     void FollowPlayer()
@@ -84,9 +89,10 @@ public class NormalNPCController : MonoBehaviour
 
     IEnumerator TalkDelay()
     {
-
         yield return new WaitForSeconds(3f);
         isFollowingPlayer = true;
+        yield return new WaitForSeconds(1f);
+        TalkText.gameObject.SetActive(false);
     }
 
     public void ChangeTarget()
