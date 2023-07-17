@@ -104,6 +104,9 @@ Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta k
 
 - **NOT**: Uzun bir sürecin sonuna geldik. Sunulan imkanlar ve bu verimli süreç için akademiye minnettarlığımızı ve teşekkürlerimizi sunuyoruz.
 
+- ## Kullanılan Assetlerin Listesi
+- https://docs.google.com/document/d/1ZxulydVEcHsVV4K9tnjB2duIo5c4q-su0Fh8dDAEkYk/edit?usp=sharing
+
 
 
 
