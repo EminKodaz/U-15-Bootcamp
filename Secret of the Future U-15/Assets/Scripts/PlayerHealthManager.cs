@@ -76,7 +76,6 @@ public class PlayerHealthManager : MonoBehaviour
         {
             DiedBr.SetActive(true);
         }
-        Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
 
     }

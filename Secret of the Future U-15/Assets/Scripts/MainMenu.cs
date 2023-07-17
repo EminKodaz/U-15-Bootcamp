@@ -11,13 +11,12 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+
     }
 
     public void StartGameOrCrdeits(int Scene›D)
     {
         StartCoroutine(LoadSceneAsync(Scene›D));
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

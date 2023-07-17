@@ -94,7 +94,7 @@ public class NormalNPCController : MonoBehaviour
         yield return new WaitForSeconds(3f);
         isFollowingPlayer = true;
         yield return new WaitForSeconds(1f);
-        Destroy(TalkText);
+        Destroy(TalkText,2.5f);
     }
 
     public void ChangeTarget()

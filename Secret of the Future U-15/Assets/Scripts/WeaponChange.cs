@@ -2,6 +2,7 @@ using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponChange : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class WeaponChange : MonoBehaviour
     public bool ak47Active = false;
     public bool escapeActive = false;
     InventoryManager ýnventoryManager;
+    [SerializeField] private WeaponManager[] shoot;
     private void Start()
     {
         ýnventoryManager = GetComponent<InventoryManager>();
@@ -28,14 +30,14 @@ public class WeaponChange : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && shoot[1].isReloading == false && shoot[2].isReloading == false)
         {
             pistol.SetActive(true);
             rifle.SetActive(false);
             ak47.SetActive(false);
             pistolActive = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && shoot[0].isReloading == false && shoot[2].isReloading == false)
         {
             if (ak47 != null && ak47Active == true)
             {
@@ -45,7 +47,7 @@ public class WeaponChange : MonoBehaviour
                 pistolActive = false;
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && shoot[0].isReloading == false && shoot[1].isReloading == false)
         {
             if (rifle != null && rifleActive == true)
             {
@@ -70,6 +72,7 @@ public class WeaponChange : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && escapeActive == false)
         {
             OpenInventory = !OpenInventory;
+            Cursor.lockState = OpenInventory ? CursorLockMode.None : CursorLockMode.Locked;
             Inventory.SetActive(OpenInventory);
             if (OpenInventory)
             {
@@ -78,7 +81,6 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = true;
                 GetComponentInChildren<WeaponManager>().camAnim.SetBool("focus", false);
                 GetComponentInParent<FirstPersonController>().RotationSpeed = 0;
-                Cursor.lockState = CursorLockMode.Confined;
                 GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
                 hurtýmage.SetActive(false);
 
@@ -127,7 +129,7 @@ public class WeaponChange : MonoBehaviour
                     pistol.SetActive(false);
                     Destroy(hitCollider.gameObject);
                 }
-                else if(pistolActive == true)
+                else if (pistolActive == true)
                 {
                     ak47Active = true;
                     pistolActive = false;
@@ -158,7 +160,7 @@ public class WeaponChange : MonoBehaviour
                     pistol.SetActive(false);
                     Destroy(hitCollider.gameObject);
                 }
-                else if(pistolActive == true)
+                else if (pistolActive == true)
                 {
                     rifleActive = true;
                     pistolActive = false;
@@ -177,7 +179,7 @@ public class WeaponChange : MonoBehaviour
                     Destroy(hitCollider.gameObject);
                 }
             }
-            if (hitCollider.CompareTag("Mag") && ýnventoryManager.TotalÝtemCount> ýnventoryManager.CurrentÝtem)
+            if (hitCollider.CompareTag("Mag") && ýnventoryManager.TotalÝtemCount > ýnventoryManager.CurrentÝtem)
             {
                 hitCollider.GetComponent<PickUpÝtem>().Pickup();
             }
@@ -190,7 +192,6 @@ public class WeaponChange : MonoBehaviour
         GetComponentInChildren<Animator>().enabled = true;
         GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
         GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
-        Cursor.lockState = CursorLockMode.Locked;
         GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
         hurtýmage.SetActive(true);
     }

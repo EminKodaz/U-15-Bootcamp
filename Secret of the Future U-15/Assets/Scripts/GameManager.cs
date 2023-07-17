@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject PauseObject;
-
+    [SerializeField] private GameObject Envanter›nformation;
+    [SerializeField] private GameObject Map›nformation;
     public bool open;
     public bool isFollowingDad = false;
 
@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         TabOpen = false;
+        if (Envanter›nformation != null && Map›nformation != null)
+        {
+            Envanter›nformation.SetActive(true);
+            StartCoroutine(Envanter›nformationClose());
+        }
     }
 
     private void Update()
@@ -62,13 +67,7 @@ public class GameManager : MonoBehaviour
         {
             open = !open;
             TabOpen = !TabOpen;
-            PauseObjectOpen(open);
-            if(MapImage != null)
-                MapImage.SetActive(false);
-            if (MapImagem2 != null)
-                MapImagem2.SetActive(false);
-            if (MapImagem3 != null)
-                MapImagem3.SetActive(false);
+            LockCursor(open);
         }
 
         if (KillCount != null)
@@ -79,6 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseObjectOpen(bool open)
     {
+
         if (open)
         {
             Time.timeScale = 0;
@@ -86,7 +86,6 @@ public class GameManager : MonoBehaviour
             {
                 PauseObject.SetActive(true);
             }
-            Cursor.lockState = CursorLockMode.Confined;
             if (HurtImage != null)
             {
                 HurtImage.SetActive(false);
@@ -99,9 +98,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1;
-            PauseObject.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+
+            ResumeGame();
             if (HurtImage != null)
             {
                 HurtImage.SetActive(true);
@@ -116,10 +114,10 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        open = false;
         Time.timeScale = 1;
         PauseObject.SetActive(false);
-        open = false;
-        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     public void LoadFirstGameSceen(int Scene›d)
@@ -172,5 +170,26 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    IEnumerator Envanter›nformationClose()
+    {
+        yield return new WaitForSeconds(5);
+        Envanter›nformation.SetActive(false);
+        Map›nformation.SetActive(true);
+        yield return new WaitForSeconds(3);
+        Map›nformation.SetActive(false);
+    }
+
+    public void LockCursor(bool open)
+    {
+        PauseObjectOpen(open);
+        if (MapImage != null)
+            MapImage.SetActive(false);
+        if (MapImagem2 != null)
+            MapImagem2.SetActive(false);
+        if (MapImagem3 != null)
+            MapImagem3.SetActive(false);
+        Cursor.lockState = open ? CursorLockMode.None : CursorLockMode.Locked;
     }
 }

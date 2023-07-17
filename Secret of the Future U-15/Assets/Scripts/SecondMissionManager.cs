@@ -17,6 +17,8 @@ public class SecondMissionManager : MonoBehaviour
     [SerializeField] private AudioSource ZombieAttackMusic;
     bool fight = false;
 
+    [SerializeField] private Text GunChangeText;
+
     private void Update()
     {
         if (ZombieAttackMusic != null && fight == true)
@@ -56,6 +58,8 @@ public class SecondMissionManager : MonoBehaviour
 
             ZombieAttackTime.SetActive(true);
 
+            GunChangeText.gameObject.SetActive(true);
+            Destroy(GunChangeText.gameObject,3f);
             StartCoroutine(ReduceSound());
         }
     }
@@ -64,7 +68,7 @@ public class SecondMissionManager : MonoBehaviour
     {
         if (TalkText != null)
         {
-            TalkText.gameObject.SetActive(false);
+            Destroy(TalkText,5f);
         }
     }
 
