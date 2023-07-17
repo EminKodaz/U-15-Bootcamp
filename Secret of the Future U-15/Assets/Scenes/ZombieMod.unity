@@ -13408,6 +13408,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1661906910}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LockCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1141536277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24194,7 +24206,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 350
+  far clip plane: 400
   field of view: 60
   orthographic: 0
   orthographic size: 10
@@ -24441,7 +24453,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 350
+  far clip plane: 400
   field of view: 60
   orthographic: 0
   orthographic size: 10
@@ -24958,7 +24970,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 350
+  far clip plane: 400
   field of view: 60
   orthographic: 0
   orthographic size: 0.005593998
@@ -32124,7 +32136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5897037774380288785}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -36.297195, y: 12.782428, z: 11.684381}
+  m_LocalPosition: {x: -36.297195, y: 8.96, z: 11.684381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

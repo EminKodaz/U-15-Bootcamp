@@ -22,7 +22,7 @@ public class HospitalAttackTime : MonoBehaviour
 
             StartCoroutine(ReduceSound());
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 8; i++)
             {
                 Instantiate(SpanObject(), RandomPoint().position, Quaternion.identity);
             }
