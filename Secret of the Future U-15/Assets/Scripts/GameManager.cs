@@ -53,11 +53,11 @@ public class GameManager : MonoBehaviour
             {
                 MapImage.SetActive(m_open);
             }
-            else if(MapImage != null && MissionFirst && !MissionSecond)
+            else if (MapImage != null && MissionFirst && !MissionSecond)
             {
                 MapImagem2.SetActive(m_open);
             }
-            else if(MapImage != null && MissionFirst && MissionSecond && !MissionThird)
+            else if (MapImage != null && MissionFirst && MissionSecond && !MissionThird)
             {
                 MapImagem3.SetActive(m_open);
             }
@@ -86,24 +86,16 @@ public class GameManager : MonoBehaviour
             {
                 PauseObject.SetActive(true);
             }
-            if (HurtImage != null)
-            {
-                HurtImage.SetActive(false);
-            }
-
             foreach (var guns in gun)
             {
                 guns.enabled = false;
             }
+
+            HurtClose(false);
         }
         else
         {
-
             ResumeGame();
-            if (HurtImage != null)
-            {
-                HurtImage.SetActive(true);
-            }
 
             foreach (var guns in gun)
             {
@@ -191,5 +183,10 @@ public class GameManager : MonoBehaviour
         if (MapImagem3 != null)
             MapImagem3.SetActive(false);
         Cursor.lockState = open ? CursorLockMode.None : CursorLockMode.Locked;
+    }
+
+    public void HurtClose(bool open)
+    {
+        HurtImage.SetActive(open);
     }
 }

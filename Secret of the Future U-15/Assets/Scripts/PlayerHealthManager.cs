@@ -61,6 +61,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void UpdatedImage()
     {
+        hurtImage.gameObject.SetActive(true);
         Color splatterAlpha = hurtImage.color;
         splatterAlpha.a =(1) - (CurrentHealth / health);
         hurtImage.color = splatterAlpha;

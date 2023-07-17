@@ -19132,7 +19132,7 @@ MonoBehaviour:
   LoadMenuI: {fileID: 1927262873}
   gun:
   - {fileID: 329237379698115055}
-  - {fileID: 599196962784360017}
+  - {fileID: 329237381298781738}
   - {fileID: 599196962784360017}
   MapImage: {fileID: 0}
   MapImagem2: {fileID: 0}
@@ -25923,7 +25923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &599196963854943790
 GameObject:
   m_ObjectHideFlags: 0
@@ -25944,7 +25944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &675063193562678856
 GameObject:
   m_ObjectHideFlags: 0

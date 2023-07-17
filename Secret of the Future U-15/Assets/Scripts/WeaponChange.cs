@@ -81,8 +81,7 @@ public class WeaponChange : MonoBehaviour
                 GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = true;
                 GetComponentInChildren<WeaponManager>().camAnim.SetBool("focus", false);
                 GetComponentInParent<FirstPersonController>().RotationSpeed = 0;
-                GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
-                hurtýmage.SetActive(false);
+                GameManager.instance.HurtClose(false);
 
                 if (InventoryManager.Instance != null)
                 {
@@ -192,7 +191,5 @@ public class WeaponChange : MonoBehaviour
         GetComponentInChildren<Animator>().enabled = true;
         GetComponentInChildren<WeaponManager>().InventoryOpenOrClose = false;
         GetComponentInParent<FirstPersonController>().RotationSpeed = 1;
-        GameObject hurtýmage = GetComponent<PlayerHealthManager>().hurtImage.gameObject;
-        hurtýmage.SetActive(true);
     }
 }
