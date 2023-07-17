@@ -30,7 +30,6 @@ public class PlayerHealthManager : MonoBehaviour
         if (died)
         {
             healthTimer += Time.deltaTime + 0.01f;
-
         }
     }
 
@@ -77,6 +76,7 @@ public class PlayerHealthManager : MonoBehaviour
             DiedBr.SetActive(true);
         }
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
 
     }
 }

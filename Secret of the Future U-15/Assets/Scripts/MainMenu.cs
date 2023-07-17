@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void StartGameOrCrdeits(int Scene›D)

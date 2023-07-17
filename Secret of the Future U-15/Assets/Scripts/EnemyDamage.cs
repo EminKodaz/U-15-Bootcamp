@@ -10,6 +10,7 @@ public class EnemyDamage : MonoBehaviour
     public Animator animator;
     ZombieAI zombieAI;
     NavMeshAgent agent;
+    bool died = false;
 
     private void Start()
     {
@@ -32,6 +33,12 @@ public class EnemyDamage : MonoBehaviour
     void Die()
     {
         Destroy(gameObject,5f);
-        GameManager.instance.KillCalculate(1);
+        if (died == false)
+        {
+            GameManager.instance.KillCalculate(1);
+
+        }
+        died = true;
+        
     }
 }

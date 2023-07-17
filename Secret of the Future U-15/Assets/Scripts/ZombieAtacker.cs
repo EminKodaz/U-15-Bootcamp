@@ -23,7 +23,7 @@ public class ZombieAtacker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AttackOverPos = new Vector3(transform.position.x,transform.position.y + AttackOverOffset, transform.position.z);
+        AttackOverPos = new Vector3(transform.position.x, transform.position.y + AttackOverOffset, transform.position.z);
         Collider[] solider = Physics.OverlapSphere(transform.position, radius);
         foreach (var player in solider)
         {
@@ -56,7 +56,7 @@ public class ZombieAtacker : MonoBehaviour
             PlayerHealthManager solider = zombi.GetComponentInChildren<PlayerHealthManager>();
             if (solider != null)
             {
-                solider.TakeDamage(.5f);
+                solider.TakeDamage(1f);
             }
         }
 

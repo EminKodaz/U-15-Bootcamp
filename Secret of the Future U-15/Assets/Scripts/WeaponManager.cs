@@ -28,7 +28,6 @@ public abstract class WeaponManager : MonoBehaviour
     public int bulletNumber;
     public bool finishedBullet = false;
     public bool fire = false;
-
     public GameObject[] zombies;
     public static WeaponManager instanceW;
 
@@ -163,7 +162,8 @@ public abstract class WeaponManager : MonoBehaviour
 
         if (id == 4)
         {
-            GetComponentInParent<PlayerHealthManager>().CurrentHealth += 70;
+            float healthC = 100 - GetComponentInParent<PlayerHealthManager>().CurrentHealth;
+            GetComponentInParent<PlayerHealthManager>().CurrentHealth +=healthC;
             GetComponentInParent<PlayerHealthManager>().UpdatedImage();
             InventoryManager.Instance.Remove(item);
             Destroy(gameObject);

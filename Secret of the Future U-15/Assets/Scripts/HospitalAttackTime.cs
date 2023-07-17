@@ -9,6 +9,8 @@ public class HospitalAttackTime : MonoBehaviour
 
     [SerializeField] private GameObject ZombieAttackTime;
     [SerializeField] private AudioSource ZombieAttackMusic;
+    [SerializeField] private Collider GetCollider;
+
     bool fight = false;
     bool m_Complated;
 
@@ -25,6 +27,7 @@ public class HospitalAttackTime : MonoBehaviour
                 Instantiate(SpanObject(), RandomPoint().position, Quaternion.identity);
             }
             m_Complated = true;
+            GetCollider.enabled = false;
         }
     }
 
