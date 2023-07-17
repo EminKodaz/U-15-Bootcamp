@@ -13,25 +13,25 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    public void StartGameOrCrdeits(int Scene›D)
+    public void StartGameOrCrdeits(int SceneID)
     {
-        StartCoroutine(LoadSceneAsync(Scene›D));
+        StartCoroutine(LoadSceneAsync(SceneID));
     }
 
 
     public void QuitGame()
     {
-        //Application.Quit();
+        Application.Quit();
         Debug.Log("Game Quit");
     }
 
-    IEnumerator LoadSceneAsync(int Scene›d)
+    IEnumerator LoadSceneAsync(int SceneId)
     {
         LoadScene.SetActive(true);
 
         yield return new WaitForEndOfFrame();
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(Scene›d);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
 
         while (!operation.isDone)
         {
