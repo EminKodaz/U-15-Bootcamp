@@ -43,6 +43,10 @@ Secret of The Future, karakterinizin post-apokaliptik bir dünyada, radyodan gel
 - NPC'ile sözlü iletişim(AI)
 
 Bu özellikler, Secret of Future'ı gerçekçi, zorlu ve stratejik bir hayatta kalma FPS oyunu yapar. Oyunda taktik becerilerinizi kullanırken heyecan verici bir deneyim yaşayabilir ve zorlu koşullarda hayatta kalmak için mücadele edebilirsiniz.
+
+## Gereklilikler
+- İnternet bağlantısı
+- Mikrofon
   
 
 ## Hedef Kitle
